@@ -1,6 +1,6 @@
 /* Metal AM Tool Coverage Matrix
    Data comes from data/tools.js (window.TOOLS_DATA). Filters are mirrored in the URL hash,
-   so a filtered view can be bookmarked or shared, e.g. index.html#cols=NRE,QA_Qual&min=partial */
+   so a filtered view can be bookmarked or shared, e.g. index.html#cols=NRE,QA_Qual&min=partial (min = yes | pquant | partial) */
 (function () {
   'use strict';
   var DATA = window.TOOLS_DATA;
@@ -24,6 +24,9 @@
   var RV = { Yes: 1, Partial: 0.5, No: 0, Unknown: 0 };
   var SORTV = { Yes: 1, Partial: 0.5, No: 0, Unknown: -0.25 };
   var CONF = { High: 3, Medium: 2, Low: 1 };
+  function isPQ(sc) { return sc.rating === 'Partial' && sc.partial_type !== 'qualitative'; }
+  function rLabel(sc) { return sc.rating === 'Partial' ? 'Partial (' + (sc.partial_type === 'qualitative' ? 'qualitative' : 'quantified') + ')' : sc.rating; }
+  function dotCls(sc) { return 'dot ' + sc.rating + (sc.rating === 'Partial' ? (sc.partial_type === 'qualitative' ? ' pl' : ' pq') : ''); }
 
   tools.forEach(function (t, i) {
     t._i = i;
@@ -52,7 +55,7 @@
     state.dir = state.dir === '1' || state.dir === 1 ? 1 : -1;
     if (state.type !== 'Tool' && state.type !== 'Framework') state.type = '';
     if (state.match !== 'any') state.match = 'all';
-    if (state.min !== 'partial') state.min = 'yes';
+    if (state.min !== 'partial' && state.min !== 'pquant') state.min = 'yes';
     state.cols = (p.get('cols') || '').split(',').filter(function (k) { return COLKEYS.indexOf(k) >= 0; });
   }
   function writeHash() {
@@ -93,8 +96,8 @@
 
   // ---- filtering
   function covered(t, k) {
-    var r = t.scores[k].rating;
-    return r === 'Yes' || (state.min === 'partial' && r === 'Partial');
+    var sc = t.scores[k], r = sc.rating;
+    return r === 'Yes' || (state.min === 'partial' && r === 'Partial') || (state.min === 'pquant' && isPQ(sc));
   }
   function baseFiltered() {
     var q = state.q.trim().toLowerCase();
@@ -133,16 +136,16 @@
   var strip = document.getElementById('strip');
   function renderStrip(base) {
     strip.innerHTML = COLS.map(function (c) {
-      var y = 0, p = 0, u = 0, n = base.length;
-      base.forEach(function (t) { var r = t.scores[c.k].rating; if (r === 'Yes') y++; else if (r === 'Partial') p++; else if (r === 'Unknown') u++; });
-      var py = n ? y / n * 100 : 0, pp = n ? p / n * 100 : 0, pu = n ? u / n * 100 : 0;
+      var y = 0, pq = 0, pl = 0, u = 0, n = base.length;
+      base.forEach(function (t) { var sc = t.scores[c.k], r = sc.rating; if (r === 'Yes') y++; else if (r === 'Partial') { if (isPQ(sc)) pq++; else pl++; } else if (r === 'Unknown') u++; });
+      var p = pq + pl, py = n ? y / n * 100 : 0, ppq = n ? pq / n * 100 : 0, ppl = n ? pl / n * 100 : 0, pu = n ? u / n * 100 : 0;
       var on = state.cols.indexOf(c.k) >= 0;
-      return '<button type="button" class="cov" data-k="' + c.k + '" aria-pressed="' + on + '" aria-label="' + esc(c.full) + ': ' + y + ' yes, ' + p + ' partial, ' + u + ' unknown, ' + (n - y - p - u) + ' no. ' + (on ? 'Selected.' : 'Select to filter.') + '">' +
+      return '<button type="button" class="cov" data-k="' + c.k + '" aria-pressed="' + on + '" aria-label="' + esc(c.full) + ': ' + y + ' yes, ' + pq + ' partial quantified, ' + pl + ' partial qualitative, ' + u + ' unknown, ' + (n - y - p - u) + ' no. ' + (on ? 'Selected.' : 'Select to filter.') + '">' +
         '<span class="box" aria-hidden="true">✓</span>' +
         '<span class="grp">' + c.grp + '</span>' +
         '<span class="k">' + esc(c.card) + '</span>' +
-        '<span class="bar" aria-hidden="true"><i class="y" style="width:' + py.toFixed(1) + '%"></i><i class="p" style="width:' + pp.toFixed(1) + '%"></i><i class="u" style="width:' + pu.toFixed(1) + '%"></i></span>' +
-        '<span class="n" aria-hidden="true"><span class="nw">' + y + ' yes ·</span> <span class="nw">' + p + ' partial ·</span> <span class="nw">' + u + ' unknown ·</span> <span class="nw">' + (n - y - p - u) + ' no</span></span></button>';
+        '<span class="bar" aria-hidden="true"><i class="y" style="width:' + py.toFixed(1) + '%"></i><i class="p" style="width:' + ppq.toFixed(1) + '%"></i><i class="pl" style="width:' + ppl.toFixed(1) + '%"></i><i class="u" style="width:' + pu.toFixed(1) + '%"></i></span>' +
+        '<span class="n" aria-hidden="true"><span class="nw">' + y + ' yes ·</span> <span class="nw">' + p + ' partial</span> <span class="nw">(' + pq + ' quant.) ·</span> <span class="nw">' + u + ' unknown ·</span> <span class="nw">' + (n - y - p - u) + ' no</span></span></button>';
     }).join('');
   }
   strip.addEventListener('click', function (e) {
@@ -168,7 +171,7 @@
   function detailHtml(t) {
     var notes = COLS.map(function (c) {
       var s = t.scores[c.k];
-      return '<li><i class="dot ' + s.rating + '" aria-hidden="true"></i><span class="c">' + esc(c.full) + '</span><span>' + esc(s.rating) + '. ' + esc(s.note) + '</span></li>';
+      return '<li><i class="' + dotCls(s) + '" aria-hidden="true"></i><span class="c">' + esc(c.full) + '</span><span>' + esc(rLabel(s)) + '. ' + esc(s.note) + '</span></li>';
     }).join('');
     var tl = t.tool_link;
     var full = tl ? (tl.label || 'Open') : '';
@@ -210,7 +213,7 @@
   function describeColFilter() {
     if (!state.cols.length) return '';
     var names = state.cols.map(function (k) { return COLS[COLKEYS.indexOf(k)].short; });
-    return ' · covering ' + (state.match === 'all' ? 'all of ' : 'any of ') + names.join(', ') + (state.min === 'partial' ? ' (Yes or Partial)' : ' (Yes)');
+    return ' · covering ' + (state.match === 'all' ? 'all of ' : 'any of ') + names.join(', ') + (state.min === 'partial' ? ' (Yes or any Partial)' : state.min === 'pquant' ? ' (Yes or quantified Partial)' : ' (Yes)');
   }
 
   function render() {
@@ -226,14 +229,14 @@
     document.getElementById('count').textContent = list.length + ' of ' + tools.length + ' tools' + describeColFilter();
     writeHash();
     if (!list.length) {
-      tb.innerHTML = '<tr><td colspan="14" class="empty">No tools match these filters.' + (state.cols.length > 1 && state.match === 'all' ? ' Try “any selected” or “Yes or Partial”.' : ' Clear a filter to see more.') + '</td></tr>';
+      tb.innerHTML = '<tr><td colspan="14" class="empty">No tools match these filters.' + (state.cols.length > 1 && state.match === 'all' ? ' Try “any selected” or a wider rating.' : ' Clear a filter to see more.') + '</td></tr>';
       return;
     }
     tb.innerHTML = list.map(function (t) {
       var open = !!state.open[t._i];
       var cells = COLS.map(function (c) {
-        var r = t.scores[c.k].rating;
-        return '<td class="rc' + (state.cols.indexOf(c.k) >= 0 ? ' sel' : '') + '"><i class="dot ' + r + '" role="img" aria-label="' + esc(c.full) + ': ' + r + '" title="' + esc(c.full) + ': ' + r + ' — ' + esc(t.scores[c.k].note) + '"></i></td>';
+        var sc = t.scores[c.k], r = rLabel(sc);
+        return '<td class="rc' + (state.cols.indexOf(c.k) >= 0 ? ' sel' : '') + '"><i class="' + dotCls(sc) + '" role="img" aria-label="' + esc(c.full) + ': ' + r + '" title="' + esc(c.full) + ': ' + r + ' — ' + esc(sc.note) + '"></i></td>';
       }).join('');
       var lv = t.decision_levels.map(function (l) { return '<span class="tag">' + esc(l) + '</span>'; }).join('');
       var flag = t.flag ? '<span class="tag flag">' + esc(t.flagShort || 'See flag') + '</span>' : '';

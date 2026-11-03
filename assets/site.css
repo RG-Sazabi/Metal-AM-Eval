@@ -10,6 +10,7 @@
   --accent-ink: #ffffff;
   --accent-soft: #e3eef7;
   --partial: #8bb3d3;
+  --partial-l: #cfe0ee;
   --row-hover: #eef3f7;
   --chip: #e8edf2;
   --unk: #c2cad3;
@@ -23,7 +24,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #0f1419; --surface: #161d24; --ink: #e6ecf1; --muted: #93a2b0; --rule: #2a3540;
-    --accent: #6fb1e4; --accent-ink: #0b1620; --accent-soft: #1a2c3b; --partial: #3f6e94; --row-hover: #1b252e; --chip: #222c36;
+    --accent: #6fb1e4; --accent-ink: #0b1620; --accent-soft: #1a2c3b; --partial: #3f6e94; --partial-l: #263f55; --row-hover: #1b252e; --chip: #222c36;
     --unk: #4a5664; --link-bg: #3a2f12; --link-ink: #f3d68a; --grey-mark: #6d7a87;
     color-scheme: dark;
   }
@@ -63,6 +64,7 @@ h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(28px, 
 .dot { display: inline-block; width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid var(--accent); vertical-align: middle; flex: none; }
 .dot.Yes { background: var(--accent); }
 .dot.Partial { background: linear-gradient(90deg, var(--accent) 50%, transparent 50%); }
+.dot.Partial.pl { border-style: dotted; background: linear-gradient(90deg, var(--partial) 50%, transparent 50%); }
 .dot.No { border-color: var(--rule); }
 .dot.Unknown { border: 1.5px dashed var(--muted); position: relative; }
 .dot.Unknown::after { content: "?"; position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--font-mono); font-size: 10px; font-weight: 600; color: var(--muted); line-height: 1; }

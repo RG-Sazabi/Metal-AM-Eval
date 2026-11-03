@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Metal AM Tool Coverage Matrix</title>
-<meta name="description" content="224 decision support tools for metal additive manufacturing, scored on four costs and four benefits of adoption, with rating notes, tool links and sources.">
+<meta name="description" content="144 decision support tools for metal additive manufacturing, scored on four costs and four benefits of adoption, with rating notes, tool links and sources.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231d5c8c'/%3E%3Ccircle cx='10' cy='11' r='4' fill='white'/%3E%3Ccircle cx='22' cy='11' r='4' fill='none' stroke='white' stroke-width='2'/%3E%3Ccircle cx='10' cy='22' r='4' fill='none' stroke='white' stroke-width='2'/%3E%3Ccircle cx='22' cy='22' r='4' fill='white'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +32,7 @@
 .strip { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 10px; }
 @media (max-width: 1180px) { .strip { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (max-width: 480px) { .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.cov { position: relative; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 10px 12px; display: grid; gap: 6px; align-content: start; cursor: pointer; text-align: left; font: inherit; color: inherit; }
+.cov { min-width: 0; grid-template-columns: minmax(0, 1fr); position: relative; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 10px 12px; display: grid; gap: 6px; align-content: start; cursor: pointer; text-align: left; font: inherit; color: inherit; }
 .cov:hover { border-color: var(--accent); }
 .cov[aria-pressed="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); background: var(--accent-soft); }
 .cov .grp { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
@@ -43,6 +43,7 @@
 .bar i { display: block; height: 100%; }
 .bar .y { background: var(--accent); }
 .bar .p { background: var(--partial); }
+.bar .pl { background: var(--partial-l); }
 .bar .u { background: repeating-linear-gradient(135deg, var(--unk) 0 3px, transparent 3px 6px); }
 .cov .n { font-family: var(--font-mono); font-size: 11px; line-height: 1.45; color: var(--muted); font-variant-numeric: tabular-nums; }
 .cov .nw { white-space: nowrap; }
@@ -127,15 +128,16 @@ tr.detail td { padding: 4px 16px 18px; background: var(--row-hover); cursor: aut
 <main class="page">
 <div class="wrap">
   <section class="head">
-    <div class="eyebrow">Metal additive manufacturing · decision support survey · as of October 2026</div>
+    <div class="eyebrow">Metal additive manufacturing · decision support survey · as of November 2026</div>
     <h1>Metal AM Tool Coverage Matrix</h1>
     <p class="lead" id="lead">Decision support tools for metal additive manufacturing, scored on whether each accounts for four costs and four benefits of adopting it. Select column cards to filter; select a row to read the rating notes, the tool link and sources.</p>
     <div class="legend" aria-label="Rating legend">
       <span><i class="dot Yes"></i> Yes: modeled or quantified</span>
-      <span><i class="dot Partial"></i> Partial: qualitative or part of the column</span>
+      <span><i class="dot Partial pq"></i> Partial, quantified: numbers on part of the column</span>
+      <span><i class="dot Partial pl"></i> Partial, qualitative: a criterion, flag or claim, not calculated</span>
       <span><i class="dot No"></i> No: confirmed not addressed</span>
       <span><i class="dot Unknown"></i> Unknown: public sources can't confirm either way</span>
-      <span>Score counts Yes as 1 and Partial as 0.5, out of 8</span>
+      <span>Score counts Yes as 1 and either Partial as 0.5, out of 8 · <a href="report.html#rating-rules">How ratings are decided</a></span>
     </div>
   </section>
 
@@ -152,7 +154,8 @@ tr.detail td { padding: 4px 16px 18px; background: var(--row-hover); cursor: aut
       <span class="segwrap">rated
         <span class="seg" role="group" aria-label="Which ratings count as covered">
           <button type="button" data-min="yes" aria-pressed="true">Yes</button>
-          <button type="button" data-min="partial" aria-pressed="false">Yes or Partial</button>
+          <button type="button" data-min="pquant" aria-pressed="false">or quantified Partial</button>
+          <button type="button" data-min="partial" aria-pressed="false">or any Partial</button>
         </span>
       </span>
       <button type="button" class="linkbtn" id="clearcols" disabled>Clear columns</button>

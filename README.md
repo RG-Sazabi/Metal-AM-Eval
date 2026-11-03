@@ -5,7 +5,7 @@
 
 A static website with two pages:
 
-- **`index.html`: Metal AM Tool Coverage Matrix.** 224 decision support tools for metal additive manufacturing, each rated Yes / Partial / No / Unknown on four costs (NRE, production, QA qualification, QA per-part inspection) and four benefits (storage, shared capital, shared capacity, value of speed). Each entry is typed as a Tool (software, spreadsheets, calculators, quantitative models, worksheets) or a Framework (a way to think about the problem: qualitative methods, standards, guidance). Filter by type and by any combination of columns, search, sort, and expand a row for rating notes, the tool link and sources.
+- **`index.html`: Metal AM Tool Coverage Matrix.** 144 decision support tools for metal additive manufacturing (tools where metal AM is in scope; polymer-only and process-agnostic tools are excluded), each rated Yes / Partial (quantified or qualitative) / No / Unknown on four costs (NRE, production, QA qualification, QA per-part inspection) and four benefits (storage, shared capital, shared capacity, value of speed). Each entry is typed as a Tool (software, spreadsheets, calculators, quantitative models, worksheets) or a Framework (a way to think about the problem: qualitative methods, standards, guidance). Filter by type and by any combination of columns, search, sort, and expand a row for rating notes, the tool link and sources.
 - **`report.html`: Metal AM Decision Support Tools report.** Findings, gaps and a proposed integration framework. Open it from the **Read report** button at the top of the matrix.
 
 It is plain HTML, CSS and JavaScript with no build step and no server code, so GitHub Pages can host it as-is.
@@ -38,4 +38,4 @@ The matrix keeps its filters in the page address, so a filtered view can be book
 
 `data/tools.js` holds the data as `window.TOOLS_DATA = {...}`; each tool has its ratings, notes, sources and tool link. If you edit it, update `tools.json` and `tools.csv` too so the downloads match.
 
-Ratings reflect public documentation as of October 2026. Tool links were re-checked in November 2026.
+Ratings were re-checked against their sources in November 2026 under the written rating rules in the report (Scope and scoring method → Rating rules), and tool links were re-checked at the same time.
