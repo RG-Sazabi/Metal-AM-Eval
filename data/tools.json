@@ -68,7 +68,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No public link: the cost model and TEA module are deliverables to America Makes and DoD and have not been released; only the Jan 2024 interim briefing (AFRL-2024-1188) is public.",
-   "evidence_basis": "Briefing slides"
+   "evidence_basis": "Briefing slides",
+   "type": "Tool",
+   "type_reason": "four-modality cost model with TEA module is the main deliverable"
   },
   {
    "name": "Workbench for Additive Manufacturing Materials (WAM)",
@@ -80,7 +82,7 @@
    ],
    "context": "Joint DoD (AFLCMC lead); shared metal AM material property data",
    "processes": "Metal AM (process coverage not documented)",
-   "availability": "Government/restricted web database (wam.niar.wichita.edu); access terms not documented",
+   "availability": "Government/restricted web database; the portal address in the DoD ManTech flyer (wam.niar.wichita.edu) does not load publicly, and access terms are not documented",
    "description": "A database of metal AM material property data that DoD developed or licensed, shared across the services. NIAR builds and maintains it under an AFLCMC contract. It is a borderline entry, a data resource that supports material and process choice and qualification, not an analytical decision tool.",
    "scores": {
     "NRE": {
@@ -128,12 +130,11 @@
    ],
    "confidence": "Low",
    "sector": "Defense",
-   "tool_link": {
-    "url": "https://wam.niar.wichita.edu/",
-    "label": "Portal (URL from the JAMWG flyer; access terms not documented)",
-    "verified": false
-   },
-   "evidence_basis": "Press or marketing"
+   "tool_link": null,
+   "tool_link_note": "No public link: the WAM portal address given in the DoD ManTech flyer (wam.niar.wichita.edu) does not load publicly; access appears limited to program participants.",
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "government database of AM material property data"
   },
   {
    "name": "Part Assessment and Cost Tool (PACT)",
@@ -200,7 +201,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No public link: internal Air Force RSO/AMPO application on Air Force Cloud One.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "government software that grades parts and computes ROI"
   },
   {
    "name": "SEEKR advanced manufacturing data analytics",
@@ -266,7 +269,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No public product page found; SEEKR is described only in an undated RAPID+TCT/AeroDef session listing (rapid3devent.com).",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "data analytics software that scores and matches parts"
   },
   {
    "name": "DLA Legacy Parts AM Prescreening Tool (DLA prototype AM candidate selection tool)",
@@ -347,7 +352,9 @@
     "label": "Report describing the prototype (DTIC); the prototype itself is not public",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "database query tool that filters DLA parts"
   },
   {
    "name": "Additive Manufacturing Initial General Assessment (AMIGA)",
@@ -405,7 +412,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No public link: internal DLA tool, described only in a June 2020 XSB press release (no AMIGA product page).",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "government software for first-pass AM candidate calls"
   },
   {
    "name": "Additive Manufacturing Cost and Time (AMCAT) decision tool",
@@ -471,7 +480,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No public link: internal Navy (NAVSUP WSS Price Fighters) web tool, described only in a September 2022 navy.mil/DVIDS article.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "web-based cost and time model producing a business case"
   },
   {
    "name": "NAVSEA AM part risk triage and TDP approval framework (with NAMPIE part identification events)",
@@ -534,7 +545,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No public link to the tool itself; it is an internal practice or unreleased output. The best public description is in Sources.",
-   "evidence_basis": "Briefing slides"
+   "evidence_basis": "Briefing slides",
+   "type": "Framework",
+   "type_reason": "color-coded risk triage and approval process; cost tool is external"
   },
   {
    "name": "NAVAIR AM Candidate Assessment Tool (Navy STTR topic N23B-T032)",
@@ -596,7 +609,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No tool released; solicitation only (Navy STTR 23.B topic N23B-T032, 2023; no award found on HigherGov or in an SBIR award search).",
-   "evidence_basis": "Solicitation"
+   "evidence_basis": "Solicitation",
+   "type": "Tool",
+   "type_reason": "solicited government candidate-assessment software"
   },
   {
    "name": "Army AI for AM Part Selection (Army SBIR topic A224-001)",
@@ -658,7 +673,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No tool released; solicitation only (Army SBIR 22.4, topic A224-001; no awardee found).",
-   "evidence_basis": "Solicitation"
+   "evidence_basis": "Solicitation",
+   "type": "Tool",
+   "type_reason": "solicited AI software for part selection"
   },
   {
    "name": "Army EXORD 050-18 AM decision tree (risk-based approach for commanders)",
@@ -721,7 +738,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No public link to the tool itself; it is an internal practice or unreleased output. The best public description is in Sources.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "execution order (policy) with a qualitative decision tree"
   },
   {
    "name": "Multi-staged business case analysis for AM part selection (Army Advanced Manufacturing Directive 2019-29 context)",
@@ -783,7 +802,9 @@
     "label": "Viewpoint article, 'Changing Acquisitions with Advanced Manufacturing' (National Defense digital edition, p. 17)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "proposed staged business-case process in a viewpoint article"
   },
   {
    "name": "USAF Candidate AM Part Selection Process (crawl-walk-run)",
@@ -845,7 +866,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No public link to the tool itself; it is an internal practice or unreleased output. The best public description is in Sources.",
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Framework",
+   "type_reason": "risk-graded selection process described in prose"
   },
   {
    "name": "Joint Additive Manufacturing Model Exchange (JAMMEX)",
@@ -914,7 +937,9 @@
     "label": "Portal (CAC login required; URL from DoD ManTech JAMWG flyer)",
     "verified": false
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "secure web repository/data portal for AM models"
   },
   {
    "name": "DoD Additive Manufacturing Strategy (2021) decision guidance",
@@ -977,7 +1002,9 @@
     "label": "Strategy PDF (OUSD(R&E))",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "strategy document naming considerations"
   },
   {
    "name": "Techno-Economic Analysis of Powder Bed Fusion for the Air Force (IMPACT Topic 9)",
@@ -1044,7 +1071,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No public link: the final report goes to America Makes/AFRL and no public release was found.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "landscape assessment and interviews; no cost model"
   },
   {
    "name": "Casting & Forging Techno-Economic Framework (IMPACT Topic 8, Project 1)",
@@ -1106,7 +1135,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No public link: IMPACT project deliverable known only by title from the America Makes/NCDMM award announcement.",
-   "evidence_basis": "Title only"
+   "evidence_basis": "Title only",
+   "type": "Framework",
+   "type_reason": "known only by title as a techno-economic framework"
   },
   {
    "name": "Selection of Additive Manufacturing Equipment (AMRDEC TR-RDMR-WD-16-87)",
@@ -1167,7 +1198,9 @@
     "label": "Technical report PDF (DTIC AD1031372)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "narrative equipment justification with no scoring or cost model"
   },
   {
    "name": "Techno-economic performance metrics for large-format metal DED (ORNL MDF)",
@@ -1228,7 +1261,9 @@
     "label": "Conference abstract (SFF Symposium 2024); proceedings paper not found",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Framework",
+   "type_reason": "set of comparison metrics, not a model that computes an answer"
   },
   {
    "name": "Project TAMPA additive manufacturing accelerator (spiral-based part adoption)",
@@ -1307,7 +1342,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No public link to the tool itself; it is an internal practice or unreleased output. The best public description is in Sources.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "accelerator programme sequencing parts; no scoring or cost model"
   },
   {
    "name": "UK Defence Advanced Manufacturing Strategy decision principles",
@@ -1369,7 +1406,9 @@
     "label": "Policy paper (GOV.UK)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "defence strategy principles"
   },
   {
    "name": "RAPiD-e Additive Manufacturing Digital Repository Concept and Framework",
@@ -1428,7 +1467,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No public output: the 2022 ACT concept study is known only from its contract notice; its deliverables were not released.",
-   "evidence_basis": "Solicitation"
+   "evidence_basis": "Solicitation",
+   "type": "Framework",
+   "type_reason": "concept study defining a repository; no software delivered"
   },
   {
    "name": "Digital spare parts warehouse economic simulation for the Bundeswehr (HIL case)",
@@ -1491,7 +1532,9 @@
     "label": "Working paper PDF (UniBw)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "event-based supply-chain simulation"
   },
   {
    "name": "Re-design and re-manufacturing methodology for discontinued Bundeswehr spares",
@@ -1550,9 +1593,11 @@
    "tool_link": {
     "url": "https://doi.org/10.21278/idc.2018.0444",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Framework",
+   "type_reason": "data-handling workflow for redesign and remanufacture"
   },
   {
    "name": "AM in military logistics assessment for the Finnish Defence Forces and Millog (SWOT/AHP and depot-placement recommendation)",
@@ -1618,7 +1663,9 @@
     "label": "Thesis record (Doria)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "qualitative review, case study and SWOT; AHP incidental"
   },
   {
    "name": "FFI field AM trial assessment and component-suitability analysis (Norwegian Armed Forces)",
@@ -1686,7 +1733,9 @@
     "label": "Report PDF (FFI)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "field-trial report and qualitative component discussion"
   },
   {
    "name": "AM spare part candidate identification for Danish defence logistics (FMI)",
@@ -1748,7 +1797,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No public link to the tool itself; it is an internal practice or unreleased output. The best public description is in Sources.",
-   "evidence_basis": "Briefing slides"
+   "evidence_basis": "Briefing slides",
+   "type": "Framework",
+   "type_reason": "PhD project on selection practice; no method published"
   },
   {
    "name": "Maritime defence AM part suitability framework (Austal/Curtin/AMCRC)",
@@ -1818,7 +1869,9 @@
     "label": "Project page (AMCRC)",
     "verified": true
    },
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Framework",
+   "type_reason": "suitability framework in progress; no model described"
   },
   {
    "name": "AM-powered aircraft logistic support business model (Leonardo Aircraft Division)",
@@ -1880,7 +1933,9 @@
     "label": "Thesis PDF (PoliTo)",
     "verified": true
    },
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Tool",
+   "type_reason": "cost and business model for AM logistic support"
   },
   {
    "name": "Deutsche Bahn AM part identification and business-case process (with 3YOURMIND AM Part Identifier)",
@@ -1955,7 +2010,9 @@
    "sector": "Civilian sustainment & aviation",
    "tool_link": null,
    "tool_link_note": "No public link to the tool itself; it is an internal practice or unreleased output. The best public description is in Sources.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "corporate process description; the software is listed separately"
   },
   {
    "name": "SNCF AM part identification for a qualified digital inventory (with 3YOURMIND)",
@@ -2017,7 +2074,9 @@
    "sector": "Civilian sustainment & aviation",
    "tool_link": null,
    "tool_link_note": "No public link to the tool itself; it is an internal practice or unreleased output. The best public description is in Sources.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "corporate assessment practice described in a vendor article"
   },
   {
    "name": "AM4Rail AM potential assessment pipeline, knowledge graph and dashboard",
@@ -2088,7 +2147,9 @@
     "label": "Project record (FFG)",
     "verified": true
    },
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Tool",
+   "type_reason": "data pipeline, knowledge graph and AM potential dashboard"
   },
   {
    "name": "Life-cycle and evaluation model for AM spare parts in the Austrian rail vehicle sector",
@@ -2149,7 +2210,9 @@
     "label": "Thesis record (TU Wien)",
     "verified": true
    },
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Tool",
+   "type_reason": "semi-automated R evaluation model rating parts"
   },
   {
    "name": "AM2Scale data-driven ecological and economic decision support for decentralised AM spares",
@@ -2211,7 +2274,9 @@
     "label": "Project record (FFG)",
     "verified": true
    },
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Tool",
+   "type_reason": "data-driven decision support software under development"
   },
   {
    "name": "MPA/NAMIC/SSA maritime AM Joint Industry Programme part screening (Phase 1)",
@@ -2281,7 +2346,9 @@
     "label": "Study report PDF, public version (MPA)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "scoring matrix and cost estimate screen parts"
   },
   {
    "name": "Wilhelmsen DAVAMS on-demand spare part service model and Digital Asset Review Tool (DART)",
@@ -2355,7 +2422,9 @@
    "earlier_versions": [
     "Wilhelmsen Early Adopter Program (2019): first on-demand 3D-printed spare parts service for ship operators, with parts passing a digitisation and certification process and starting with parts not needing class approval; DART was added later under DAVAMS (2022-2026)."
    ],
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Tool",
+   "type_reason": "DART computes cost, lead time and GHG estimates"
   },
   {
    "name": "DNV Digital Warehouse JIP quality-assurance framework for distributed on-demand spare parts",
@@ -2424,7 +2493,9 @@
     "label": "JIP page (DNV)",
     "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "JIP quality-assurance framework"
   },
   {
    "name": "IOGP JIS02 digital inventory framework for AM spare parts",
@@ -2482,7 +2553,9 @@
    "sector": "Civilian sustainment & aviation",
    "tool_link": null,
    "tool_link_note": "No public deliverable: the JIS02 specification was still in development; only an IOGP workshop blog post (Aug 2024) describes it.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "specification and digital inventory framework"
   },
   {
    "name": "Equinor digital inventory / Digital Supply Network programme",
@@ -2549,7 +2622,9 @@
    "sector": "Civilian sustainment & aviation",
    "tool_link": null,
    "tool_link_note": "No public link to the tool itself; it is an internal practice or unreleased output. The best public description is in Sources.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "corporate programme with no published decision method"
   },
   {
    "name": "Shell digital inventory and AM supplier qualification approach",
@@ -2611,7 +2686,9 @@
    "sector": "Civilian sustainment & aviation",
    "tool_link": null,
    "tool_link_note": "No public link to the tool itself; it is an internal practice or unreleased output. The best public description is in Sources.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "supplier qualification approach described in trade press"
   },
   {
    "name": "Onboard metal AM implementation roadmap and part filter (Heerema Marine Contractors)",
@@ -2678,7 +2755,9 @@
     "label": "Thesis record (TU Delft)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "roadmap with qualitative part filters"
   },
   {
    "name": "AMDSP 2.0 AM cost and lead-time calculator",
@@ -2743,7 +2822,9 @@
    "earlier_versions": [
     "AMDSP first version (DIVA project, c. 2018): MATLAB-based metal powder bed fusion cost and time estimator at amdsp.org.aalto.fi, splitting cost into machine amortisation, work and material; the 2020 report calls 2.0 'revised and expanded', adding polymer systems and cost and lead time over production volume."
    ],
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Tool",
+   "type_reason": "online cost and lead-time calculator"
   },
   {
    "name": "DirectSpare spare part AM feasibility and cost decision support",
@@ -2806,7 +2887,9 @@
     "label": "Final report (CORDIS)",
     "verified": true
    },
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Tool",
+   "type_reason": "constraint model plus cost analysis tool"
   },
   {
    "name": "CASTOR (CASTOR Enterprise / automatic part identification)",
@@ -2926,10 +3009,12 @@
    "sector": "Defense",
    "tool_link": {
     "url": "https://www.siemens.com/en-us/products/castor-enterprise/",
-    "label": "Product page (CASTOR Enterprise, Siemens Xcelerator listing); castor.tech could not be fetched",
+    "label": "Product page (CASTOR Enterprise, Siemens)",
     "verified": true
    },
-   "evidence_basis": "Briefing slides"
+   "evidence_basis": "Briefing slides",
+   "type": "Tool",
+   "type_reason": "commercial part-screening and cost software"
   },
   {
    "name": "3YOURMIND Part Identification",
@@ -3061,7 +3146,9 @@
     "Part Screening & Business Case (Jan 2023): name used for the screening and business-case solution in 3YOURMIND's Jan 2023 FAQ, whose images are still labeled AMPI.",
     "Agile PLM (date not found): given as an earlier name in the survey but not confirmed; the old 'Agile PLM FAQ' URL now serves Part Screening & Business Case content without mentioning Agile PLM."
    ],
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial part-screening software with cost comparison"
   },
   {
    "name": "3YOURMIND Distributed Manufacturing",
@@ -3133,7 +3220,9 @@
    "earlier_versions": [
     "3YOURMIND ERP + MES (Order Management) (before 2024): earlier name of the order and production management software; 3YOURMIND's Jan 2025 FAQ says Distributed Manufacturing was 'formerly known as ERP + MES', and the 2025 review dates the renaming to 2024."
    ],
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial quoting and order-routing software"
   },
   {
    "name": "Senvol ML",
@@ -3215,10 +3304,12 @@
    "sector": "Defense",
    "tool_link": {
     "url": "http://senvol.com/ml/",
-    "label": "Product page (URL from 2021 coverage; senvol.com blocked)",
-    "verified": false
+    "label": "Product page",
+    "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial ML software for parameters and allowables"
   },
   {
    "name": "Senvol Database",
@@ -3280,10 +3371,12 @@
    "sector": "General manufacturing",
    "tool_link": {
     "url": "http://senvol.com/database/",
-    "label": "Database page (URL from 2015 coverage; senvol.com blocked)",
-    "verified": false
+    "label": "Database page",
+    "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "searchable machine and material database"
   },
   {
    "name": "DigiPart (IDENTIFY / CATALOG / PRINT) with Theia 2D-to-3D",
@@ -3359,11 +3452,13 @@
    "confidence": "Medium",
    "sector": "Defense",
    "tool_link": {
-    "url": "https://spare-parts-3d.com/digipart-as-a-platform-2/",
-    "label": "Product page (URL from 2024 coverage; site not reachable)",
-    "verified": false
+    "url": "https://spare-parts-3d.com/digital-inventory/",
+    "label": "Product page (Digital Inventory, powered by DigiPART)",
+    "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial ML part-screening software"
   },
   {
    "name": "3D Spark (Part Screening, Make-or-Buy Support, quoting)",
@@ -3446,7 +3541,9 @@
     "label": "Product page",
     "verified": true
    },
-   "evidence_basis": "Documentation"
+   "evidence_basis": "Documentation",
+   "type": "Tool",
+   "type_reason": "commercial part-screening and costing software"
   },
   {
    "name": "PrintSyst.ai 3DP AI-Perfecter",
@@ -3508,10 +3605,12 @@
    "sector": "Defense",
    "tool_link": {
     "url": "https://printsyst.com/",
-    "label": "Company site (linked as PrintSyst.ai in 2020 coverage; not reachable)",
-    "verified": false
+    "label": "Company site",
+    "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial AI pre-print analysis software"
   },
   {
    "name": "Ivaldi Group digital parts platform",
@@ -3587,10 +3686,12 @@
    "sector": "Defense",
    "tool_link": {
     "url": "https://www.ivaldi.com/",
-    "label": "Company platform site (URL from 2026 coverage; not reachable)",
-    "verified": false
+    "label": "Company platform site",
+    "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial digital parts platform"
   },
   {
    "name": "Replique digital inventory and on-demand manufacturing platform",
@@ -3661,10 +3762,12 @@
    "sector": "Defense",
    "tool_link": {
     "url": "https://www.replique.io/",
-    "label": "Company platform site (URL from 2021 launch coverage; not reachable)",
-    "verified": false
+    "label": "Company platform site",
+    "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial digital inventory platform"
   },
   {
    "name": "SelectAM",
@@ -3724,10 +3827,12 @@
    "sector": "General manufacturing",
    "tool_link": {
     "url": "https://selectam.io/",
-    "label": "Product site (URL from 2022 coverage; not reachable)",
-    "verified": false
+    "label": "Product site",
+    "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial pricing and TCO software"
   },
   {
    "name": "aPriori (Additive Manufacturing process group)",
@@ -3797,7 +3902,9 @@
     "label": "Documentation (Cost Model Guide 2019 R2, AM process group)",
     "verified": true
    },
-   "evidence_basis": "Documentation"
+   "evidence_basis": "Documentation",
+   "type": "Tool",
+   "type_reason": "commercial should-cost software"
   },
   {
    "name": "AMFG (Auto-Quoting, Geometric Estimating Engine, Planning & Scheduling, Quality Tracking)",
@@ -3866,7 +3973,9 @@
     "label": "Product page (AM quoting and production software)",
     "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial quoting and workflow software"
   },
   {
    "name": "Authentise Flows (FlowsAM, RFQ Responder, Design Warehouse)",
@@ -3935,7 +4044,9 @@
     "label": "Product page (FlowsAM)",
     "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial MES and quoting software"
   },
   {
    "name": "Materialise CO-AM software platform",
@@ -4001,13 +4112,15 @@
    "sector": "Defense",
    "tool_link": {
     "url": "https://www.materialise.com/zh/industrial/software/co-am-software-platform",
-    "label": "Product page (Chinese-locale URL, English text; English URL not reachable)",
+    "label": "Product page (Chinese-locale URL, mostly English text)",
     "verified": true
    },
    "earlier_versions": [
     "Materialise Streamics (date not found): Materialise AM production-management system used at Avio Aero; the entry treats it as the predecessor of CO-AM's AM MES, which the sources read do not confirm."
    ],
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial build-prep and MES software"
   },
   {
    "name": "Materialise OnSite (instant quote portal)",
@@ -4071,7 +4184,9 @@
     "label": "Product page (Materialise OnSite)",
     "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "online instant-quote portal"
   },
   {
    "name": "Oqton MOS (Manufacturing OS) with 3DXpert add-on",
@@ -4140,7 +4255,9 @@
     "label": "Product page (MOS MES)",
     "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial manufacturing OS software"
   },
   {
    "name": "Autodesk Fusion with Netfabb",
@@ -4208,7 +4325,9 @@
    "earlier_versions": [
     "Autodesk Netfabb 2019 (Nov 2018): standalone Netfabb release whose simulation supported parameter (PRM) file development; the product is now sold as Fusion with Netfabb."
    ],
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial build-prep and simulation software"
   },
   {
    "name": "Etteplan AMOTool",
@@ -4221,7 +4340,7 @@
    ],
    "context": "General industry (engineering services firm)",
    "processes": "Metal AM (specific processes not named)",
-   "availability": "Free cloud tool (no model upload)",
+   "availability": "Was a free cloud tool (no model upload); the tool page now redirects to Etteplan's general services page, so it appears to have been withdrawn",
    "description": "Quick metal AM cost estimator from part height and volume covering material, printing and post-processing; compares with conventional manufacturing, gives ROI, recommends orientation to maximize parts per plate and indicates if redesign would pay off.",
    "scores": {
     "NRE": {
@@ -4259,6 +4378,10 @@
    },
    "sources": [
     {
+     "title": "Etteplan news release: Groundbreaking tool for estimating 3D printing costs developed by Etteplan (Sep 2020)",
+     "url": "https://etteplan.com/about-us/news/2020/09/21/groundbreaking-tool-for-estimating-3d-printing-costs-developed-by-etteplan"
+    },
+    {
      "title": "3Dnatives: AMOTool free solution to estimate metal AM cost (Sep 2020)",
      "url": "https://www.3dnatives.com/en/amotool-free-solution-estimating-the-cost-metal-additive-manufacturing-250920204/"
     },
@@ -4269,12 +4392,11 @@
    ],
    "confidence": "Medium",
    "sector": "General manufacturing",
-   "tool_link": {
-    "url": "https://www.etteplan.com/services/engineering/additive-manufacturing/etteplan-amotool-calculate-your-production-costs-3d-printing",
-    "label": "Tool page (URL from Etteplan's 2020 release; not reachable)",
-    "verified": false
-   },
-   "evidence_basis": "Press or marketing"
+   "tool_link": null,
+   "tool_link_note": "No public link: Etteplan's AMOTool page now redirects to its general services page, so the free calculator appears to have been withdrawn. Its 2020 launch announcement is listed in Sources.",
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "online cost estimator"
   },
   {
    "name": "ExOne Production Metal Cost Calculator",
@@ -4336,7 +4458,9 @@
     "label": "Calculator (form-gated access page)",
     "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "online cost calculator"
   },
   {
    "name": "Galorath SEER-MFG / SEER 3D",
@@ -4407,7 +4531,9 @@
     "label": "Product page (SEER-MFG)",
     "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial cost-estimating software"
   },
   {
    "name": "Paperless Parts (additive manufacturing estimating)",
@@ -4468,7 +4594,9 @@
     "label": "Product page (AM cost estimation)",
     "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial quoting software with AM module"
   },
   {
    "name": "DigiFabster (AM quoting and e-commerce)",
@@ -4533,7 +4661,9 @@
     "label": "Product page (Instant Quoting)",
     "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial quoting software"
   },
   {
    "name": "Rickenbacher integrated SLM cost model",
@@ -4602,7 +4732,9 @@
     "label": "Paper (DOI)",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "published SLM cost model"
   },
   {
    "name": "Lindemann et al. (2013) DMRC lifecycle-cost model with TD-ABC",
@@ -4670,7 +4802,9 @@
    "earlier_versions": [
     "Lindemann, Jahnke, Moi, Koch (2012), 'Analyzing Product Lifecycle Costs for a Better Understanding of Cost Drivers in Additive Manufacturing', SFF Symposium 2012: earlier DMRC cost-driver analysis whose results the 2013 lifecycle-cost paper builds on."
    ],
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "published lifecycle-cost model"
   },
   {
    "name": "Atzeni & Salmi DMLS vs. die-casting break-even model",
@@ -4735,7 +4869,9 @@
     "label": "Paper (DOI)",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "published break-even cost model"
   },
   {
    "name": "Baumers et al. (2017) total-cost and capacity-utilisation model (IJPR)",
@@ -4803,7 +4939,9 @@
    "earlier_versions": [
     "Baumers, Dickens, Tuck, Hague (2016), Technol. Forecast. Soc. Change 102:193-201: production-cost model for EBM and DMLS (about GBP 2.39 vs. 6.18 per cm3 deposited) showing machine productivity drives cost; the 2017 model adds total cost with build-failure risk, filling build volume with other geometries, and the value of design adaptation."
    ],
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "published activity-based cost model"
   },
   {
    "name": "Schröder et al. AM cost-structure / PSS cost-calculation model",
@@ -4866,9 +5004,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1016/j.procir.2015.02.144",
     "label": "Paper (DOI), Procedia CIRP 30 (2015)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Briefing slides"
+   "evidence_basis": "Briefing slides",
+   "type": "Tool",
+   "type_reason": "published activity-based cost model"
   },
   {
    "name": "Laureijs/Fuchs (CMU) process-based cost model: metal AM vs. forging",
@@ -4938,7 +5078,9 @@
     "label": "Paper (DOI)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "published process-based cost model"
   },
   {
    "name": "Bonnín Roca (CMU) process-based cost model + facility-location model for decentralized metal AM",
@@ -5020,7 +5162,9 @@
     "label": "Paper (DOI)",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "cost model plus facility-location MILP"
   },
   {
    "name": "Knofius-van der Heijden-Zijm AHP spare-part screening (SINTAS; Fokker, Royal Netherlands forces)",
@@ -5093,7 +5237,9 @@
     "label": "Paper (DOI)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "AHP scoring model that ranks parts"
   },
   {
    "name": "Paderborn DMRC Trade-off Methodology (TOM), 2017 version (Kruse, Reiher & Koch)",
@@ -5166,7 +5312,9 @@
     "Lindemann, Jahnke, Reiher & Koch (2014), SFF Symposium paper 'Towards a sustainable and economic selection of part candidates for AM': original workshop-based part-selection matrix with an early cost-estimation module.",
     "Lindemann, Reiher, Jahnke & Koch (2015), Rapid Prototyping Journal 21(2):216-227 (doi:10.1108/RPJ-12-2014-0179): journal version reporting 90% overlap with independent expert selections in an ESA project; the 2017 version adds knock-out gates, four value categories, company and product questionnaires, and an Excel implementation."
    ],
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "scored trade-off matrix (Excel) ranking parts"
   },
   {
    "name": "VTT/Aalto digital spare parts program (DIVA / DIVALIITO): screening, metal PBF cost tool, qualification workflow",
@@ -5240,7 +5388,9 @@
     "label": "Project report PDF (Digital spare parts, Aalto/VTT 2018); MATLAB cost tool not stated to be public",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "screening plus STL-based PBF cost tool"
   },
   {
    "name": "Chaudhuri et al. design-science spare-part selection (TOPSIS + clustering + AHP)",
@@ -5305,7 +5455,9 @@
     "label": "Paper (DOI)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "TOPSIS/AHP ranking model"
   },
   {
    "name": "McGill automated AM part-candidate decision support (Yang, Page, Zhang & Zhao 2020)",
@@ -5372,12 +5524,14 @@
    "tool_link": {
     "url": "https://doi.org/10.1007/s10845-020-01545-6",
     "label": "Paper (DOI), J. Intelligent Manufacturing 31(8):1917-1933",
-    "verified": false
+    "verified": true
    },
    "earlier_versions": [
     "Page, Yang & Zhao, 'Automated Candidate Detection for Additive Manufacturing: A Framework Proposal', ICED 2019 (doi:10.1017/dsi.2019.72): framework proposal comparing six classifiers on ~120 expert-labelled parts; all ratings in this entry rest on this paper's full text, as the 2020 JIM article (which extends it toward a decision-support system) was not readable."
    ],
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "ML classifier flags candidate parts"
   },
   {
    "name": "Yang & Zhao lifecycle part-count-reduction (consolidation) method",
@@ -5438,7 +5592,9 @@
     "label": "Paper (DOI)",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "combinatorial optimization model"
   },
   {
    "name": "Ghiasian et al. (2020) preference-based AM design-readiness assessment",
@@ -5507,7 +5663,9 @@
    "earlier_versions": [
     "Ghiasian, Jaiswal, Rai, Lewis (2018), ASME IDETC DETC2018-86238 (doi:10.1115/DETC2018-86238): voxel-based fabrication-feasibility framework (geometry, build orientation and supports, resource cost and time) tested on 34 parts; the 2020 version adds multi-criteria readiness scoring with physical-programming preference functions."
    ],
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "voxel-based multi-criteria readiness scoring model"
   },
   {
    "name": "Purdue Design for AM (DfAM) Worksheet",
@@ -5570,7 +5728,9 @@
     "label": "Paper (DOI); worksheet is Fig. 1",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "fill-in worksheet scoring parts"
   },
   {
    "name": "Klahn-Leutenecker-Meboldt (ETH Zurich) design-strategy and indicator method",
@@ -5635,7 +5795,9 @@
     "label": "Paper (DOI), Procedia CIRP 36",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "qualitative design strategies and indicators"
   },
   {
    "name": "Purdue/Virginia Tech Decision Engine for AM in defense acquisition",
@@ -5709,7 +5871,9 @@
     "label": "Paper PDF (NPS Acquisition Research Program); decision-engine software not publicly released",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "expected-utility decision engine with cost model"
   },
   {
    "name": "Zaman et al. integrated material & AM process selection (Ashby + AHP)",
@@ -5772,7 +5936,9 @@
     "label": "Paper (DOI)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "Ashby screening plus AHP ranking"
   },
   {
    "name": "Liu-Zhu-Ye design-integrated AM process & machine selection",
@@ -5833,7 +5999,9 @@
     "label": "Paper (DOI)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "AHP ranking plus per-machine cost estimate"
   },
   {
    "name": "Mançanares et al. AHP AM process selection",
@@ -5894,7 +6062,9 @@
     "label": "Paper (DOI)",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "AHP ranking of AM processes"
   },
   {
    "name": "Fera/Costabile/Lambiase (Salerno) MiProCAMAM mixed-build cost-allocation model",
@@ -5955,7 +6125,9 @@
     "label": "Paper (DOI)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "published mixed-build cost model"
   },
   {
    "name": "Di & Yang DMLS cost model with dynamic process planning",
@@ -6016,7 +6188,9 @@
     "label": "Paper (DOI)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "published cost model with process optimization"
   },
   {
    "name": "Barclift et al. powder-reuse depreciation extension to PBF cost model",
@@ -6077,7 +6251,9 @@
     "label": "Paper PDF (SFF 2016 proceedings)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "published cost-model extension"
   },
   {
    "name": "Kamps et al. integrated cost + LCA model for LBM gears",
@@ -6139,7 +6315,9 @@
     "label": "Paper (DOI)",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "integrated cost and LCA model"
   },
   {
    "name": "Dias et al. (2022) WAAM process-based cost model (Sustainability)",
@@ -6208,7 +6386,9 @@
    "earlier_versions": [
     "Dias (2021) IST MSc thesis 'Economic and Environmental Potential of Wire Arc Additive Manufacturing' (July 2021): original Excel process-based cost model and cradle-to-gate LCA of a 316L part; the 2022 Sustainability paper publishes this work with co-authors."
    ],
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "Excel process-based cost model"
   },
   {
    "name": "Cranfield WAAM early-stage cost estimation models (vs. CNC machining)",
@@ -6282,7 +6462,9 @@
     "label": "Thesis record (Zhai 2012; Guo 2012 is handle 1826/7923)",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "feature-based cost models with spreadsheet/VB tools"
   },
   {
    "name": "Wilson et al. DED turbine-blade remanufacturing (repair vs. replace) assessment",
@@ -6343,7 +6525,9 @@
     "label": "Paper (DOI)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "algorithm and LCA compute a repair-vs-replace threshold"
   },
   {
    "name": "Wilson-Schmitz hybrid AFSD + scanning + CNC activity-based cost model",
@@ -6403,9 +6587,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1016/j.mfglet.2024.09.038",
     "label": "Paper (DOI), Manufacturing Letters 41(S):320-331",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "activity-based cost model"
   },
   {
    "name": "NIST SP 1176 / Thomas & Gilbert AM cost review and taxonomy",
@@ -6472,7 +6658,9 @@
     "label": "Report (DOI)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "literature review and cost taxonomy; no calibrated model"
   },
   {
    "name": "Khajavi spare parts network model: hub configurations (extends 2014 F/A-18 model)",
@@ -6539,12 +6727,14 @@
    "tool_link": {
     "url": "https://doi.org/10.1108/RPJ-03-2017-0052",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
    "earlier_versions": [
     "Khajavi, Partanen & Holmström 2014 (Computers in Industry 65(1):50-63): the original F/A-18E/F environmental-control-system spare-parts cost model (polymer laser sintering, Nylon 11), comparing centralized vs distributed AM with a 2013 machine and a hypothetical future machine (centralized $1.04M vs distributed $1.79M/yr with 2013 machines). The 2018 Rapid Prototyping Journal 24(7) paper reuses that model, adds a four-hub configuration, real single- and multi-part machines and a 400-iteration Monte Carlo for stock-out-based inventory levels."
    ],
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "network cost model with Monte Carlo"
   },
   {
    "name": "Liu et al. SCOR-based aircraft spare parts AM model",
@@ -6612,9 +6802,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1080/09537287.2013.808835",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Tool",
+   "type_reason": "SCOR-based quantitative supply-chain model"
   },
   {
    "name": "Li et al. system-dynamics comparison of conventional, centralized and distributed AM spare parts SCs",
@@ -6678,9 +6870,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1080/00207543.2016.1231433",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "system-dynamics simulation"
   },
   {
    "name": "Ghadge aircraft spare parts AM system dynamics model",
@@ -6744,9 +6938,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1108/JMTM-07-2017-0143",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "system-dynamics simulation"
   },
   {
    "name": "Song-Zhang 'Stock or Print' multi-part printer queue model",
@@ -6815,9 +7011,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1287/mnsc.2019.3409",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "queueing/inventory optimization model"
   },
   {
    "name": "Westerweel remote-location print/expedite/wait MDP (Royal Netherlands Army, Mali)",
@@ -6889,9 +7087,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1111/poms.13298",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "Markov decision process"
   },
   {
    "name": "Westerweel lifecycle-cost model for AM vs traditional component design",
@@ -6955,9 +7155,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1016/j.ejor.2018.04.015",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "lifecycle-cost model"
   },
   {
    "name": "Zhang-Westerweel-Basten-Song IP licensing / distributed printing model",
@@ -7021,9 +7223,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1287/msom.2022.1117",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "game-theoretic quantitative model"
   },
   {
    "name": "Knofius et al. (2021) AM/CM dual-sourcing spare parts MDP (OR Spectrum)",
@@ -7091,12 +7295,14 @@
    "tool_link": {
     "url": "https://doi.org/10.1007/s00291-020-00608-7",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
    "earlier_versions": [
     "Knofius, van der Heijden, Sleptchenko & Zijm (2017), BETA Working Paper 530 'Improving effectiveness of spare part supply by additive manufacturing as dual sourcing option': pre-publication version of the same model."
    ],
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "Markov decision process solved by LP"
   },
   {
    "name": "Knofius AM part-consolidation METRIC lifecycle model",
@@ -7160,9 +7366,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1016/j.ijpe.2018.11.007",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "METRIC lifecycle-cost model"
   },
   {
    "name": "Sgarbossa conventional vs additive spare parts inventory comparison (Poisson demand)",
@@ -7223,9 +7431,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1016/j.ijpe.2020.107993",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "inventory model"
   },
   {
    "name": "Peron failure-rate-uncertainty AM vs CM spare parts model with inspection tools",
@@ -7285,9 +7495,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1016/j.ijpe.2024.109438",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "inventory model with failure-rate uncertainty"
   },
   {
    "name": "Cantini spare parts supply chain configuration DSS (AM vs CM, degree of centralization)",
@@ -7351,9 +7563,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1080/00207543.2022.2041757",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "cost model distilled into a decision tree"
   },
   {
    "name": "Heinen-Hoberg portfolio-level AM switchover model",
@@ -7413,9 +7627,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1002/joom.1054",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "inventory-based portfolio model"
   },
   {
    "name": "Ahlsell automotive slow-moving spare parts AM supply chain cost model",
@@ -7475,9 +7691,11 @@
    "tool_link": {
     "url": "https://doi.org/10.3390/jmmp7010008",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "total supply-chain cost model"
   },
   {
    "name": "Cokyasar-Jin AM capacity allocation problem (AMCAP) over a network",
@@ -7538,9 +7756,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1080/24725854.2022.2120222",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "mixed-integer nonlinear program"
   },
   {
    "name": "Strong two-stage p-median model for metal AM post-processing hubs",
@@ -7599,9 +7819,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1016/j.addma.2018.11.027",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "facility-location model"
   },
   {
    "name": "Barz two-stage capacitated facility location model with AM buy-to-fly ratio",
@@ -7660,9 +7882,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1007/s12159-016-0140-0",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "facility-location model"
   },
   {
    "name": "Doudnikoff NCSU/USMA military spare parts network model (extends McDermott et al.)",
@@ -7731,7 +7955,9 @@
    "earlier_versions": [
     "McDermott, Winz, Hodgson, Kay, King & McConnell 2021 (Journal of Defense Analytics and Logistics 5(2):179; from McDermott's 2020 NCSU MS thesis, with the Winz et al. 2020 readiness-vs-cost working paper): the original Monte Carlo + Croston/SBA intermittent-demand + MILP (s,S) model comparing no-AM, centralized and distributed AM. It found centralized AM wins for lumpy demand and distributed for stable demand. Doudnikoff 2021 reuses this model and its 1-1-4 network and modifies it for isolated military sustainment networks, first-machine placement and AM fixed-cost/capacity trade-offs."
    ],
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "MILP plus Monte Carlo simulation"
   },
   {
    "name": "Einhorn distributed AM operational-readiness model (NPS, Army)",
@@ -7792,7 +8018,9 @@
     "label": "Thesis PDF (DTIC)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "operational-availability model"
   },
   {
    "name": "Coyle naval aviation AM sustainment screening + DES (NPS)",
@@ -7854,7 +8082,9 @@
     "label": "Thesis PDF (DTIC)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "discrete-event simulation"
   },
   {
    "name": "Veitenheimer AFIT centralized vs distributed AM Monte Carlo (EOD robots)",
@@ -7916,7 +8146,9 @@
     "label": "Thesis record (AFIT Scholar)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "Excel/VBA Monte Carlo model"
   },
   {
    "name": "NPS data-farming simulations of expeditionary AM logistics and Ao (NPS-LM-22-006, 2022)",
@@ -7985,7 +8217,9 @@
    "earlier_versions": [
     "Sanchez, Lynch, Luhrs & McDonald (2019) 'Networked Logistics and Additive Manufacturing', Acquisition Research Symposium slides SYM-AM-19-156: earlier presentation of the data-farmed 'Iron Network' AM simulation; the 2022 report is the full write-up and includes the operational availability model."
    ],
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "discrete-event simulations"
   },
   {
    "name": "NPS KVA / real-options make-or-buy model for Navy ship parts (3DP + 3D scanning + CPLM)",
@@ -8046,7 +8280,9 @@
     "label": "Paper PDF (NPS ARP)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "KVA and real-options model"
   },
   {
    "name": "Jedeck spare-parts-on-demand AM vs warehousing simulation (Arena)",
@@ -8109,7 +8345,9 @@
     "label": "Dissertation record (ThinkIR)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "Arena discrete-event simulation"
   },
   {
    "name": "O'Brien aerospace spare parts AM shop DES vs warehouse model",
@@ -8171,7 +8409,9 @@
     "label": "Thesis record (ThinkIR)",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "discrete-event simulation"
   },
   {
    "name": "Abidar-Chaabane METRIC model with centralized/decentralized AM repair",
@@ -8231,9 +8471,11 @@
    "tool_link": {
     "url": "https://doi.org/10.21203/rs.3.rs-2113133/v1",
     "label": "Preprint (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "METRIC model"
   },
   {
    "name": "Busachi/Erkoyuncu (Cranfield, Babcock) AM framework and decision support for Royal Navy support services",
@@ -8319,9 +8561,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1007/s13198-017-0585-9",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "framework comes with cost models and a calculating DSS"
   },
   {
    "name": "Strieby USMC expeditionary metal AM cost-effectiveness analysis",
@@ -8383,7 +8627,9 @@
     "label": "Report PDF (NPS ARP)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "cost-effectiveness model"
   },
   {
    "name": "NASA-STD-6030 Additive Manufacturing Requirements for Spaceflight Systems (2021)",
@@ -8461,7 +8707,9 @@
     "MSFC-STD-3716 (2017): Marshall standard for L-PBF spaceflight hardware; superseded by NASA-STD-6030 in 2021, which extended it to other AM processes.",
     "MSFC-SPEC-3717 (2017): Marshall specification for control and qualification of L-PBF metallurgical processes; superseded in 2021 by NASA-STD-6030 and companion NASA-SPEC-6033."
    ],
-   "evidence_basis": "Standard text"
+   "evidence_basis": "Standard text",
+   "type": "Tool",
+   "type_reason": "includes a points-based AM risk checklist for scoring parts"
   },
   {
    "name": "ISO/ASTM 52967:2024 part classifications for AM parts used in aviation",
@@ -8532,12 +8780,14 @@
    "tool_link": {
     "url": "https://www.iso.org/standard/89299.html",
     "label": "Standard page (ISO)",
-    "verified": false
+    "verified": true
    },
    "earlier_versions": [
     "ASTM F3572-22 (2022): original ASTM practice with the same four consequence-of-failure classes (A-D); still listed as active by ASTM; published as joint ISO/ASTM 52967 in 2024 (valid from Oct 2024)."
    ],
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Framework",
+   "type_reason": "standard part-classification scheme"
   },
   {
    "name": "USAF Structures Bulletin EZ-SB-19-01: Durability and Damage Tolerance Certification for AM Aircraft Structural Metallic Parts",
@@ -8606,7 +8856,9 @@
     "label": "Bulletin PDF (Distribution A; Dayton Aerospace mirror)",
     "verified": true
    },
-   "evidence_basis": "Standard text"
+   "evidence_basis": "Standard text",
+   "type": "Framework",
+   "type_reason": "certification requirements bulletin"
   },
   {
    "name": "USAF Flight Systems Bulletin EN-FSB-25-01 (Preliminary Qualification Data Requirements for Metallic AM) and Part Family Qualification approach",
@@ -8665,7 +8917,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No public link: the bulletin is not publicly posted; only a TMS 2026 conference abstract describes it.",
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Framework",
+   "type_reason": "qualification data requirements bulletin"
   },
   {
    "name": "NAVSEA AM qualification framework: Guidance letter Ser 05T/2018-024 severity levels, T9074-AX-GIB-010/100 material selection requirements, and PBF/DED Technical Publications",
@@ -8739,7 +8993,9 @@
     "label": "Guidance letter PDF (copy hosted by NCMS AMMO; Tech Pubs not public)",
     "verified": true
    },
-   "evidence_basis": "Standard text"
+   "evidence_basis": "Standard text",
+   "type": "Framework",
+   "type_reason": "qualification guidance and technical publications"
   },
   {
    "name": "DNV-ST-B203 Additive manufacturing (Edition 2025-11)",
@@ -8814,7 +9070,9 @@
     "DNVGL-ST-B203 Additive manufacturing of metallic parts, first edition (year Unknown): covered two metal AM technologies.",
     "DNV-ST-B203 edition of Dec 2022: added DED-arc, PBF-EB and binder jetting, combined manufacturing, NDT acceptance criteria, and guidance on part families and AMC selection; the 2025-11 edition adds polymers, a CO2 footprint method and grouped part approvals."
    ],
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Framework",
+   "type_reason": "qualification standard"
   },
   {
    "name": "API Standard 20S Additively Manufactured Metallic Components (AM Specification Levels AMSL 1/2/3)",
@@ -8880,7 +9138,9 @@
     "label": "Standard page (API)",
     "verified": true
    },
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Framework",
+   "type_reason": "qualification standard"
   },
   {
    "name": "FAA AM Roadmap and risk-based certification framework (Gorelik briefings)",
@@ -8958,7 +9218,9 @@
     "label": "FAA AM Roadmap briefing (PDF, March 2017)",
     "verified": true
    },
-   "evidence_basis": "Briefing slides"
+   "evidence_basis": "Briefing slides",
+   "type": "Framework",
+   "type_reason": "regulatory roadmap and certification framework"
   },
   {
    "name": "CMU adaptive regulatory framework for metal AM in aviation (Bonnín Roca et al. 2017)",
@@ -9025,12 +9287,14 @@
    "tool_link": {
     "url": "https://doi.org/10.1016/j.respol.2017.05.010",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
    "earlier_versions": [
     "Bonnín Roca, Fuchs, Morgan & Vaishnav 2016, 'Policy needed for additive manufacturing' (Nature Materials commentary): earlier call for process science, standards and adaptive regulation that the 2017 paper develops into a framework."
    ],
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Framework",
+   "type_reason": "conceptual regulatory framework"
   },
   {
    "name": "Rapid qualification framework for powder-bed laser AM parts (Honeywell-led DARPA Open Manufacturing work; Peralta et al.)",
@@ -9097,9 +9361,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1186/s40192-016-0052-5",
     "label": "Paper (DOI, open access)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "ICME simulations and Bayesian risk calculation"
   },
   {
    "name": "NIST qualification pathways for AM materials, processes and parts (statistical, equivalence-based, model-based, 'qualify-as-you-go')",
@@ -9164,7 +9430,9 @@
     "label": "Project page (NIST)",
     "verified": true
    },
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Framework",
+   "type_reason": "qualification pathways framing"
   },
   {
    "name": "Seifi et al. qualification and certification pathway review (JOM, 2017)",
@@ -9236,7 +9504,9 @@
    "earlier_versions": [
     "Seifi et al. 2016, Overview of Materials Qualification Needs for Metal Additive Manufacturing (JOM 68, doi:10.1007/s11837-015-1810-0): companion review; source of the AMS4999A test counts and the 'millions of dollars, up to 15 years' figure."
    ],
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "review of qualification pathways"
   },
   {
    "name": "Cost model for the economic evaluation of in-situ monitoring tools in metal AM (Colosimo, Cavalli, Grasso)",
@@ -9296,9 +9566,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1016/j.ijpe.2019.107532",
     "label": "Paper (DOI; author manuscript open on Polimi repository)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "per-part cost model"
   },
   {
    "name": "Process-based cost estimation model for metal AM spare parts with explicit qualification-test line items (Sheikh et al.)",
@@ -9357,9 +9629,11 @@
    "tool_link": {
     "url": "https://doi.org/10.46254/EU08.20250223",
     "label": "Paper (DOI; open PDF in IEOM proceedings)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "process-based cost model"
   },
   {
    "name": "ASTM E3166-20e1 Standard Guide for Nondestructive Examination of Metal Additively Manufactured Aerospace Parts After Build",
@@ -9423,7 +9697,9 @@
    "earlier_versions": [
     "ASTM E3166-20 (2020): original edition, now listed as historical; reissued as E3166-20e1 with an editorial change that the ASTM page does not describe."
    ],
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Framework",
+   "type_reason": "NDT standard guide"
   },
   {
    "name": "In-situ NDE (INDE) with probability-of-detection framework for L-PBF (ORNL; Snow et al.)",
@@ -9482,9 +9758,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1016/j.addma.2023.103817",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "ML detection model generating POD metrics"
   },
   {
    "name": "VEXTEC VPS-MICRO model-assisted AM certification (AFWERX SBIR; AFRL QUASAR)",
@@ -9546,7 +9824,9 @@
     "label": "Product page (VPS-MICRO)",
     "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial probabilistic fatigue software"
   },
   {
    "name": "Joint Additive Manufacturing Acceptability (JAMA) framework, Phase II",
@@ -9604,7 +9884,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No public link: JAMA outputs are not public; only an NCMS project announcement describes the Phase II work.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "acceptance framework; outputs not public"
   },
   {
    "name": "NASA-CMU Additive Manufacturing Ecosystem for qualification of AM processes and materials in aviation",
@@ -9665,7 +9947,9 @@
     "label": "NTRS record (TechPort project data sheet)",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Framework",
+   "type_reason": "research programme description"
   },
   {
    "name": "3DXpert (build preparation with print time and cost estimation)",
@@ -9742,7 +10026,9 @@
     "label": "Product page (Oqton)",
     "verified": true
    },
-   "evidence_basis": "Documentation"
+   "evidence_basis": "Documentation",
+   "type": "Tool",
+   "type_reason": "commercial build-prep software with cost estimation"
   },
   {
    "name": "Ansys Additive Prep (Cost Estimator)",
@@ -9803,7 +10089,9 @@
     "label": "Documentation (Cost Estimator help, 2024 R2)",
     "verified": true
    },
-   "evidence_basis": "Documentation"
+   "evidence_basis": "Documentation",
+   "type": "Tool",
+   "type_reason": "commercial cost estimator software"
   },
   {
    "name": "Ansys Granta Selector (Additive Manufacturing data)",
@@ -9885,7 +10173,9 @@
     "CES Selector with Senvol data (May 2016): Granta Design first integrated Senvol machine and material data (550+ machines, 700+ materials) into CES Selector and GRANTA MI.",
     "CES Selector 2019 Additive Manufacturing Edition (2019): Granta Design release covering >950 AM machines, >1,700 materials and >190 conventional equivalents from the updated Senvol Database; now sold as Ansys Granta Selector."
    ],
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial materials selection software"
   },
   {
    "name": "Ansys Granta MI:Additive Manufacturing",
@@ -9947,10 +10237,12 @@
    "sector": "Defense",
    "tool_link": {
     "url": "https://www.ansys.com/products/materials/granta-mi",
-    "label": "Product page (Granta MI; AM capability has no separate page found); redirects to ansys.synopsys.com",
-    "verified": false
+    "label": "Product page (Granta MI; the AM capability has no separate page)",
+    "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial AM data management software"
   },
   {
    "name": "Altair Inspire Print3D",
@@ -10023,7 +10315,9 @@
     "label": "Documentation (Inspire 2022.2 help, Print Part SLM); altair.com/inspire-print3D now redirects to a Siemens Simcenter Inspire page",
     "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial process-simulation software"
   },
   {
    "name": "Hexagon Simufact Additive (print cost estimation; part of HxGN Additive Manufacturing Suite)",
@@ -10092,7 +10386,9 @@
     "label": "Product page (Hexagon Nexus)",
     "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial process-simulation and cost software"
   },
   {
    "name": "Siemens NX Parts Order Management (AM and CNC job costing/quoting)",
@@ -10157,7 +10453,9 @@
     "label": "Product page",
     "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial order-management and quoting software"
   },
   {
    "name": "Fieldmade Digital Inventory software with NOMAD deployable micro-factories",
@@ -10230,11 +10528,13 @@
    "confidence": "Low",
    "sector": "Defense",
    "tool_link": {
-    "url": "https://www.fieldmade.no/",
-    "label": "Company site (product pages not reachable)",
-    "verified": false
+    "url": "https://fieldmade.com/",
+    "label": "Company site",
+    "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial digital inventory software"
   },
   {
    "name": "SPEE3D TwinSPEE3D (cold spray toolpath and printability software)",
@@ -10308,10 +10608,12 @@
    "sector": "Defense",
    "tool_link": {
     "url": "https://directindustry.com/prod/spee3d/product-4602544-2710455.html",
-    "label": "Product listing (DirectIndustry, vendor text; spee3d.com page not reachable)",
+    "label": "Product listing (DirectIndustry, vendor text)",
     "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial toolpath and printability software"
   },
   {
    "name": "Markforged Digital Forge (Eiger / Eiger Fleet with Digital Part Inventory; Digital Source)",
@@ -10392,7 +10694,9 @@
     "label": "Product page (Eiger)",
     "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial fleet and digital inventory platform"
   },
   {
    "name": "AMPOWER Additive Manufacturing Cost Calculator",
@@ -10458,7 +10762,9 @@
     "label": "Product page",
     "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Tool",
+   "type_reason": "commercial cost calculator"
   },
   {
    "name": "Ulu-Huang-Kara-Whitefoot (CMU) concurrent structure + process-parameter optimization for minimum-cost metal AM",
@@ -10517,9 +10823,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1115/1.4042112",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "cost model coupled with topology optimization"
   },
   {
    "name": "Nie-Jung-Kara-Whitefoot (CMU) part-consolidation optimization for minimum production cost/time with metal AM",
@@ -10580,7 +10888,9 @@
     "label": "Author PDF (CMU Whitefoot group)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "consolidation optimization model"
   },
   {
    "name": "Piili et al. (LUT/Aalto) laser PBF stainless-steel cost estimation by build scenario",
@@ -10645,7 +10955,9 @@
     "label": "Paper (DOI), open access",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "cost estimation model"
   },
   {
    "name": "Barclift et al. (Penn State) CAD-integrated cost estimation and build-orientation optimization for metal PBF",
@@ -10710,7 +11022,9 @@
     "label": "Paper (DOI)",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "CAD-integrated cost estimation macro"
   },
   {
    "name": "Budinoff & Shafae geometry-to-cost process-based model for metal L-PBF design alternatives",
@@ -10771,7 +11085,9 @@
     "label": "Paper (DOI)",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "process-based cost model"
   },
   {
    "name": "Sartini et al. (UNIVPM) analytic cost model for bound metal deposition",
@@ -10832,7 +11148,9 @@
     "label": "Paper (DOI), open access",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "analytic cost model"
   },
   {
    "name": "DeBoer-Diba-Hosseini AM cost calculator (FFF and metal bound powder extrusion)",
@@ -10893,7 +11211,9 @@
     "label": "Paper PDF (CSME 2021 proceedings)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "cost calculator"
   },
   {
    "name": "Reiher et al. (Paderborn DMRC) holistic approach: part selection through test and verification",
@@ -10955,7 +11275,9 @@
     "label": "Paper (DOI), open access",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "end-to-end process description; scoring matrix listed separately"
   },
   {
    "name": "Siller et al. (TU Berlin) potential-assessment and adaptation method for AM of conventionally made components",
@@ -11016,7 +11338,9 @@
     "label": "Paper (DOI), open access",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "weighted utility scoring with suitability thresholds"
   },
   {
    "name": "Bracken et al. (Penn State) Geometry for Additive Part Selection (GAPS) worksheet",
@@ -11081,7 +11405,9 @@
     "label": "Paper (DOI); the worksheet is published as a figure in the paper",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "fill-in worksheet scoring geometry"
   },
   {
    "name": "Mitterbaur (TU Wien) data-driven spare-part identification for AM from digitized legacy drawings",
@@ -11142,7 +11468,9 @@
     "label": "Thesis record (reposiTUm, open-access PDF)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "deep-learning software demonstrator"
   },
   {
    "name": "Lawand et al. (McGill/Chalmers/GKN) dynamic lifecycle-cost model for DED remanufacturing (repair/extend vs. replace)",
@@ -11207,7 +11535,9 @@
     "label": "Paper (DOI)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "lifecycle-cost optimization model"
   },
   {
    "name": "Xu & Feng AM-based remanufacturing cost model (remanufacture vs. new manufacture)",
@@ -11272,7 +11602,9 @@
     "label": "Paper (DOI), open access",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "cost-breakdown model"
   },
   {
    "name": "Baffa (Univ. Florence) WAAM repair-vs-replace sustainability and remanufacturing-viability model",
@@ -11333,7 +11665,9 @@
     "label": "Thesis record (full text embargoed to 31 Dec 2026)",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "mathematical viability model"
   },
   {
    "name": "Morgan & Prentiss (NPS) Navy AM item-identification approach and make-vs-buy comparison",
@@ -11399,9 +11733,11 @@
    "tool_link": {
     "url": "https://calhoun.nps.edu/entities/publication/4516939e-9763-441a-8e38-94e3a19f4256",
     "label": "Report record (NPS Calhoun)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "qualitative candidate lenses; cost formula only illustrative"
   },
   {
    "name": "IMPACT 2.0 Techno-Economic Analysis Tool for Selection of Metal Part Manufacturing Processes (Topic 3)",
@@ -11460,7 +11796,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No public link: IMPACT 2.0 project deliverable known only by title from the America Makes/NCDMM award announcement.",
-   "evidence_basis": "Title only"
+   "evidence_basis": "Title only",
+   "type": "Tool",
+   "type_reason": "government techno-economic analysis tool"
   },
   {
    "name": "DoDI 5000.93 Use of Additive Manufacturing in the DoD (Change 1, July 6, 2021)",
@@ -11526,7 +11864,9 @@
     "DTM-19-006 'Interim Policy and Guidance for the Use of Additive Manufacturing (AM) in Support of Materiel Sustainment' (March 21, 2019): interim directive-type memorandum, incorporated and cancelled by DoDI 5000.93.",
     "DoDI 5000.93 original issuance (June 10, 2021): Change 1 (July 6, 2021) only removed a duplicate responsibility entry in paragraph 2.3."
    ],
-   "evidence_basis": "Standard text"
+   "evidence_basis": "Standard text",
+   "type": "Framework",
+   "type_reason": "DoD instruction (policy)"
   },
   {
    "name": "RAND 3D printing supply-chain impact matrix and fab-lab concept (PE-229)",
@@ -11592,7 +11932,9 @@
     "label": "Report page (RAND; DOI 10.7249/PE229)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "conceptual matrix and process flow; no cost model"
   },
   {
    "name": "RAND Europe AM and obsolescence management in defence (PE-171), with Cranfield obsolescence-resolution cost metrics",
@@ -11653,7 +11995,9 @@
     "label": "Report PDF (RAND Europe PE-171-AST)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "expert perspectives, not a model"
   },
   {
    "name": "NASA In-Space Manufacturing spares-logistics case (MSFC briefings citing Owens & de Weck 2016 and Cirillo et al. 2011)",
@@ -11723,7 +12067,9 @@
     "label": "NASA MSFC briefing with the spares-logistics case (NTRS PDF, Clinton 2017)",
     "verified": true
    },
-   "evidence_basis": "Briefing slides"
+   "evidence_basis": "Briefing slides",
+   "type": "Framework",
+   "type_reason": "briefing case citing other analyses"
   },
   {
    "name": "Meisel et al. decision support for AM deployment in remote or austere environments (tiered-funnel machine/material selector)",
@@ -11786,9 +12132,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1108/JMTM-06-2015-0040",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "tiered-funnel tool filters a machine/material database"
   },
   {
    "name": "Braunberger AFIT MODA and metal L-PBF cost model for AM vs DLA procurement (C-130 parts)",
@@ -11850,7 +12198,9 @@
     "label": "Thesis record (AFIT Scholar)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "multi-objective scoring plus cost model"
   },
   {
    "name": "Crean AFIT metal AM per-part cost model and AM capability fielding costs",
@@ -11916,7 +12266,9 @@
     "label": "Thesis record (AFIT Scholar)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "per-part cost model"
   },
   {
    "name": "Draudt AFIT Advanced Intermediate Manufacturing (AIM) facility supply-chain simulation",
@@ -11977,7 +12329,9 @@
     "label": "Thesis record (AFIT Scholar)",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "supply-chain simulation"
   },
   {
    "name": "Daugherty & Heiple NPS USMC AM cost-benefit analysis (extrusion vs CLIP vs OEM supply)",
@@ -12041,7 +12395,9 @@
     "label": "Report PDF (NPS Acquisition Research Program, NPS-LM-18-018)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "NPV cost-benefit model"
   },
   {
    "name": "AMPAT (Additive Manufacturing Process and Analysis Tool), NPS Navy Expeditionary AM capstone",
@@ -12103,7 +12459,9 @@
     "label": "Capstone report PDF (DTIC); the Excel/VBA tool file is not distributed publicly",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "Excel/VBA weighted ranking tool"
   },
   {
    "name": "Holmström et al. rapid-manufacturing capacity-deployment alternatives for spare parts",
@@ -12173,7 +12531,9 @@
     "label": "Paper (publisher page; DOI 10.1108/17410381011063996)",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Framework",
+   "type_reason": "conceptual comparison of deployment options"
   },
   {
    "name": "Sirichakwal & Conner AM spare-parts inventory model",
@@ -12232,9 +12592,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1089/3dp.2015.0035",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Tool",
+   "type_reason": "inventory model"
   },
   {
    "name": "Kunovjanek & Reiner AM diffusion and raw-material inventory model",
@@ -12303,9 +12665,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1080/00207543.2019.1661537",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "diffusion-based inventory model"
   },
   {
    "name": "Chekurov et al. perceived value of AM digital spare parts (focus groups and a conceptual distribution network)",
@@ -12365,9 +12729,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1016/j.ijpe.2018.09.008",
     "label": "Paper (DOI); open post-print at re.public.polimi.it",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "focus groups and conceptual network"
   },
   {
    "name": "Sasson & Johnson 3D printing supercenters concept",
@@ -12431,9 +12797,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1108/IJPDLM-10-2015-0257",
     "label": "Paper (DOI); open author version at biopen.bi.no",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "conceptual paper without a model"
   },
   {
    "name": "Strong et al. hybrid-AM hub facility-location model (uncapacitated and p-median, 2018)",
@@ -12492,9 +12860,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1016/j.addma.2018.03.010",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "facility-location models"
   },
   {
    "name": "Durão et al. distributed AM spare-parts production use cases (Germany–Brazil network)",
@@ -12555,7 +12925,9 @@
     "label": "Paper (publisher page; DOI 10.1007/s00170-017-0555-z)",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Framework",
+   "type_reason": "qualitative use-case study"
   },
   {
    "name": "Muir & Haddud AM impact on spare-parts inventory performance (mechanical engineering and medical industries)",
@@ -12620,7 +12992,9 @@
     "label": "Paper (DOI; resolves to JMTM 29(2):372)",
     "verified": true
    },
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Framework",
+   "type_reason": "impact study; no model described"
   },
   {
    "name": "Zanoni et al. supply chain implications of AM: case-study synthesis",
@@ -12681,7 +13055,9 @@
     "label": "Paper (publisher page; DOI 10.1007/s00170-019-03430-w)",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Framework",
+   "type_reason": "case-study synthesis"
   },
   {
    "name": "Ashour Pour et al. (2019) JELS model of AM in a two-level supply chain",
@@ -12749,12 +13125,14 @@
    "tool_link": {
     "url": "https://doi.org/10.1080/23302674.2017.1340985",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
    "earlier_versions": [
     "'Additive Manufacturing Supply Chain: Modeling and Performance Evaluation' (2016), Nineteenth International Working Seminar on Production Economics, vol. 3, pp. 25-36: conference version of the same JELS model, adding discussion of centralized vs decentralized manufacturing; the journal article was first published online in 2017."
    ],
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "analytic JELS model"
   },
   {
    "name": "GWU spare parts model for AM (hybrid AM/traditional maintenance-spares simulation)",
@@ -12815,7 +13193,9 @@
     "label": "Dissertation record (GWU ScholarSpace, open-access PDF)",
     "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "spare-parts simulation"
   },
   {
    "name": "Farghali et al. optimal AM and external-sourcing mix for spare-parts inventory",
@@ -12874,9 +13254,11 @@
    "tool_link": {
     "url": "https://doi.org/10.1016/j.procs.2025.01.149",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "optimization model"
   },
   {
    "name": "ISO/ASTM 52920:2023 Qualification principles: requirements for industrial AM processes and production sites",
@@ -12946,7 +13328,9 @@
     "label": "Standard page (ISO)",
     "verified": true
    },
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Framework",
+   "type_reason": "qualification standard"
   },
   {
    "name": "ISO/ASTM TS 52930:2021 Qualification principles: installation, operation and performance (IQ/OQ/PQ) of PBF-LB equipment",
@@ -13007,7 +13391,9 @@
     "label": "Standard page (ISO)",
     "verified": true
    },
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Framework",
+   "type_reason": "technical specification of recommended practices"
   },
   {
    "name": "AMSC Standardization Roadmap for AM v3.0 (2023), with gap progress reports to 2026",
@@ -13081,7 +13467,9 @@
     "AMSC Standardization Roadmap v1.0 (2017): first America Makes/ANSI roadmap after the AMSC launched in 2016.",
     "AMSC Standardization Roadmap v2.0 (June 2018): update; replaced by v3.0 in July 2023 (141 gaps, 60 new)."
    ],
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "standardization roadmap"
   },
   {
    "name": "EASA CM-S-008 Additive Manufacturing, Issue 04 (3 Sept 2025)",
@@ -13151,7 +13539,9 @@
     "CM-S-008 Issue 02 (3 Nov 2020): added supporting text for the basic CS materials requirements, guidance on AM in non-critical parts, and emphasis on knowledge transfer and training; issued for public consultation (3-24 Nov 2020).",
     "CM-S-008 Issue 03 (30 Apr 2021): incorporated the comments from the Issue 02 consultation."
    ],
-   "evidence_basis": "Standard text"
+   "evidence_basis": "Standard text",
+   "type": "Framework",
+   "type_reason": "certification memorandum"
   },
   {
    "name": "FAA Advisory Circular AC 33.15-3 Powder Bed Fusion AM Process for Aircraft Engine Parts (with FAA 2020 AM Report to Congress)",
@@ -13216,7 +13606,9 @@
     "label": "Advisory Circular PDF (FAA)",
     "verified": true
    },
-   "evidence_basis": "Standard text"
+   "evidence_basis": "Standard text",
+   "type": "Framework",
+   "type_reason": "advisory circular (regulatory guidance)"
   },
   {
    "name": "MMPDS Volume II guidelines for AM allowables (2026 handbook edition)",
@@ -13294,7 +13686,9 @@
     "MMPDS-2024 Volume II (released 1 July 2024): first edition; data-generation and analysis framework only, no material allowables yet (Battelle press release, Aug 2024).",
     "MMPDS 2025 Volume II: annual edition listed on SAE Mobilus; changes not checked."
    ],
-   "evidence_basis": "Briefing slides"
+   "evidence_basis": "Briefing slides",
+   "type": "Framework",
+   "type_reason": "allowables guidelines in a handbook"
   },
   {
    "name": "JMADD: Joint Metal Additive Database Definition (America Makes project 5511.001), public B/A-basis allowables framework for L-PBF Ti-6Al-4V",
@@ -13356,7 +13750,9 @@
    "sector": "General manufacturing",
    "tool_link": null,
    "tool_link_note": "No public link to the tool itself; it is an internal practice or unreleased output. The best public description is in Sources.",
-   "evidence_basis": "Briefing slides"
+   "evidence_basis": "Briefing slides",
+   "type": "Tool",
+   "type_reason": "shared allowables database"
   },
   {
    "name": "US Army AMCOM Command Policy Memorandum 070-062 on advanced/additively manufactured aviation parts (six-category scheme)",
@@ -13422,7 +13818,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No public link: AMCOM Command Policy Memorandum 070-062 is not publicly posted; only Army news articles describe it.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "policy memorandum"
   },
   {
    "name": "MASAAG Paper 124 Issue 2 (2022): qualification and certification of AM parts for military aviation",
@@ -13487,7 +13885,9 @@
    "earlier_versions": [
     "MASAAG Paper 124 Issue 1 (17 Oct 2018): first issue covering structures, propulsion and metals; Issue 2 added Systems and Polymers chapters, a graphical abstract and updated recommendations."
    ],
-   "evidence_basis": "Standard text"
+   "evidence_basis": "Standard text",
+   "type": "Framework",
+   "type_reason": "certification guidance"
   },
   {
    "name": "ASTM AM CoE Strategic Guide to Certification of Additively Manufactured Parts in Defence Applications (UK MOD Project TAMPA)",
@@ -13555,9 +13955,11 @@
    "tool_link": {
     "url": "https://amcoe.org/research-development/publications/",
     "label": "Guide download page (AM CoE publications, linked by VoxelMatters)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "certification guide"
   },
   {
    "name": "Lloyd's Register LR-GN-046 guidance notes for AM metallic parts (June 2024)",
@@ -13630,7 +14032,9 @@
    "earlier_versions": [
     "LR/TWI Guidance Notes for Additive Manufacturing (March 2017 edition, read in full; an earlier 2016 edition is reported but not confirmed): joint LR-TWI goal-based guidance for LMD, L-PBF and WAAM parts; LR-GN-046 (2024) refocused it on marine and offshore use."
    ],
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Framework",
+   "type_reason": "class-society guidance notes"
   },
   {
    "name": "ABS Requirements for Additive Manufacturing",
@@ -13708,7 +14112,9 @@
     "ABS Guidance Notes on Additive Manufacturing (Sept 2018): four-stage maturity approval (feasibility, verification, pre-production validation, production); specimen counts agreed case by case; read in full.",
     "ABS Guide for Additive Manufacturing (April 2021): first ABS Guide, covering facility and part approval for PBF and DED; later reissued as the Requirements, which also cover material extrusion (2025 trade coverage); not read."
    ],
-   "evidence_basis": "Summary or TOC"
+   "evidence_basis": "Summary or TOC",
+   "type": "Framework",
+   "type_reason": "class-society requirements"
   },
   {
    "name": "Indian Register of Shipping Classification Notes: Additively Manufactured Metallic Parts for Marine and Offshore Applications",
@@ -13770,7 +14176,9 @@
     "label": "Classification Notes PDF (IRClass)",
     "verified": true
    },
-   "evidence_basis": "Standard text"
+   "evidence_basis": "Standard text",
+   "type": "Framework",
+   "type_reason": "classification notes"
   },
   {
    "name": "AIA Recommended Guidance for Certification of AM Components, Rev. A (Oct 2025)",
@@ -13835,7 +14243,9 @@
    "earlier_versions": [
     "AIA Recommended Guidance for Certification of AM Components, initial report (2020): first AIA AM Working Group guidance; Rev. A (2025) restructured it, added guidance for higher-criticality parts (damage-tolerance, crack-growth and fracture-toughness data, expanded NDI, witness coupons) and aligned with ASTM F3572-22."
    ],
-   "evidence_basis": "Standard text"
+   "evidence_basis": "Standard text",
+   "type": "Framework",
+   "type_reason": "industry certification guidance"
   },
   {
    "name": "Peron/Cantini qualification-cost model for AM vs conventional spare parts (Cantini et al. 2025)",
@@ -13907,12 +14317,14 @@
    "tool_link": {
     "url": "https://doi.org/10.1080/09537287.2025.2494096",
     "label": "Paper (DOI, 2025 extension)",
-    "verified": false
+    "verified": true
    },
    "earlier_versions": [
     "Peron, Cantini & Coruzzolo 2023, IFAC-PapersOnLine 56(2):6537-6542 (doi:10.1016/j.ifacol.2023.10.303, open access): base model pricing DNV-ST-B203 class-dependent qualification and production tests; AM break-even falls from 42 parts to 8 (C2) and 6 (C3)."
    ],
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "qualification-cost model"
   },
   {
    "name": "Verna et al. quality-inspection cost model for low-volume and AM production (2022)",
@@ -13979,12 +14391,14 @@
    "tool_link": {
     "url": "https://doi.org/10.1177/09544054221078090",
     "label": "Paper (DOI; author manuscript open on IRIS PoliTo)",
-    "verified": false
+    "verified": true
    },
    "earlier_versions": [
     "Verna et al. 2020, Planning offline inspection strategies in low-volume manufacturing processes (Quality Engineering, doi:10.1080/08982112.2020.1739309): earlier inspection-planning model trading inspection cost against alpha/beta errors; the 2022 model adds per-part production cost and a return on inspection investment."
    ],
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "probabilistic quality-cost model"
   },
   {
    "name": "CT vs electromechanical-impedance per-specimen verification cost estimate for metal AM (Strutner et al.)",
@@ -14049,7 +14463,9 @@
     "label": "Paper record with open full text (NSF PAR)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "per-specimen inspection cost estimate"
   },
   {
    "name": "Multivariate equivalency testing framework for AM requalification (Lynch et al., UTEP) with R package MultivariateEquivalency",
@@ -14108,9 +14524,11 @@
    "tool_link": {
     "url": "https://doi.org/10.3390/jmmp10070229",
     "label": "Paper (DOI, open access); R package MultivariateEquivalency location not found",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Abstract"
+   "evidence_basis": "Abstract",
+   "type": "Tool",
+   "type_reason": "statistical test method with R package"
   },
   {
    "name": "NAVAIR Additive Manufacturing Capability initiative: licensed Material Process Combination (MPC) qualification data packages (Colibrium Additive contract) and FRCE depot certification",
@@ -14173,7 +14591,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No public link to the tool itself; it is an internal practice or unreleased output. The best public description is in Sources.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "qualification-data licensing programme; no scoring or cost model"
   },
   {
    "name": "EDA Additive Manufacturing Feasibility Study & Technology Demonstration (EDA-AM, deployable AM factory)",
@@ -14239,7 +14659,9 @@
     "label": "Project poster (EDA)",
     "verified": true
    },
-   "evidence_basis": "Briefing slides"
+   "evidence_basis": "Briefing slides",
+   "type": "Framework",
+   "type_reason": "feasibility study and demonstration"
   },
   {
    "name": "DGA industrial orientation note on additive manufacturing (defence AM action plan incl. in-service support/MCO)",
@@ -14301,7 +14723,9 @@
     "label": "Policy note PDF (DGA)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "policy note"
   },
   {
    "name": "DGA OptiFab study: AM anti-blast protection and pre-qualified spare parts catalogue for light armoured vehicles",
@@ -14365,7 +14789,9 @@
    "sector": "Defense",
    "tool_link": null,
    "tool_link_note": "No public link to the tool itself; it is an internal practice or unreleased output. The best public description is in Sources.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "study and qualitative trials"
   },
   {
    "name": "ROK procedure for applying 3D-printed repair parts in operational units (DMSMS / FMECA / localisation screening with DT&E-OT&E qualification)",
@@ -14428,9 +14854,11 @@
    "tool_link": {
     "url": "https://doi.org/10.20910/JASE.2019.13.1.54",
     "label": "Paper (DOI)",
-    "verified": false
+    "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "qualitative screening procedure"
   },
   {
    "name": "Satair/Airbus AM spare-part pre-assessment and RapidSpares recertification route",
@@ -14497,7 +14925,9 @@
    "sector": "Civilian sustainment & aviation",
    "tool_link": null,
    "tool_link_note": "No public link to the tool itself; it is an internal practice or unreleased output. The best public description is in Sources.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "corporate practice"
   },
   {
    "name": "ST Engineering AM parts screening, business case and certification workflow (with EOS Additive Minds)",
@@ -14568,7 +14998,9 @@
    "sector": "Civilian sustainment & aviation",
    "tool_link": null,
    "tool_link_note": "No public link to the tool itself; it is an internal practice or unreleased output. The best public description is in Sources.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "corporate workflow"
   },
   {
    "name": "Leonardo Aircraft Division AM spare-part candidate criteria (safety, feasibility, lead time >180 days, unscheduled removal rate band)",
@@ -14633,7 +15065,9 @@
     "label": "Thesis PDF (PoliTo)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "screening criteria stated in prose"
   },
   {
    "name": "EPRI Quick Insight Brief: Additive Manufacturing to Support Spare and Replacement Items (3002019767)",
@@ -14698,7 +15132,9 @@
     "label": "Report PDF (EPRI)",
     "verified": true
    },
-   "evidence_basis": "Full text"
+   "evidence_basis": "Full text",
+   "type": "Framework",
+   "type_reason": "considerations brief"
   },
   {
    "name": "EDF case-by-case AM of obsolete nuclear auxiliary-circuit parts and EDF Hydro WAAM programme",
@@ -14757,7 +15193,9 @@
    "sector": "Civilian sustainment & aviation",
    "tool_link": null,
    "tool_link_note": "No public link to the tool itself; it is an internal practice or unreleased output. The best public description is in Sources.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "case-by-case corporate practice"
   },
   {
    "name": "Siemens Energy (Siemens Industrial Turbomachinery) Finspang AM burner repair and spares programme",
@@ -14824,7 +15262,9 @@
    "sector": "Civilian sustainment & aviation",
    "tool_link": null,
    "tool_link_note": "No public link to the tool itself; it is an internal practice or unreleased output. The best public description is in Sources.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "corporate programme"
   },
   {
    "name": "GE annual part audit and per-part ROI screen for casting-to-AM conversion (LM9000 bleed air adapter caps)",
@@ -14883,7 +15323,9 @@
    "sector": "Civilian sustainment & aviation",
    "tool_link": null,
    "tool_link_note": "No public link: GE's part audit and ROI screen are internal practice described only in trade press; no GE page was found.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "corporate audit practice; ROI method not described"
   },
   {
    "name": "Anglo American spare parts inventory analysis and local on-demand AM pilot (with CSIR and Ivaldi)",
@@ -14946,7 +15388,9 @@
    "sector": "Civilian sustainment & aviation",
    "tool_link": null,
    "tool_link_note": "No public link to the tool itself; it is an internal practice or unreleased output. The best public description is in Sources.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "pilot project; no published criteria"
   },
   {
    "name": "Sandvik-Boliden on-demand printed drill-rig spare parts trial",
@@ -15009,7 +15453,9 @@
    "sector": "Civilian sustainment & aviation",
    "tool_link": null,
    "tool_link_note": "No official Sandvik or Boliden page found; the trial is described only in trade press.",
-   "evidence_basis": "Press or marketing"
+   "evidence_basis": "Press or marketing",
+   "type": "Framework",
+   "type_reason": "proof-of-concept trial"
   }
  ]
 }

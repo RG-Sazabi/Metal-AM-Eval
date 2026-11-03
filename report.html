@@ -101,7 +101,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
       <div class="byline">Updated October 29, 2026 · 224 tools reviewed</div>
     </header>
 <h2 id="summary">Summary</h2>
-<p>We found 224 decision support tools for metal AM adoption published since 2010, and none prices all eight cost and benefit columns. They include 36 commercial products, 75 academic models, 24 government or consortium tools, and 89 methods, frameworks and standards; 108 come from defense. The broadest tools rate Yes on five columns, while 134 tools rate Yes on none. Another 490 of the 1,792 ratings (27%) are Unknown, because public sources can't confirm them either way.</p>
+<p>We found 224 decision support tools for metal AM adoption published since 2010, and none prices all eight cost and benefit columns. They include 36 commercial products, 75 academic models, 24 government or consortium tools, and 89 methods, frameworks and standards; 108 come from defense. By type, 146 are tools that compute an answer or are used hands-on, and 78 are frameworks for thinking about the problem. The broadest tools rate Yes on five columns, while 134 tools rate Yes on none. Another 490 of the 1,792 ratings (27%) are Unknown, because public sources can't confirm them either way.</p>
 <p>Coverage splits along the cost–benefit line. Production cost is best covered (56 Yes), while QA qualification (5), shared capacity (7) and NRE (9) are worst. Cost models price production; supply-chain models value storage, speed and shared capacity but treat AM cost as a lump sum. Only three tools (Busachi, Coyle and Braunberger) rate Yes on at least two costs and two benefits, and no qualification Yes pairs with a benefit Yes.</p>
 <p>For defense sustainment, the best partial fits are the Cranfield/Babcock Royal Navy framework (<a href="https://doi.org/10.1007/s13198-017-0585-9" target="_blank" rel="noopener">Busachi et al.</a>) and Coyle's NPS naval aviation model (<a href="https://apps.dtic.mil/sti/pdfs/AD1046824.pdf" target="_blank" rel="noopener">Coyle</a>). AFIT's laser powder bed cost models (<a href="https://scholar.afit.edu/etd/3748/" target="_blank" rel="noopener">Braunberger</a>; <a href="https://scholar.afit.edu/etd/791/" target="_blank" rel="noopener">Crean</a>) add Air Force cost data, and the NCSU/USMA network model (<a href="https://repository.lib.ncsu.edu/server/api/core/bitstreams/6d683c20-48b9-46a7-9ef5-a8db0865b4dc/content" target="_blank" rel="noopener">Doudnikoff</a>, extending <a href="https://engrxiv.org/preprint/download/2007/4037/3021" target="_blank" rel="noopener">McDermott et al.</a>) values the benefits. For QA, only the <a href="https://doi.org/10.1080/09537287.2025.2494096" target="_blank" rel="noopener">Peron/Cantini model</a> prices qualification by part class; NASA-STD-6030 and NAVSEA rules list what to price.</p>
 <p>Fielded defense tools are mostly part screens. Commercial screeners now serve Navy submarine spares (<a href="https://www.nsrp.org/wp-content/uploads/2024/07/02-05_MGREEN_3D-Printing-of-Supply-Sensitive-Parts_BTSDMT-Meeting.pdf" target="_blank" rel="noopener">CASTOR</a>) and the Marine Corps and Army (<a href="https://www.3yourmind.com/news/u.s.-marine-corps.-awards-3yourmind-and-phillips-corp.-2.5m-contract" target="_blank" rel="noopener">3YOURMIND</a>). DLA's prescreener, the Navy's AMCAT and the Air Force's PACT are government-built; AMCAT and PACT are known mainly from press releases, so their ratings carry low confidence.</p>
@@ -109,7 +109,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 <p>NIAR's other Air Force work, such as the <a href="https://www.dodmantech.mil/Portals/107/JAMWGFlyer_20241114_1.pdf" target="_blank" rel="noopener">WAM</a> materials database and <a href="https://news.wichita.edu/2023/08/03/niar-secures-100-million-contract-for-digital-transformation-and-technologies-to-support-usaf-operational-readiness/" target="_blank" rel="noopener">B-1 and F-16 digital twins</a>, is not decision support. <a href="https://www.aflcmc.af.mil/NEWS/Article/3596164/rapid-sustainment-office-advanced-manufacturing-program-office-tool-goes-live-i/" target="_blank" rel="noopener">PACT</a> belongs to the Rapid Sustainment Office. The TEA briefing lists a Christophe Combemale on the team; a CMU researcher shares that name, but the briefing gives no affiliation.</p>
 <h2 id="scope-and-scoring-method">Scope and scoring method</h2>
 <p>Each tool is scored Yes, Partial or No on eight cost and benefit columns, with a note and a source for every rating.</p>
-<p><strong>What counts as a tool.</strong> Commercial software, academic models, government and consortium tools, and methods or frameworks with no software (checklists, risk classification schemes, standards that drive decisions).</p>
+<p><strong>What counts as a tool.</strong> Commercial software, academic models, government and consortium tools, and methods or frameworks with no software (checklists, risk classification schemes, standards that drive decisions). Each entry is typed as a Tool or a Framework. Tools compute an answer or are hands-on aids: software, spreadsheets, calculators, databases, quantitative models and worksheets. Frameworks are ways to think about the problem: qualitative methods, standards, guidance and policy.</p>
 <p><strong>Lens.</strong> Defense sustainment: spare parts, maintenance depots and readiness. Civilian sustainment work (rail, energy, maritime, aviation repair and overhaul) is included when it applies.</p>
 <p><strong>Bounds.</strong> Published or released 2010 onward. All metal processes: powder bed fusion, directed energy deposition, binder jetting, cold spray and wire-arc. Four decision levels: which parts to print, which process or machine, whether to adopt or buy, and where to place and share capacity.</p>
 <div class="tablewrap"><table>
@@ -156,7 +156,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </table></div>
 <p><strong>Ratings.</strong> Yes means the tool models or quantifies the item as an input, calculation or output. Partial means it is treated qualitatively (a screening criterion, a flag, a crude proxy) or only part of the column is covered. No means a full description of the tool was read, or its documented scope plainly excludes the item. Unknown means public sources can't confirm it either way, for example when only a press release or an abstract is available. Tools with thin documentation are marked low confidence.</p>
 <p><strong>Checking.</strong> An independent reviewer re-checked 133 of the highest-stakes ratings against their sources and changed 22, mostly Yes to Partial; the corrections are applied throughout. Shared capacity counts as Yes when a model has parts or users contend for shared printer capacity that sets lead time, even at one site; the notes say when no cross-site pooling is modeled.</p>
-<p><strong>Second pass.</strong> Every rating was then re-checked against what its sources actually show, which moved 490 ratings to Unknown. Each tool also carries a direct link to the tool itself (product page, paper, thesis, standard or portal) where one is public; 190 of 224 do. Where a tool was released more than once, only the newest release is listed and earlier ones are named in its entry: Khajavi's 2014 F/A-18 model is folded into its 2018 follow-on, and McDermott et al.'s network model into Doudnikoff's 2021 extension.</p>
+<p><strong>Second pass.</strong> Every rating was then re-checked against what its sources actually show, which moved 490 ratings to Unknown. Each tool also carries a direct link to the tool itself (product page, paper, thesis, standard or portal) where one is public; 188 of 224 do, and every link was re-checked in November 2026. Where a tool was released more than once, only the newest release is listed and earlier ones are named in its entry: Khajavi's 2014 F/A-18 model is folded into its 2018 follow-on, and McDermott et al.'s network model into Doudnikoff's 2021 extension.</p>
 <h2 id="tool-inventory-and-scores">Tool inventory and scores</h2>
 <p>These 20 tools are the most useful to a defense sustainment analyst, by coverage and defense use, sorted by coverage. The symbols match the matrix: see the legend under this paragraph. Each tool name links to the tool itself where one is public, otherwise to its main source. The <a href="index.html">full matrix</a> lists all 224 tools, with filters, a tool link, a note and a source for every rating.</p>
 <div class="legend inv-legend"><span><i class="dot Yes"></i> Yes</span><span><i class="dot Partial"></i> Partial</span><span><i class="dot No"></i> No (confirmed)</span><span><i class="dot Unknown"></i> Unknown</span></div><div class="tablewrap"><table class="inv">
@@ -178,7 +178,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 <tbody>
 <tr>
 <td><a href="https://doi.org/10.1007/s13198-017-0585-9" target="_blank" rel="noopener">Busachi/Erkoyuncu Royal Navy framework (Cranfield/Babcock)</a></td>
-<td>Method/framework</td>
+<td>Tool</td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
@@ -191,7 +191,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tr>
 <tr>
 <td><a href="https://scholar.afit.edu/etd/3748/" target="_blank" rel="noopener">Braunberger MODA and L-PBF cost model (AFIT)</a></td>
-<td>Academic model</td>
+<td>Tool</td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
@@ -204,7 +204,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tr>
 <tr>
 <td><a href="https://sarjaweb.vtt.fi/julkaisut/muut/2018/DIVA_final_report.pdf" target="_blank" rel="noopener">VTT/Aalto DIVA digital spare parts tools</a></td>
-<td>Method/framework</td>
+<td>Tool</td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
@@ -217,7 +217,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tr>
 <tr>
 <td><a href="https://apps.dtic.mil/sti/pdfs/AD1046824.pdf" target="_blank" rel="noopener">Coyle naval aviation screen and simulation (NPS)</a></td>
-<td>Academic model</td>
+<td>Tool</td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
@@ -230,7 +230,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tr>
 <tr>
 <td><a href="https://doi.org/10.1108/RPJ-03-2017-0052" target="_blank" rel="noopener">Khajavi hub-configuration network model (polymer case; extends 2014 F/A-18 model)</a></td>
-<td>Academic model</td>
+<td>Tool</td>
 <td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
@@ -243,7 +243,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tr>
 <tr>
 <td><a href="https://utw10945.utweb.utexas.edu/Manuscripts/2013/2013-79-Lindemann.pdf" target="_blank" rel="noopener">Lindemann lifecycle and TD-ABC model (Paderborn)</a></td>
-<td>Academic model</td>
+<td>Tool</td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
@@ -256,7 +256,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tr>
 <tr>
 <td><a href="https://doi.org/10.1016/j.addma.2019.04.010" target="_blank" rel="noopener">Bonnín Roca cost and site-location model (CMU)</a></td>
-<td>Academic model</td>
+<td>Tool</td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
@@ -269,7 +269,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tr>
 <tr>
 <td><a href="https://repository.lib.ncsu.edu/server/api/core/bitstreams/6d683c20-48b9-46a7-9ef5-a8db0865b4dc/content" target="_blank" rel="noopener">Doudnikoff NCSU/USMA network model (extends McDermott et al.)</a></td>
-<td>Academic model</td>
+<td>Tool</td>
 <td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
@@ -282,7 +282,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tr>
 <tr>
 <td><a href="https://doi.org/10.1007/s00291-020-00608-7" target="_blank" rel="noopener">Knofius AM/CM dual-sourcing model</a></td>
-<td>Academic model</td>
+<td>Tool</td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
@@ -295,7 +295,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tr>
 <tr>
 <td><a href="https://scholar.afit.edu/etd/791/" target="_blank" rel="noopener">Crean L-PBF cost and fielding model (AFIT)</a></td>
-<td>Academic model</td>
+<td>Tool</td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
@@ -308,7 +308,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tr>
 <tr>
 <td><a href="https://www.3yourmind.com/part-identification-software" target="_blank" rel="noopener">3YOURMIND Part Identification</a></td>
-<td>Commercial</td>
+<td>Tool</td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
@@ -321,7 +321,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tr>
 <tr>
 <td><a href="https://www.americamakes.us/wp-content/uploads/2024/03/5554.007-IMPACT-Additive-Manufacturing-Techno-Economic-Analysis-AFRL-2024-1188.pdf" target="_blank" rel="noopener">NIAR TEA cost model and module (IMPACT 5554.007)</a></td>
-<td>Gov't/consortium</td>
+<td>Tool</td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
@@ -334,7 +334,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tr>
 <tr>
 <td><a href="https://doi.org/10.1080/09537287.2025.2494096" target="_blank" rel="noopener">Peron/Cantini qualification-cost model</a></td>
-<td>Academic model</td>
+<td>Tool</td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
@@ -347,7 +347,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tr>
 <tr>
 <td><a href="https://www.siemens.com/en-us/products/castor-enterprise/" target="_blank" rel="noopener">CASTOR (NSRP submarine spares use)</a></td>
-<td>Commercial</td>
+<td>Tool</td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
@@ -360,7 +360,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tr>
 <tr>
 <td><a href="https://www.navy.mil/Press-Office/News-Stories/Article/3163936/navy-price-fighters-develop-additive-manufacturing-cost-time-model/" target="_blank" rel="noopener">AMCAT (Navy Price Fighters)</a></td>
-<td>Gov't/consortium</td>
+<td>Tool</td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
@@ -373,7 +373,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tr>
 <tr>
 <td><a href="https://standards.nasa.gov/standard/nasa/nasa-std-6030" target="_blank" rel="noopener">NASA-STD-6030</a></td>
-<td>Method/framework</td>
+<td>Tool</td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
@@ -386,7 +386,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tr>
 <tr>
 <td><a href="https://apps.dtic.mil/sti/pdfs/AD1013934.pdf" target="_blank" rel="noopener">DLA Legacy Parts AM Prescreening Tool (LMI)</a></td>
-<td>Gov't/consortium</td>
+<td>Tool</td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
@@ -399,7 +399,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tr>
 <tr>
 <td><a href="https://ammo.ncms.org/wp-content/uploads/024-4870-Ser-05T-2018-024-20180817.pdf" target="_blank" rel="noopener">NAVSEA AM qualification framework</a></td>
-<td>Method/framework</td>
+<td>Framework</td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
@@ -412,7 +412,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tr>
 <tr>
 <td><a href="https://doi.org/10.1111/poms.13298" target="_blank" rel="noopener">Westerweel remote-site print/expedite model (Dutch Army, Mali)</a></td>
-<td>Academic model</td>
+<td>Tool</td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
@@ -425,7 +425,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tr>
 <tr>
 <td><a href="https://www.aflcmc.af.mil/NEWS/Article/3596164/rapid-sustainment-office-advanced-manufacturing-program-office-tool-goes-live-i/" target="_blank" rel="noopener">PACT (Air Force RSO/AMPO)</a></td>
-<td>Gov't/consortium</td>
+<td>Tool</td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
 <td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>

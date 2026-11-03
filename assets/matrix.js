@@ -50,6 +50,7 @@
     var p = new URLSearchParams(h);
     FIELDS.forEach(function (f) { if (p.has(f)) state[f] = p.get(f); });
     state.dir = state.dir === '1' || state.dir === 1 ? 1 : -1;
+    if (state.type !== 'Tool' && state.type !== 'Framework') state.type = '';
     if (state.match !== 'any') state.match = 'all';
     if (state.min !== 'partial') state.min = 'yes';
     state.cols = (p.get('cols') || '').split(',').filter(function (k) { return COLKEYS.indexOf(k) >= 0; });
@@ -69,7 +70,7 @@
     var el = document.getElementById(id);
     el.innerHTML = '<option value="">All ' + esc(label) + '</option>' + vals.map(function (v) { return '<option>' + esc(v) + '</option>'; }).join('');
   }
-  fillSelect('ftype', 'types', uniq(tools.map(function (t) { return t.tool_type; })));
+  document.getElementById('ftype').innerHTML = '<option value="">All</option><option value="Tool">Tool</option><option value="Framework">Frameworks</option>';
   fillSelect('flevel', 'levels', uniq([].concat.apply([], tools.map(function (t) { return t.decision_levels; }))));
   fillSelect('fsector', 'settings', uniq(tools.map(function (t) { return t.sector; })));
   fillSelect('fconf', 'levels', ['High', 'Medium', 'Low']);
@@ -77,7 +78,7 @@
   // ---- table header
   var hdr = document.getElementById('hdr');
   var heads = [
-    { k: 'name', label: 'Tool' }, { k: 'tool_type', label: 'Type' }, { k: 'level', label: 'Decision level' }, { k: 'year', label: 'Year' }
+    { k: 'name', label: 'Tool' }, { k: 'type', label: 'Type' }, { k: 'level', label: 'Decision level' }, { k: 'year', label: 'Year' }
   ].concat(COLS.map(function (c) { return { k: c.k, label: c.label, rc: true, title: c.full }; }))
    .concat([{ k: 'score', label: 'Score' }, { k: 'conf', label: 'Conf.' }]);
   hdr.innerHTML = heads.map(function (h) {
@@ -86,7 +87,7 @@
   hdr.addEventListener('click', function (e) {
     var b = e.target.closest('button'); if (!b) return;
     var k = b.getAttribute('data-k');
-    if (state.sort === k) state.dir = -state.dir; else { state.sort = k; state.dir = (k === 'name' || k === 'tool_type' || k === 'level') ? 1 : -1; }
+    if (state.sort === k) state.dir = -state.dir; else { state.sort = k; state.dir = (k === 'name' || k === 'type' || k === 'level') ? 1 : -1; }
     render();
   });
 
@@ -99,7 +100,7 @@
     var q = state.q.trim().toLowerCase();
     return tools.filter(function (t) {
       if (q && t._hay.indexOf(q) < 0) return false;
-      if (state.type && t.tool_type !== state.type) return false;
+      if (state.type && t.type !== state.type) return false;
       if (state.level && t.decision_levels.indexOf(state.level) < 0) return false;
       if (state.sector && t.sector !== state.sector) return false;
       if (state.conf && t.confidence !== state.conf) return false;
@@ -120,7 +121,7 @@
   function sortKey(t) {
     var k = state.sort;
     if (k === 'name') return t.name.toLowerCase();
-    if (k === 'tool_type') return t.tool_type;
+    if (k === 'type') return t.type;
     if (k === 'level') return t.decision_levels.join(',');
     if (k === 'year') return t._yr;
     if (k === 'score') return t._score;
@@ -183,7 +184,7 @@
       : '';
     return '<div class="dgrid"><div>' +
       '<h4>What it is</h4><p>' + esc(t.description) + '</p>' + ev +
-      '<dl class="kv"><dt>Developer</dt><dd>' + esc(t.developer) + '</dd><dt>Year</dt><dd>' + esc(t.year) + '</dd><dt>Setting</dt><dd>' + esc(t.context) + '</dd><dt>Processes</dt><dd>' + esc(t.processes) + '</dd><dt>Availability</dt><dd>' + esc(t.availability) + '</dd>' +
+      '<dl class="kv"><dt>Type</dt><dd>' + esc(t.type) + (t.type_reason ? ' · ' + esc(t.type_reason) : '') + '</dd><dt>Kind</dt><dd>' + esc(t.tool_type) + '</dd><dt>Developer</dt><dd>' + esc(t.developer) + '</dd><dt>Year</dt><dd>' + esc(t.year) + '</dd><dt>Setting</dt><dd>' + esc(t.context) + '</dd><dt>Processes</dt><dd>' + esc(t.processes) + '</dd><dt>Availability</dt><dd>' + esc(t.availability) + '</dd>' +
       (t.evidence_basis ? '<dt>Evidence read</dt><dd>' + esc(t.evidence_basis) + '</dd>' : '') +
       (t.flag ? '<dt>Flag</dt><dd>' + esc(t.flag) + '</dd>' : '') + '</dl>' +
       '<h4>Sources</h4><ol class="srcs">' + srcs + '</ol></div>' +
@@ -239,7 +240,7 @@
       return '<tr class="row" tabindex="0" data-i="' + t._i + '" aria-expanded="' + open + '">' +
         '<td class="name"><b>' + esc(t.name) + '</b><span class="dev">' + esc(t.developer) + '</span>' + flag +
         (t.tool_link ? '<a class="tl" href="' + esc(t.tool_link.url) + '" target="_blank" rel="noopener">Tool link ↗</a>' : '') + '</td>' +
-        '<td class="meta">' + esc(t.tool_type) + '<br>' + esc(t.sector) + '</td>' +
+        '<td class="meta"><span class="typ typ-' + esc(t.type) + '">' + esc(t.type) + '</span><br>' + esc(t.sector) + '</td>' +
         '<td class="meta">' + lv + '</td>' +
         '<td class="yr" title="' + esc(t.year) + '">' + esc(t._yrShort) + '</td>' + cells +
         '<td class="score">' + t._score.toFixed(1) + '</td><td class="conf">' + confHtml(t.confidence) + '</td></tr>' +

@@ -78,6 +78,8 @@ td.name { min-width: 250px; max-width: 380px; }
 td.name b { font-weight: 600; display: block; line-height: 1.3; }
 td.name .dev { color: var(--muted); font-size: 12.5px; display: block; margin-top: 2px; }
 .tag { display: inline-block; font-size: 11.5px; padding: 1px 7px; border-radius: 3px; background: var(--chip); color: var(--ink); white-space: nowrap; margin: 0 4px 3px 0; }
+.typ { font-weight: 600; color: var(--ink); }
+.typ-Framework { color: var(--muted); }
 .tag.flag { background: transparent; border: 1px dashed var(--muted); color: var(--muted); }
 td.meta { font-size: 12.5px; color: var(--muted); min-width: 120px; }
 td.yr { font-family: var(--font-mono); font-size: 12.5px; white-space: nowrap; }
@@ -160,7 +162,7 @@ tr.detail td { padding: 4px 16px 18px; background: var(--row-hover); cursor: aut
 
   <section class="filters" aria-label="More filters">
     <div class="f"><label for="q">Search</label><input id="q" type="search" placeholder="Tool, developer, context"></div>
-    <div class="f"><label for="ftype">Tool type</label><select id="ftype"></select></div>
+    <div class="f"><label for="ftype">Type</label><select id="ftype"></select></div>
     <div class="f"><label for="flevel">Decision level</label><select id="flevel"></select></div>
     <div class="f"><label for="fsector">Setting</label><select id="fsector"></select></div>
     <div class="f"><label for="fconf">Confidence</label><select id="fconf"></select></div>
