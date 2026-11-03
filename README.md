@@ -5,7 +5,7 @@
 
 A static website with two pages:
 
-- **`index.html`: Metal AM Tool Coverage Matrix.** 144 decision support tools for metal additive manufacturing (tools where metal AM is in scope; polymer-only and process-agnostic tools are excluded), each rated Yes / Partial (quantified or qualitative) / No / Unknown on four costs (NRE, production, QA qualification, QA per-part inspection) and four benefits (storage, shared capital, shared capacity, value of speed). Each entry is typed as a Tool (software, spreadsheets, calculators, quantitative models, worksheets) or a Framework (a way to think about the problem: qualitative methods, standards, guidance). Filter by type and by any combination of columns, search, sort, and expand a row for rating notes, the tool link and sources.
+- **`index.html`: Metal AM Tool Coverage Matrix.** 144 decision support tools for metal additive manufacturing (tools where metal AM is in scope; polymer-only and process-agnostic tools are excluded), each rated Yes / Partial (quantified or qualitative) / No / Unknown on four costs (NRE, production, QA qualification, QA per-part inspection) and four benefits (storage, shared capital, shared capacity, value of speed). Each entry is typed as a Tool (software, spreadsheets, calculators, quantitative models, worksheets) or a Framework (a way to think about the problem: qualitative methods, standards, guidance). Search, filter by type, decision level, setting, confidence and tool link, sort, and expand a row for rating notes, the tool link and sources; the table header stays in view while you scroll. The **Filter by cost and benefit** panel is both a chart and the column filter: a triangular heat map counts the shown tools that cover each pair of columns (shaded by share), and to its right each column has a row with its rating bar and counts (Yes, Partial quantified, Partial qualitative, Unknown, No); hover a row for the column's definition. A 2 × 2 box in the empty corner of the triangle splits the shown tools into those covering at least one cost and at least one benefit, a cost only, a benefit only, or neither. Select rows to filter by one or more columns, a cell to filter by a pair, or a corner box to filter by that split (the heat map and bars then show only that box's tools); the "rated" buttons set which ratings count as covered.
 - **`report.html`: Metal AM Decision Support Tools report.** Findings, gaps and a proposed integration framework. Open it from the **Read report** button at the top of the matrix.
 
 It is plain HTML, CSS and JavaScript with no build step and no server code, so GitHub Pages can host it as-is.
@@ -32,7 +32,7 @@ The empty `.nojekyll` file tells GitHub Pages to serve the files exactly as they
 
 ## Sharing a filtered view
 
-The matrix keeps its filters in the page address, so a filtered view can be bookmarked or shared. For example, `index.html#cols=QA_Qual,Speed&match=any&min=partial` shows tools that cover qualification or speed, counting Partial ratings.
+The matrix keeps its filters in the page address, so a filtered view can be bookmarked or shared. For example, `index.html#cols=QA_Qual,Speed&match=any&min=partial` shows tools that cover qualification or speed, counting Partial ratings. Column and corner-box selections made in the matrix are saved the same way (for example `#cb=both`).
 
 ## Updating the data
 

@@ -1,6 +1,6 @@
 {
  "updated": "2026-11-03",
- "lead": "144 decision support tools for metal additive manufacturing, scored on whether each accounts for four costs and four benefits of adopting it. Select one or more column cards to filter; select a row to read the rating notes, the tool link and sources.",
+ "lead": "144 decision support tools for metal additive manufacturing, scored on whether each accounts for four costs and four benefits of adopting it. Filter by columns in the cost and benefit matrix; select a table row to read the rating notes, the tool link and sources.",
  "foot": "Scope: commercial software, academic models, government and consortium tools, and methods or standards, published 2010 onward, all metal AM processes, with a defense sustainment lens. Ratings reflect public documentation as of November 2026, checked against the written rating rules in the report. No means a full description of the tool was read, or its documented scope plainly excludes the item; Unknown means the public evidence is too thin to tell, which is common for internal government tools and products described only in press releases. Where a tool was released more than once, only the newest release is listed and earlier ones are named under What it is. A tool is included only if metal AM is in scope: it models, screens for or supports metal processes or materials, or was applied to metal parts. Polymer-only and process-agnostic tools are excluded. Tool links and ratings were re-checked in November 2026.",
  "tools": [
   {

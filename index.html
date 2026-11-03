@@ -11,52 +11,123 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="assets/site.css">
 <style>
-/* Matrix page: header, column filter controls + coverage cards, other filters, then the scrollable table with expandable rows */
+/* Matrix page: header; filters and rating key beside the coverage matrix (which is also the column filter); then the scrollable table with expandable rows */
 .wrap { max-width: 1360px; margin: 0 auto; display: grid; gap: 22px; }
 .head { display: grid; gap: 8px; }
 .lead { max-width: 76ch; color: var(--muted); margin: 0; }
 
-/* column filters */
-.colfilter { display: grid; gap: 10px; }
-.colbar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; }
-.colbar h2 { font-family: var(--font-display); font-size: 18px; font-weight: 600; margin: 0; }
-.colbar .hint { color: var(--muted); font-size: 13px; }
+/* shared controls */
 .seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; background: var(--surface); }
 .seg button { font: inherit; font-size: 13px; padding: 5px 11px; border: 0; background: none; color: var(--ink); cursor: pointer; }
 .seg button + button { border-left: 1px solid var(--rule); }
 .seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); font-weight: 600; }
-.segwrap { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
+.segwrap { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
 .linkbtn { font: inherit; font-size: 13px; background: none; border: 0; color: var(--accent); cursor: pointer; padding: 4px 2px; text-decoration: underline; }
 .linkbtn[disabled] { color: var(--muted); text-decoration: none; cursor: default; opacity: .6; }
-
-.strip { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 10px; }
-@media (max-width: 1180px) { .strip { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-@media (max-width: 480px) { .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.cov { min-width: 0; grid-template-columns: minmax(0, 1fr); position: relative; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 10px 12px; display: grid; gap: 6px; align-content: start; cursor: pointer; text-align: left; font: inherit; color: inherit; }
-.cov:hover { border-color: var(--accent); }
-.cov[aria-pressed="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); background: var(--accent-soft); }
-.cov .grp { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-.cov .k { font-family: var(--font-display); font-weight: 600; font-size: 15px; line-height: 1.15; padding-right: 22px; }
-.cov .box { position: absolute; top: 10px; right: 10px; width: 16px; height: 16px; border: 1.5px solid var(--rule); border-radius: 3px; display: grid; place-items: center; font-size: 11px; line-height: 1; color: transparent; background: var(--surface); }
-.cov[aria-pressed="true"] .box { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+/* rating bar: Yes, Partial quantified, Partial qualitative, Unknown (hatched); the empty rest of the track is No */
 .bar { display: flex; height: 8px; border-radius: 2px; overflow: hidden; background: var(--chip); }
 .bar i { display: block; height: 100%; }
 .bar .y { background: var(--accent); }
 .bar .p { background: var(--partial); }
 .bar .pl { background: var(--partial-l); }
 .bar .u { background: repeating-linear-gradient(135deg, var(--unk) 0 3px, transparent 3px 6px); }
-.cov .n { font-family: var(--font-mono); font-size: 11px; line-height: 1.45; color: var(--muted); font-variant-numeric: tabular-nums; }
-.cov .nw { white-space: nowrap; }
+
+/* dashboard: filters and rating key on the left, the coverage matrix (the column filter) on the right; stacks below 1180px */
+.dash { display: grid; gap: 22px; }
+@media (min-width: 1180px) { .dash { grid-template-columns: 290px minmax(0, 1fr); align-items: start; } .dash .filters { grid-template-columns: minmax(0, 1fr); } }
+.side { display: grid; gap: 18px; align-content: start; min-width: 0; }
+.panel { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px 16px; display: grid; gap: 12px; min-width: 0; }
+@media (max-width: 480px) { .panel { padding: 12px 10px 14px; } }
+.panel h2 { font-family: var(--font-display); font-size: 18px; font-weight: 600; margin: 0; }
+.keyhead { font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0; }
+.tablekey { display: grid; gap: 6px; }
 
 /* other filters */
-.filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
+.filters { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; align-items: end; }
 .f { display: grid; gap: 4px; min-width: 0; }
+.f.wide { grid-column: 1 / -1; }
 .f label { font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-family: var(--font-mono); }
-.f input, .f select { font: inherit; font-size: 13.5px; color: var(--ink); background: var(--surface); border: 1px solid var(--rule); border-radius: 5px; padding: 7px 9px; min-width: 0; max-width: 100%; }
-.f input { width: 240px; }
-.count { margin-left: auto; font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.f input, .f select { font: inherit; font-size: 13.5px; color: var(--ink); background: var(--surface); border: 1px solid var(--rule); border-radius: 5px; padding: 7px 9px; min-width: 0; width: 100%; }
+.fbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 14px; }
+.count { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .reset { font: inherit; font-size: 13px; background: var(--surface); border: 1px solid var(--rule); border-radius: 5px; padding: 7px 10px; color: var(--ink); cursor: pointer; }
 .reset:hover { border-color: var(--accent); }
+
+/* coverage matrix: upper triangle of column pairs; on the right of it, one selectable row per column with its label and rating bar */
+.cooc { align-content: start; }
+@media (max-width: 1179px) { .cooc { max-width: 760px; } }
+@media (max-width: 700px) { .cooc { max-width: 520px; } }
+.colbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+.cooc-sub, .cooc-note { margin: 0; font-size: 12.5px; line-height: 1.45; color: var(--muted); }
+.cooc-body { display: grid; gap: 12px; align-items: start; }
+@media (min-width: 1320px) { .cooc-body { grid-template-columns: minmax(0, 1fr) 200px; gap: 24px; } .cooc-side { padding-top: 104px; } }
+.cooc-side { display: grid; gap: 12px; align-content: start; }
+.cooc-box { position: relative; }
+table.hm { width: 100%; min-width: 0; table-layout: fixed; border-collapse: separate; border-spacing: 2px; font-variant-numeric: tabular-nums; }
+.hm col.g { width: 12px; }
+.hm col.dc { width: 40px; }
+@media (max-width: 700px) { .hm col.g { width: 10px; } .hm col.dc { width: auto; } .hm col.rbc { width: 138px; } }
+.hm th, .hm td { padding: 0; border: 0; background: none; text-align: center; vertical-align: middle; font-weight: 400; }
+.hm .gh { font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-bottom: 3px; border-bottom: 1px solid var(--rule); }
+.hm .gv { border-left: 1px solid var(--rule); }
+.hm .gv span { display: inline-block; writing-mode: vertical-rl; font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.hm .ch { vertical-align: bottom; padding-top: 4px; }
+.hm .ch span { display: inline-block; writing-mode: vertical-rl; transform: rotate(180deg); font-size: 11.5px; line-height: 1.1; color: var(--muted); white-space: nowrap; padding-bottom: 4px; }
+.hm .bh { vertical-align: bottom; text-align: left; font-size: 11.5px; line-height: 1.25; color: var(--muted); padding: 0 0 5px 112px; }
+@media (max-width: 700px) { .hm .bh { padding-left: 70px; font-size: 10.5px; } .hm .ch span { font-size: 10.5px; } }
+.hm .hl span { color: var(--ink); font-weight: 600; }
+.hm .sel span { color: var(--accent); font-weight: 600; }
+.hm .b0 { padding-left: 5px; }
+.hm tr.b0 > * { padding-top: 5px; }
+.hc { display: grid; place-items: center; width: 100%; height: 42px; padding: 0; border: 0; border-radius: 3px; font-family: var(--font-mono); font-size: 12px; font-weight: 500; cursor: pointer; position: relative; }
+@media (max-width: 700px) { .hc { height: 28px; font-size: 10.5px; } }
+.hc.z { background: transparent; box-shadow: inset 0 0 0 1px var(--rule); color: var(--muted); font-weight: 400; }
+.hc:hover, .hc:focus-visible { outline: 2px solid var(--ink); outline-offset: -1px; z-index: 2; }
+.hc.on { box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--accent); z-index: 1; }
+/* column rows: checkbox, label, rating bar with counts; selecting a row toggles that column in the filter */
+.rb { display: grid; grid-template-columns: 14px 76px minmax(0, 1fr); align-items: center; gap: 7px; width: 100%; height: 42px; padding: 0 6px 0 4px; border: 0; border-radius: 4px; background: none; cursor: pointer; font: inherit; color: var(--ink); text-align: left; }
+.rb:hover { background: var(--row-hover); }
+.rb.on { background: var(--accent-soft); }
+.rb .box { width: 14px; height: 14px; border: 1.5px solid var(--rule); border-radius: 3px; display: grid; place-items: center; font-size: 10px; line-height: 1; color: transparent; background: var(--surface); }
+.rb.on .box { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.rb .rl { font-size: 12.5px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rb.hl .rl { color: var(--ink); font-weight: 600; }
+.rb.on .rl { color: var(--accent); font-weight: 600; }
+.rb .rv { display: grid; gap: 2px; min-width: 0; max-width: 400px; }
+.rb .rv .bar { margin-bottom: 2px; }
+.rb .rn { font-family: var(--font-mono); font-size: 10px; line-height: 1.2; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-variant-numeric: tabular-nums; }
+@media (max-width: 700px) { .rb { grid-template-columns: 62px minmax(0, 1fr); gap: 5px; height: 28px; padding: 0 3px; } .rb .box, .rb .rn { display: none; } .rb .rl { font-size: 11px; } }
+.hm-empty { padding: 24px 8px; text-align: center; color: var(--muted); font-size: 13px; }
+/* corner box in the empty part of the triangle: tools covering at least one cost and/or one benefit */
+.hm td.mini { vertical-align: bottom; text-align: left; padding: 0 8px 0 0; }
+.mm { display: grid; gap: 4px; }
+.mm-t { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); line-height: 1.2; }
+.mm-g { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+.mc { display: grid; align-content: center; justify-items: start; gap: 1px; min-width: 0; height: 54px; padding: 4px 7px; border: 1px solid var(--rule); border-radius: 4px; background: var(--surface); color: var(--ink); cursor: pointer; font: inherit; text-align: left; position: relative; }
+.mc b { font-family: var(--font-mono); font-size: 15px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.mc span { font-size: 10.5px; line-height: 1.15; color: var(--muted); }
+.mc-both { background: var(--accent-soft); border-color: var(--partial); }
+.mc:hover, .mc:focus-visible { outline: 2px solid var(--ink); outline-offset: -1px; z-index: 2; }
+.mc.on { box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--accent); z-index: 1; }
+@media (max-width: 700px) { .hm td.mini { padding-right: 4px; } .mc { height: 44px; padding: 3px 4px; } .mc b { font-size: 12px; } .mc span { font-size: 9px; } .mm-t { font-size: 8px; } }
+.hm-tip { position: absolute; z-index: 5; pointer-events: none; max-width: 260px; padding: 7px 10px; border-radius: 5px; background: var(--ink); color: var(--surface); font-size: 12.5px; line-height: 1.4; box-shadow: 0 4px 14px rgba(0, 0, 0, .18); }
+.hm-tip b { font-size: 13.5px; }
+.hm-tip .k { display: block; opacity: .82; }
+.hm-key { display: grid; gap: 8px; font-size: 12px; color: var(--muted); }
+.kgrp { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; }
+@media (min-width: 1320px) { .kgrp { flex-direction: column; align-items: flex-start; gap: 6px; } }
+.kgrp .kt { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; }
+.hm-key span { display: inline-flex; align-items: center; gap: 6px; }
+.hm-key i { display: inline-block; width: 14px; height: 14px; border-radius: 3px; flex: none; }
+.hm-key .kz { box-shadow: inset 0 0 0 1px var(--rule); }
+.hm-key .kg { width: 90px; height: 12px; border-radius: 2px; }
+.hm-key .ks { width: 12px; height: 8px; border-radius: 2px; }
+.hm-key .ks.y { background: var(--accent); }
+.hm-key .ks.p { background: var(--partial); }
+.hm-key .ks.pl { background: var(--partial-l); }
+.hm-key .ks.u { background: repeating-linear-gradient(135deg, var(--unk) 0 3px, transparent 3px 6px); box-shadow: inset 0 0 0 1px var(--unk); }
+.hm-key .ks.n { background: var(--chip); }
+.hm-key b { font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
 
 /* table */
 .tablebox { overflow-x: auto; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; }
@@ -66,7 +137,7 @@ th button { font: inherit; font-family: var(--font-mono); font-size: 11px; lette
 th button:hover { color: var(--ink); }
 th button[data-dir]::after { content: attr(data-dir); margin-left: 4px; color: var(--accent); }
 th.rc, td.rc { text-align: center; width: 64px; }
-th.rc button { text-align: center; }
+th.rc button { text-align: center; padding-left: 6px; padding-right: 6px; letter-spacing: .02em; }
 th.rc.sel, td.rc.sel { background: var(--accent-soft); }
 th.rc.sel button { color: var(--accent); font-weight: 600; }
 th.grp { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding: 8px 10px 0; text-align: center; border-bottom: 2px solid var(--rule); }
@@ -112,6 +183,9 @@ tr.detail td { padding: 4px 16px 18px; background: var(--row-hover); cursor: aut
 .srcs li.toolsrc small { display: block; font-weight: 400; color: var(--muted); margin-top: 2px; }
 .srcs li.nolink { color: var(--muted); font-style: italic; }
 .empty { padding: 28px; text-align: center; color: var(--muted); }
+/* floating copy of the table header: shown while the real header is scrolled out of view, kept in step with sideways scrolling */
+.floathead { position: fixed; z-index: 15; display: none; overflow: hidden; background: var(--surface); border: 1px solid var(--rule); border-top: 0; box-shadow: 0 4px 10px rgba(0, 0, 0, .08); }
+.floathead table { table-layout: fixed; min-width: 0; }
 .foot { font-size: 12.5px; color: var(--muted); max-width: 92ch; display: grid; gap: 8px; }
 .foot p { margin: 0; }
 .noscript { padding: 16px; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; }
@@ -130,21 +204,32 @@ tr.detail td { padding: 4px 16px 18px; background: var(--row-hover); cursor: aut
   <section class="head">
     <div class="eyebrow">Metal additive manufacturing · decision support survey · as of November 2026</div>
     <h1>Metal AM Tool Coverage Matrix</h1>
-    <p class="lead" id="lead">Decision support tools for metal additive manufacturing, scored on whether each accounts for four costs and four benefits of adopting it. Select column cards to filter; select a row to read the rating notes, the tool link and sources.</p>
-    <div class="legend" aria-label="Rating legend">
-      <span><i class="dot Yes"></i> Yes: modeled or quantified</span>
-      <span><i class="dot Partial pq"></i> Partial, quantified: numbers on part of the column</span>
-      <span><i class="dot Partial pl"></i> Partial, qualitative: a criterion, flag or claim, not calculated</span>
-      <span><i class="dot No"></i> No: confirmed not addressed</span>
-      <span><i class="dot Unknown"></i> Unknown: public sources can't confirm either way</span>
-      <span>Score counts Yes as 1 and either Partial as 0.5, out of 8 · <a href="report.html#rating-rules">How ratings are decided</a></span>
-    </div>
+    <p class="lead" id="lead">Decision support tools for metal additive manufacturing, scored on whether each accounts for four costs and four benefits of adopting it.</p>
   </section>
 
-  <section class="colfilter" aria-labelledby="colfilter-title">
+  <div class="dash">
+  <div class="side">
+    <section class="panel" aria-labelledby="filters-title">
+      <h2 id="filters-title">Filter tools</h2>
+      <div class="filters">
+        <div class="f wide"><label for="q">Search</label><input id="q" type="search" placeholder="Tool, developer, context"></div>
+        <div class="f"><label for="ftype">Type</label><select id="ftype"></select></div>
+        <div class="f"><label for="flevel">Decision level</label><select id="flevel"></select></div>
+        <div class="f"><label for="fsector">Setting</label><select id="fsector"></select></div>
+        <div class="f"><label for="fconf">Confidence</label><select id="fconf"></select></div>
+        <div class="f"><label for="flink">Tool link</label><select id="flink"><option value="">All tools</option><option value="yes">Has a public link</option><option value="no">No public link</option></select></div>
+      </div>
+      <div class="fbar">
+        <span class="count" id="count" aria-live="polite"></span>
+        <button class="reset" id="reset" type="button">Clear all filters</button>
+      </div>
+    </section>
+  </div>
+
+  <aside class="panel cooc" aria-labelledby="cooc-title">
+    <h2 id="cooc-title">Filter by cost and benefit</h2>
+    <p class="cooc-sub" id="cooc-sub"></p>
     <div class="colbar">
-      <h2 id="colfilter-title">Filter by cost and benefit</h2>
-      <span class="hint">Select any number of columns.</span>
       <span class="segwrap">Show tools covering
         <span class="seg" role="group" aria-label="How selected columns combine">
           <button type="button" data-match="all" aria-pressed="true">all selected</button>
@@ -160,24 +245,35 @@ tr.detail td { padding: 4px 16px 18px; background: var(--row-hover); cursor: aut
       </span>
       <button type="button" class="linkbtn" id="clearcols" disabled>Clear columns</button>
     </div>
-    <div class="strip" id="strip"></div>
-  </section>
+    <div class="cooc-body">
+      <div class="cooc-box" id="cooc-box">
+        <table class="hm" id="hm"></table>
+        <div class="hm-tip" id="hm-tip" role="tooltip" hidden></div>
+      </div>
+      <div class="cooc-side">
+        <div class="hm-key" id="hm-key" aria-hidden="true"></div>
+        <p class="cooc-note">Cells and bars follow the other filters and the corner box, but not the column selection, so they stay put while you pick columns. The corner box always counts every shown tool.</p>
+      </div>
+    </div>
+  </aside>
+  </div>
 
-  <section class="filters" aria-label="More filters">
-    <div class="f"><label for="q">Search</label><input id="q" type="search" placeholder="Tool, developer, context"></div>
-    <div class="f"><label for="ftype">Type</label><select id="ftype"></select></div>
-    <div class="f"><label for="flevel">Decision level</label><select id="flevel"></select></div>
-    <div class="f"><label for="fsector">Setting</label><select id="fsector"></select></div>
-    <div class="f"><label for="fconf">Confidence</label><select id="fconf"></select></div>
-    <div class="f"><label for="flink">Tool link</label><select id="flink"><option value="">All tools</option><option value="yes">Has a public link</option><option value="no">No public link</option></select></div>
-    <button class="reset" id="reset" type="button">Clear all filters</button>
-    <span class="count" id="count" aria-live="polite"></span>
+  <section class="tablekey" aria-labelledby="key-title">
+    <h2 class="keyhead" id="key-title">Ratings in the table</h2>
+    <div class="legend">
+      <span><i class="dot Yes"></i> Yes: modeled or quantified</span>
+      <span><i class="dot Partial pq"></i> Partial, quantified: numbers on part of the column</span>
+      <span><i class="dot Partial pl"></i> Partial, qualitative: a criterion, flag or claim, not calculated</span>
+      <span><i class="dot No"></i> No: confirmed not addressed</span>
+      <span><i class="dot Unknown"></i> Unknown: public sources can't confirm either way</span>
+      <span>Score counts Yes as 1 and either Partial as 0.5, out of 8 · <a href="report.html#rating-rules">How ratings are decided</a></span>
+    </div>
   </section>
 
   <div class="tablebox">
     <table>
       <thead>
-        <tr>
+        <tr class="grprow">
           <th class="blank" colspan="4"></th>
           <th class="grp" colspan="4">Costs</th>
           <th class="grp" colspan="4">Benefits</th>
