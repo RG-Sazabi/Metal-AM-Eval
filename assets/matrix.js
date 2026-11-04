@@ -1,6 +1,6 @@
 /* Metal AM Tool Coverage Matrix
    Data comes from data/tools.js (window.TOOLS_DATA). Filters are mirrored in the URL hash,
-   so a filtered view can be bookmarked or shared, e.g. index.html#cols=NRE,QA_Qual&min=partial (min = yes | pquant | partial) */
+   so a filtered view can be bookmarked or shared, e.g. index.html#cols=NRE,QA_Qual&min=partial (min = yes | partial) */
 (function () {
   'use strict';
   var DATA = window.TOOLS_DATA;
@@ -13,7 +13,7 @@
   var COLS = [
     { k: 'NRE', def: 'One-time cost to prepare design files and set run parameters: reverse engineering, redesign, build prep and parameter development.', hm: 'NRE', label: 'NRE', full: 'Non-recurring engineering', card: 'Non-recurring engineering', short: 'NRE', grp: 'Cost' },
     { k: 'Production', def: 'Per-part cost from geometry, material and machine.', hm: 'Production', label: 'Prod', full: 'Production cost', card: 'Production cost', short: 'production cost', grp: 'Cost' },
-    { k: 'QA_Qual', def: 'Material, process and part qualification; first-article testing; airworthiness or technical-authority approval.', hm: 'QA qual', label: 'QA qual', full: 'QA: qualification & certification', card: 'QA qualification', short: 'QA qualification', grp: 'Cost' },
+    { k: 'QA_Qual', def: 'Material, process and part qualification; first-article testing; airworthiness or technical-authority approval.', hm: 'Qualification', label: 'Qualif.', full: 'Qualification & certification', card: 'Qualification', short: 'qualification', grp: 'Cost' },
     { k: 'QA_Insp', def: 'Per-part inspection and testing: NDI or CT, witness coupons and mechanical tests.', hm: 'QA insp', label: 'QA insp', full: 'QA: per-part inspection', card: 'QA per-part inspection', short: 'QA inspection', grp: 'Cost' },
     { k: 'Storage', def: 'Inventory reduction because spares can be printed on demand.', hm: 'Storage', label: 'Storage', full: 'Storage / inventory', card: 'Storage / inventory', short: 'storage', grp: 'Benefit' },
     { k: 'Shared_Capital', def: 'Machine purchase and maintenance cost spread across many parts or users.', hm: 'Sh capital', label: 'Sh cap $', full: 'Shared capital cost', card: 'Shared capital cost', short: 'shared capital', grp: 'Benefit' },
@@ -37,9 +37,8 @@
   var RV = { Yes: 1, Partial: 0.5, No: 0, Unknown: 0 };
   var SORTV = { Yes: 1, Partial: 0.5, No: 0, Unknown: -0.25 };
   var CONF = { High: 3, Medium: 2, Low: 1 };
-  function isPQ(sc) { return sc.rating === 'Partial' && sc.partial_type !== 'qualitative'; }
-  function rLabel(sc) { return sc.rating === 'Partial' ? 'Partial (' + (sc.partial_type === 'qualitative' ? 'qualitative' : 'quantified') + ')' : sc.rating; }
-  function dotCls(sc) { return 'dot ' + sc.rating + (sc.rating === 'Partial' ? (sc.partial_type === 'qualitative' ? ' pl' : ' pq') : ''); }
+  function rLabel(sc) { return sc.rating; }
+  function dotCls(sc) { return 'dot ' + sc.rating; }
 
   tools.forEach(function (t, i) {
     t._i = i;
@@ -50,7 +49,7 @@
     t._hay = (t.name + ' ' + t.developer + ' ' + t.context + ' ' + t.description + ' ' + t.processes).toLowerCase();
   });
 
-  var state = { q: '', type: '', level: '', sector: '', conf: '', link: '', cols: [], cb: '', match: 'all', min: 'yes', sort: 'score', dir: -1, open: {} };
+  var state = { q: '', type: '', level: '', sector: '', conf: '', metal: '', cols: [], cb: '', match: 'all', min: 'yes', sort: 'score', dir: -1, open: {} };
 
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function uniq(arr) { return Array.from(new Set(arr)).sort(); }
@@ -59,10 +58,10 @@
   document.getElementById('foot').textContent = DATA.foot;
 
   // ---- URL hash <-> state
-  var FIELDS = ['q', 'type', 'level', 'sector', 'conf', 'link', 'cb', 'match', 'min', 'sort', 'dir'];
+  var FIELDS = ['q', 'type', 'level', 'sector', 'conf', 'metal', 'cb', 'match', 'min', 'sort', 'dir'];
   function readHash() {
     // start from the defaults so a field missing from the address is reset, not left over from the previous view
-    state.q = state.type = state.level = state.sector = state.conf = state.link = state.cb = '';
+    state.q = state.type = state.level = state.sector = state.conf = state.metal = state.cb = '';
     state.match = 'all'; state.min = 'yes'; state.sort = 'score'; state.dir = -1; state.cols = [];
     var h = location.hash.replace(/^#/, '');
     if (!h) return;
@@ -71,13 +70,15 @@
     state.dir = state.dir === '1' || state.dir === 1 ? 1 : -1;
     if (state.type !== 'Tool' && state.type !== 'Framework') state.type = '';
     if (state.match !== 'any') state.match = 'all';
-    if (state.min !== 'partial' && state.min !== 'pquant') state.min = 'yes';
+    if (state.min === 'pquant') state.min = 'partial';   // older links from the two-Partial version
+    if (state.min !== 'partial') state.min = 'yes';
     if (!CB[state.cb]) state.cb = '';
+    if (state.metal !== 'Metal' && state.metal !== 'Unclear') state.metal = '';
     state.cols = (p.get('cols') || '').split(',').filter(function (k) { return COLKEYS.indexOf(k) >= 0; });
   }
   function writeHash() {
     var p = new URLSearchParams();
-    ['q', 'type', 'level', 'sector', 'conf', 'link', 'cb'].forEach(function (f) { if (state[f]) p.set(f, state[f]); });
+    ['q', 'type', 'level', 'sector', 'conf', 'metal', 'cb'].forEach(function (f) { if (state[f]) p.set(f, state[f]); });
     if (state.cols.length) p.set('cols', state.cols.join(','));
     if (state.match !== 'all') p.set('match', state.match);
     if (state.min !== 'yes') p.set('min', state.min);
@@ -113,8 +114,8 @@
 
   // ---- filtering
   function covered(t, k) {
-    var sc = t.scores[k], r = sc.rating;
-    return r === 'Yes' || (state.min === 'partial' && r === 'Partial') || (state.min === 'pquant' && isPQ(sc));
+    var r = t.scores[k].rating;
+    return r === 'Yes' || (state.min === 'partial' && r === 'Partial');
   }
   function baseFiltered() {
     var q = state.q.trim().toLowerCase();
@@ -124,8 +125,7 @@
       if (state.level && t.decision_levels.indexOf(state.level) < 0) return false;
       if (state.sector && t.sector !== state.sector) return false;
       if (state.conf && t.confidence !== state.conf) return false;
-      if (state.link === 'yes' && !t.tool_link) return false;
-      if (state.link === 'no' && t.tool_link) return false;
+      if (state.metal && (t.metal_scope || 'Metal') !== state.metal) return false;
       return true;
     });
   }
@@ -178,7 +178,7 @@
   function contrast(a, b) { var x = lum(a), y = lum(b); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); }
   function inkOn(bg) { var a = isDark() ? '#e6ecf1' : '#17202a', b = isDark() ? '#0b1620' : '#ffffff'; return contrast(bg, a) >= contrast(bg, b) ? a : b; }
   function pct(c, n) { if (!n) return '0%'; var p = c / n * 100; return (p > 0 && p < 10 ? p.toFixed(1) : String(Math.round(p))) + '%'; }
-  function ruleText() { return state.min === 'partial' ? 'Yes or any Partial' : state.min === 'pquant' ? 'Yes or quantified Partial' : 'Yes'; }
+  function ruleText() { return state.min === 'partial' ? 'Yes or Partial' : 'Yes'; }
   var heat = { M: null, n: 0, cnt: null };
 
   function renderHeat(base) {
@@ -188,11 +188,11 @@
     var inBox = state.cb ? 'in \u201c' + CB[state.cb].label + '\u201d' : 'shown';
     for (i = 0; i < K; i++) { M.push([]); for (j = 0; j < K; j++) M[i].push(0); }
     // every rating per column (for the bars) plus pair counts under the current "rated" rule (for the cells)
-    var cnt = COLKEYS.map(function () { return { y: 0, pq: 0, pl: 0, u: 0, no: 0 }; });
+    var cnt = COLKEYS.map(function () { return { y: 0, p: 0, u: 0, no: 0 }; });
     sub.forEach(function (t) {
       var cv = COLKEYS.map(function (k, ci) {
         var sc = t.scores[k], r = sc.rating, c = cnt[ci];
-        if (r === 'Yes') c.y++; else if (r === 'Partial') { if (isPQ(sc)) c.pq++; else c.pl++; } else if (r === 'Unknown') c.u++; else c.no++;
+        if (r === 'Yes') c.y++; else if (r === 'Partial') c.p++; else if (r === 'Unknown') c.u++; else c.no++;
         return covered(t, k);
       });
       for (i = 0; i < K; i++) if (cv[i]) for (j = 0; j < K; j++) if (cv[j]) M[i][j]++;
@@ -208,7 +208,7 @@
     var stops = []; for (i = 0; i <= 6; i++) stops.push(rampAt(i / 6));
     document.getElementById('hm-key').innerHTML =
       '<div class="kgrp"><span class="kt">Cells</span><span><i class="kz"></i>0 tools</span><span><i class="kg" style="background:linear-gradient(90deg, ' + stops.join(', ') + ')"></i><b>up to ' + pct(maxOff, n) + '</b></span><span>' + (state.cb ? 'share of tools ' + inBox : 'share of shown tools') + '</span></div>' +
-      '<div class="kgrp"><span class="kt">Bars</span><span><i class="ks y"></i>Yes</span><span><i class="ks p"></i>Partial, quantified</span><span><i class="ks pl"></i>Partial, qualitative</span><span><i class="ks u"></i>Unknown</span><span><i class="ks n"></i>No</span></div>';
+      '<div class="kgrp"><span class="kt">Bars</span><span><i class="ks y"></i>Yes</span><span><i class="ks p"></i>Partial</span><span><i class="ks u"></i>Unknown</span><span><i class="ks n"></i>No</span></div>';
     hideTip();
     if (!nAll) { hm.innerHTML = '<tbody><tr><td class="hm-empty">No tools match these filters.</td></tr></tbody>'; return; }
 
@@ -247,11 +247,11 @@
       });
       if (ri === 0 || ri === B0) h += '<th class="gv" rowspan="4" scope="rowgroup"><span>' + (ri === 0 ? 'Costs' : 'Benefits') + '</span></th>';
       var q = cnt[ri], on = inSel(r.k), f = function (x) { return n ? (x / n * 100).toFixed(1) : 0; };
-      var blbl = r.full + '. ' + r.def + ' ' + q.y + ' yes, ' + q.pq + ' partial quantified, ' + q.pl + ' partial qualitative, ' + q.u + ' unknown, ' + q.no + ' no. ' + (on ? 'Selected; select to remove.' : 'Select to filter by this column.');
+      var blbl = r.full + '. ' + r.def + ' ' + q.y + ' yes, ' + q.p + ' partial, ' + q.u + ' unknown, ' + q.no + ' no. ' + (on ? 'Selected; select to remove.' : 'Select to filter by this column.');
       h += '<td><button type="button" class="rb' + (on ? ' on' : '') + '" data-r="' + ri + '" aria-pressed="' + on + '" aria-label="' + esc(blbl) + '">' +
         '<span class="box" aria-hidden="true">✓</span><span class="rl" title="' + esc(r.full) + '">' + esc(r.hm) + '</span>' +
-        '<span class="rv" aria-hidden="true"><span class="bar"><i class="y" style="width:' + f(q.y) + '%"></i><i class="p" style="width:' + f(q.pq) + '%"></i><i class="pl" style="width:' + f(q.pl) + '%"></i><i class="u" style="width:' + f(q.u) + '%"></i></span>' +
-        '<span class="rn">' + q.y + ' yes · ' + q.u + ' unknown · ' + q.no + ' no</span><span class="rn">Partial: ' + q.pq + ' quantified · ' + q.pl + ' qualitative</span></span></button></td></tr>';
+        '<span class="rv" aria-hidden="true"><span class="bar"><i class="y" style="width:' + f(q.y) + '%"></i><i class="p" style="width:' + f(q.p) + '%"></i><i class="u" style="width:' + f(q.u) + '%"></i></span>' +
+        '<span class="rn">' + q.y + ' yes · ' + q.p + ' partial</span><span class="rn">' + q.u + ' unknown · ' + q.no + ' no</span></span></button></td></tr>';
     });
     hm.innerHTML = h + '</tbody>';
   }
@@ -282,7 +282,7 @@
       line(COLS[ri].full, true);
       line(COLS[ri].def);
       var shown = [].slice.call(btn.querySelectorAll('.rn')).every(function (e) { return e.offsetParent && e.scrollWidth <= e.clientWidth + 1; });
-      if (!shown) line(q.y + ' Yes · ' + q.pq + ' Partial, quantified · ' + q.pl + ' Partial, qualitative · ' + q.u + ' Unknown · ' + q.no + ' No, of ' + n + ' ' + heat.inBox);
+      if (!shown) line(q.y + ' Yes · ' + q.p + ' Partial · ' + q.u + ' Unknown · ' + q.no + ' No, of ' + n + ' ' + heat.inBox);
       line(btn.classList.contains('on') ? 'Selected · select again to remove' : 'Select to filter by this column');
     } else {
       var ci = +btn.getAttribute('data-c'), v = heat.M[ri][ci];
@@ -353,7 +353,7 @@
       : '';
     return '<div class="dgrid"><div>' +
       '<h4>What it is</h4><p>' + esc(t.description) + '</p>' + ev +
-      '<dl class="kv"><dt>Type</dt><dd>' + esc(t.type) + (t.type_reason ? ' · ' + esc(t.type_reason) : '') + '</dd><dt>Kind</dt><dd>' + esc(t.tool_type) + '</dd><dt>Developer</dt><dd>' + esc(t.developer) + '</dd><dt>Year</dt><dd>' + esc(t.year) + '</dd><dt>Setting</dt><dd>' + esc(t.context) + '</dd><dt>Processes</dt><dd>' + esc(t.processes) + '</dd><dt>Availability</dt><dd>' + esc(t.availability) + '</dd>' +
+      '<dl class="kv"><dt>Type</dt><dd>' + esc(t.type) + (t.type_reason ? ' · ' + esc(t.type_reason) : '') + '</dd><dt>Kind</dt><dd>' + esc(t.tool_type) + '</dd><dt>Developer</dt><dd>' + esc(t.developer) + '</dd><dt>Year</dt><dd>' + esc(t.year) + '</dd><dt>Setting</dt><dd>' + esc(t.context) + '</dd><dt>Processes</dt><dd>' + esc(t.processes) + '</dd>' + (t.metal_scope ? '<dt>Metal AM</dt><dd>' + esc(t.metal_scope === 'Metal' ? 'In scope' : 'AM tool; metal not stated') + (t.metal_note ? ' · ' + esc(t.metal_note) : '') + '</dd>' : '') + '<dt>Availability</dt><dd>' + esc(t.availability) + '</dd>' +
       (t.evidence_basis ? '<dt>Evidence read</dt><dd>' + esc(t.evidence_basis) + '</dd>' : '') +
       (t.flag ? '<dt>Flag</dt><dd>' + esc(t.flag) + '</dd>' : '') + '</dl>' +
       '<h4>Sources</h4><ol class="srcs">' + srcs + '</ol></div>' +
@@ -365,7 +365,7 @@
     document.querySelectorAll('[data-min]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-min') === state.min)); });
     document.getElementById('clearcols').disabled = !state.cols.length && !state.cb;
     document.getElementById('q').value = state.q;
-    [['ftype', 'type'], ['flevel', 'level'], ['fsector', 'sector'], ['fconf', 'conf'], ['flink', 'link']].forEach(function (p) {
+    [['ftype', 'type'], ['flevel', 'level'], ['fsector', 'sector'], ['fconf', 'conf'], ['fmetal', 'metal']].forEach(function (p) {
       document.getElementById(p[0]).value = state[p[1]];
     });
     hdr.querySelectorAll('th').forEach(function (th) {
@@ -408,6 +408,7 @@
       }).join('');
       var lv = t.decision_levels.map(function (l) { return '<span class="tag">' + esc(l) + '</span>'; }).join('');
       var flag = t.flag ? '<span class="tag flag">' + esc(t.flagShort || 'See flag') + '</span>' : '';
+      if (t.metal_scope === 'Unclear') flag += '<span class="tag flag" title="An AM tool whose sources do not say whether it covers metal">Metal not stated</span>';
       return '<tr class="row" tabindex="0" data-i="' + t._i + '" aria-expanded="' + open + '">' +
         '<td class="name"><b>' + esc(t.name) + '</b><span class="dev">' + esc(t.developer) + '</span>' + flag +
         (t.tool_link ? '<a class="tl" href="' + esc(t.tool_link.url) + '" target="_blank" rel="noopener">Tool link ↗</a>' : '') + '</td>' +
@@ -459,11 +460,11 @@
   tb.addEventListener('keydown', function (e) { if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('tr.row')) { e.preventDefault(); toggle(e.target); } });
 
   document.getElementById('q').addEventListener('input', function (e) { state.q = e.target.value; render(); });
-  [['ftype', 'type'], ['flevel', 'level'], ['fsector', 'sector'], ['fconf', 'conf'], ['flink', 'link']].forEach(function (p) {
+  [['ftype', 'type'], ['flevel', 'level'], ['fsector', 'sector'], ['fconf', 'conf'], ['fmetal', 'metal']].forEach(function (p) {
     document.getElementById(p[0]).addEventListener('change', function (e) { state[p[1]] = e.target.value; render(); });
   });
   document.getElementById('reset').addEventListener('click', function () {
-    state.q = state.type = state.level = state.sector = state.conf = state.link = '';
+    state.q = state.type = state.level = state.sector = state.conf = state.metal = '';
     state.cols = []; state.cb = ''; state.match = 'all'; state.min = 'yes';
     render();
   });

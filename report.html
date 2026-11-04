@@ -66,7 +66,6 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 .c-grp { font-size: 11.5px; font-weight: 600; letter-spacing: .06em; }
 .c-yes { fill: var(--accent); } .sw.c-yes { background: var(--accent); }
 .c-part { fill: var(--partial); } .sw.c-part { background: var(--partial); }
-.c-partl { fill: var(--partial-l); } .sw.c-partl { background: var(--partial-l); }
 .c-unk { fill: var(--grey-mark); fill-opacity: .6; } .sw.c-unk { background: var(--grey-mark); opacity: .6; }
 .c-no { fill: var(--grey-mark); fill-opacity: .18; } .sw.c-no { background: var(--grey-mark); opacity: .25; }
 .d-box { fill: none; stroke: var(--grey-mark); stroke-width: 1.25; }
@@ -99,20 +98,20 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
     <header class="rhead">
       <div class="eyebrow">Report · metal additive manufacturing · defense sustainment</div>
       <h1>Metal AM Decision Support Tools: Cost and Benefit Coverage</h1>
-      <div class="byline">Updated October 29, 2026 · 144 tools reviewed</div>
+      <div class="byline">Updated October 29, 2026 · 215 tools reviewed</div>
     </header>
 <h2 id="summary">Summary</h2>
-<p>We found 144 decision support tools for metal AM adoption published since 2010, and none prices all eight cost and benefit columns. They include 29 commercial products, 46 academic models, 15 government or consortium tools, and 54 methods, frameworks and standards; 62 come from defense. By type, 96 are tools that compute an answer or are used hands-on, and 48 are frameworks for thinking about the problem. The broadest tools rate Yes on four columns, while 81 tools rate Yes on none. Another 170 of the 1,152 ratings (15%) are Unknown, because public sources can't confirm them either way. We also reviewed 80 tools that are polymer-only or never address metal, and left them out.</p>
-<p>Coverage splits along the cost–benefit line. Production cost is best covered (49 Yes), while shared capacity (1), NRE (5) and QA qualification (7) are worst. Partial is the most common rating (524 of 1,152), and three in four Partials are qualitative: the tool names the item as a criterion or claim but does not calculate it. Cost models price production; supply-chain models value storage and speed but treat AM cost as a lump sum. Only three tools (Busachi, Coyle and Braunberger) rate Yes on at least two costs and two benefits, and no qualification Yes pairs with a benefit Yes.</p>
-<p>For defense sustainment, the best partial fits are the Cranfield/Babcock Royal Navy framework (<a href="https://doi.org/10.1007/s13198-017-0585-9" target="_blank" rel="noopener">Busachi et al.</a>) and Coyle's NPS naval aviation model (<a href="https://apps.dtic.mil/sti/pdfs/AD1046824.pdf" target="_blank" rel="noopener">Coyle</a>). AFIT's laser powder bed cost models (<a href="https://scholar.afit.edu/etd/3748/" target="_blank" rel="noopener">Braunberger</a>; <a href="https://scholar.afit.edu/etd/791/" target="_blank" rel="noopener">Crean</a>) add Air Force cost data, and the NCSU/USMA network model (<a href="https://repository.lib.ncsu.edu/server/api/core/bitstreams/6d683c20-48b9-46a7-9ef5-a8db0865b4dc/content" target="_blank" rel="noopener">Doudnikoff</a>, extending <a href="https://engrxiv.org/preprint/download/2007/4037/3021" target="_blank" rel="noopener">McDermott et al.</a>) values the benefits. For QA, only the <a href="https://doi.org/10.1080/09537287.2025.2494096" target="_blank" rel="noopener">Peron/Cantini model</a> prices qualification by part class; NASA-STD-6030 and NAVSEA rules list what to price.</p>
-<p>Fielded defense tools are mostly part screens. Commercial screeners now serve Navy submarine spares (<a href="https://www.nsrp.org/wp-content/uploads/2024/07/02-05_MGREEN_3D-Printing-of-Supply-Sensitive-Parts_BTSDMT-Meeting.pdf" target="_blank" rel="noopener">CASTOR</a>) and the Marine Corps and Army (<a href="https://www.3yourmind.com/news/u.s.-marine-corps.-awards-3yourmind-and-phillips-corp.-2.5m-contract" target="_blank" rel="noopener">3YOURMIND</a>). DLA's prescreener and the Air Force's PACT are government-built; PACT is known mainly from press releases, so its ratings carry low confidence.</p>
-<p><strong>The NIAR tool.</strong> The only NIAR decision tool found is the <a href="https://www.americamakes.us/wp-content/uploads/2024/03/5554.007-IMPACT-Additive-Manufacturing-Techno-Economic-Analysis-AFRL-2024-1188.pdf" target="_blank" rel="noopener">AM Techno-Economic Analysis (TEA) cost model and module</a>, America Makes IMPACT project 5554.007 (2023–2025). OSD ManTech funded it through AFRL, so it is DoD-wide rather than Air Force-specific; AFLCMC is the only Air Force member of its advisory board. Among government tools it scores near the top, but its ratings are all Partial or Unknown: the January 2024 interim briefing reviews existing cost models and lists what a tool still to be built would cover. No final report was public by October 2026.</p>
+<p>We reviewed 224 decision support tools for metal AM adoption published since 2010 and kept 215; none prices all eight cost and benefit columns. They include 35 commercial products, 69 academic models, 24 government or consortium tools, and 87 methods, frameworks and standards; 101 come from defense. By type, 138 are tools that compute an answer or are used hands-on, and 77 are frameworks for thinking about the problem. For 153 tools a source shows metal AM is in scope; the other 62 are AM tools whose sources never say whether they cover metal, and they are flagged "metal not stated". We dropped 9: eight polymer-only studies and one general-purpose cost estimator. The broadest tools rate Yes on five columns, while 131 rate Yes on none, and 593 of the 1,720 ratings (34%) are Unknown because public sources can't confirm them either way.</p>
+<p>Coverage splits along the cost–benefit line. Production cost is best covered (56 Yes), while shared capacity (5), qualification (6) and NRE (7) are worst. Partial means the tool prices part of an item or uses it as a criterion in its decision; a tool that only mentions an item or claims a benefit rates No or Unknown, so 366 of the 1,720 ratings are Partial. Cost models price production; supply-chain models value storage and speed but treat AM cost as a lump sum. Only one tool, <a href="https://doi.org/10.1007/s00291-020-00608-7" target="_blank" rel="noopener">Knofius et al.'s dual-sourcing model</a>, rates Yes on at least two costs and two benefits, and no qualification Yes pairs with a benefit Yes.</p>
+<p>For defense sustainment, the broadest fits remain the Cranfield/Babcock Royal Navy framework (<a href="https://doi.org/10.1007/s13198-017-0585-9" target="_blank" rel="noopener">Busachi et al.</a>) and AFIT's laser powder bed cost models (<a href="https://scholar.afit.edu/etd/791/" target="_blank" rel="noopener">Crean</a>; <a href="https://scholar.afit.edu/etd/3748/" target="_blank" rel="noopener">Braunberger</a>), alongside Coyle's NPS naval aviation model (<a href="https://apps.dtic.mil/sti/pdfs/AD1046824.pdf" target="_blank" rel="noopener">Coyle</a>); after the adversarial review none of them rates Yes on two costs and two benefits. The benefit side comes from network and inventory models: <a href="https://ir.library.louisville.edu/etd/2290" target="_blank" rel="noopener">Jedeck's spare-parts simulation</a> and the NCSU/USMA network model (<a href="https://repository.lib.ncsu.edu/server/api/core/bitstreams/6d683c20-48b9-46a7-9ef5-a8db0865b4dc/content" target="_blank" rel="noopener">Doudnikoff</a>, extending <a href="https://engrxiv.org/preprint/download/2007/4037/3021" target="_blank" rel="noopener">McDermott et al.</a>) both rate Yes on storage, shared capital, shared capacity and speed, though Doudnikoff's sources don't say whether it covers metal. For QA, the <a href="https://doi.org/10.1080/09537287.2025.2494096" target="_blank" rel="noopener">Peron/Cantini model</a> prices qualification by part class and NASA-STD-6030 sets costable tests for every class; NAVSEA's framework decides whether qualification applies but leaves the tests to each part.</p>
+<p>Fielded defense tools are mostly part screens. Commercial screeners now serve Navy submarine spares (<a href="https://www.nsrp.org/wp-content/uploads/2024/07/02-05_MGREEN_3D-Printing-of-Supply-Sensitive-Parts_BTSDMT-Meeting.pdf" target="_blank" rel="noopener">CASTOR</a>) and the Marine Corps and Army (<a href="https://www.3yourmind.com/news/u.s.-marine-corps.-awards-3yourmind-and-phillips-corp.-2.5m-contract" target="_blank" rel="noopener">3YOURMIND</a>). DLA's prescreener and the Air Force's PACT are government-built; PACT is known mainly from press releases, so its ratings carry low confidence. The Navy Price Fighters' <a href="https://www.navy.mil/Press-Office/News-Stories/Article/3163936/navy-price-fighters-develop-additive-manufacturing-cost-time-model/" target="_blank" rel="noopener">AMCAT cost and time model</a>, readmitted in this round, is the only government tool with a Yes (it costs NRE explicitly), and NAVSEA is wiring it into technical data package development.</p>
+<p><strong>The NIAR tool.</strong> The only NIAR decision tool found is the <a href="https://www.americamakes.us/wp-content/uploads/2024/03/5554.007-IMPACT-Additive-Manufacturing-Techno-Economic-Analysis-AFRL-2024-1188.pdf" target="_blank" rel="noopener">AM Techno-Economic Analysis (TEA) cost model and module</a>, America Makes IMPACT project 5554.007 (2023–2025). OSD ManTech funded it through AFRL, so it is DoD-wide rather than Air Force-specific; AFLCMC is the only Air Force member of its advisory board. All eight of its ratings are Unknown: the January 2024 interim briefing reviews existing cost models and lists what a tool still to be built would cover, so there is no method yet to rate. No final report was public by October 2026.</p>
 <p>NIAR's other Air Force work, such as the <a href="https://www.dodmantech.mil/Portals/107/JAMWGFlyer_20241114_1.pdf" target="_blank" rel="noopener">WAM</a> materials database and <a href="https://news.wichita.edu/2023/08/03/niar-secures-100-million-contract-for-digital-transformation-and-technologies-to-support-usaf-operational-readiness/" target="_blank" rel="noopener">B-1 and F-16 digital twins</a>, is not decision support. <a href="https://www.aflcmc.af.mil/NEWS/Article/3596164/rapid-sustainment-office-advanced-manufacturing-program-office-tool-goes-live-i/" target="_blank" rel="noopener">PACT</a> belongs to the Rapid Sustainment Office. The TEA briefing lists a Christophe Combemale on the team; a CMU researcher shares that name, but the briefing gives no affiliation.</p>
 <h2 id="scope-and-scoring-method">Scope and scoring method</h2>
 <p>Each tool is rated on eight cost and benefit columns, with a note and a source for every rating; the rating rules are below.</p>
 <p><strong>What counts as a tool.</strong> Commercial software, academic models, government and consortium tools, and methods or frameworks with no software (checklists, risk classification schemes, standards that drive decisions). Each entry is typed as a Tool or a Framework. Tools compute an answer or are hands-on aids: software, spreadsheets, calculators, databases, quantitative models and worksheets. Frameworks are ways to think about the problem: qualitative methods, standards, guidance and policy.</p>
 <p><strong>Lens.</strong> Defense sustainment: spare parts, maintenance depots and readiness. Civilian sustainment work (rail, energy, maritime, aviation repair and overhaul) is included when it applies.</p>
-<p><strong>Bounds.</strong> Published or released 2010 onward. All metal processes: powder bed fusion, directed energy deposition, binder jetting, cold spray and wire-arc. Metal must be in scope: a tool counts only if it models, screens for or supports metal AM processes or materials (alongside polymer is fine), or was applied to metal parts. We reviewed 80 more tools that are polymer-only, cover AM in general with no metal content, or show no metal evidence in their sources, and left them out. Four decision levels: which parts to print, which process or machine, whether to adopt or buy, and where to place and share capacity.</p>
+<p><strong>Bounds.</strong> Published or released 2010 onward. All metal processes: powder bed fusion, directed energy deposition, binder jetting, cold spray and wire-arc. A tool counts if a source shows metal AM is in scope (it models, screens for or supports metal processes or materials, alongside polymer or not, was applied to metal parts, or is used inside a named program that prints metal parts), or if it is an AM tool whose sources never say whether it covers metal; those 62 are flagged "metal not stated" in the matrix, which can filter them out. Polymer-only studies and general-purpose tools where AM is incidental are excluded: 9 of the 224 tools reviewed were dropped on these grounds. Four decision levels: which parts to print, which process or machine, whether to adopt or buy, and where to place and share capacity.</p>
 <div class="tablewrap"><table>
 <thead>
 <tr>
@@ -130,7 +129,7 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 <td>Per-part cost from geometry, material and machine</td>
 </tr>
 <tr>
-<td>QA: qualification</td>
+<td>Qualification</td>
 <td>Material, process and part qualification; first-article testing; airworthiness or technical-authority approval</td>
 </tr>
 <tr>
@@ -156,82 +155,83 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </tbody>
 </table></div>
 <h3 id="rating-rules">Rating rules</h3>
-<p>Every rating describes what the tool itself does (its method, model, software or prescribed procedure), as shown by a source, and carries a one-sentence note naming that source. There are five ratings:</p>
+<p>Every rating describes what the tool itself does (its method, model, software or prescribed procedure), as shown by a source, and carries a one-sentence note naming that source. There are four ratings:</p>
 <ul>
-<li><strong>Yes:</strong> the item is an explicit input, calculation or output that meets the column's test below. On the two QA columns, a standard also counts as Yes when it prescribes costable activities by part class.</li>
-<li><strong>Partial, quantified:</strong> the tool's method puts numbers on part of the column but misses the Yes test.</li>
-<li><strong>Partial, qualitative:</strong> the tool recognizes the item without calculating it: a screening criterion or threshold, a yes/no gate, a flag or proxy, a requirement or planned feature, or a claim. A saving quoted from a case study but not computed by the method counts here.</li>
-<li><strong>No:</strong> confirmed not addressed, because a full description of the tool was read and the item is absent, or the tool's scope plainly excludes it.</li>
-<li><strong>Unknown:</strong> public sources can't settle it, for example when only an abstract or a press release is available.</li>
+<li><strong>Yes:</strong> the item is an explicit input, calculation or output that meets the column's test below. On the qualification and inspection columns, a standard also counts as Yes when it prescribes costable activities by part class.</li>
+<li><strong>Partial:</strong> the tool takes the item into its decision without meeting the Yes test. Either its method puts numbers on part of the column, or the item is a screening criterion or threshold, a yes/no gate, a scored factor, or a step its procedure requires. A mention, a claimed or case-study saving, a planned feature, or a service the tool performs without weighing its cost does not count.</li>
+<li><strong>No:</strong> confirmed not addressed, because a full description of the tool was read and the item is absent or only mentioned, or the tool's scope plainly excludes it.</li>
+<li><strong>Unknown:</strong> public sources can't settle it, for example when only an abstract or a press release is available, or when such a source mentions the item without showing the tool uses it.</li>
 </ul>
-<p>The coverage score counts Yes as 1 and either kind of Partial as 0.5, out of 8. Tools with thin documentation are marked low confidence.</p>
+<p>The coverage score counts Yes as 1 and Partial as 0.5, out of 8. Tools with thin documentation are marked low confidence.</p>
 <div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Column</th>
 <th>Yes</th>
-<th>Partial, quantified</th>
-<th>Partial, qualitative</th>
+<th>Partial</th>
+<th>Not enough for Partial</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>NRE</td>
 <td>One-time engineering effort or cost (reverse engineering, redesign, data-package creation, parameter development) is a cost term, input or output</td>
-<td>Only part is costed, e.g. per-build file prep but no one-time redesign</td>
-<td>NRE work offered or discussed; data-package availability used as a flag</td>
+<td>Only part is costed, e.g. per-build file prep but no one-time redesign; data-package availability or redesign potential used as a screen or scored factor</td>
+<td>NRE work offered, recommended or discussed</td>
 </tr>
 <tr>
 <td>Production</td>
 <td>Per-part cost computed from machine time, material, labor and post-processing, or unit costs by technology entered as inputs</td>
-<td>A single lumped AM unit cost or premium with no build-up</td>
-<td>Cost compared or claimed in words; unit price used only as a filter; quoting or ROI with no documented inputs</td>
+<td>A single lumped AM unit cost or premium; unit price used as a filter; a quote the tool outputs from undocumented inputs</td>
+<td>Cost compared or claimed in words; ROI mentioned</td>
 </tr>
 <tr>
-<td>QA qualification</td>
+<td>Qualification</td>
 <td>Qualification cost or effort modeled, or activities prescribed by part class in costable form (test counts, test sets)</td>
-<td>A single fixed fee; costable counts for only some classes or steps</td>
-<td>Criticality or qualification used as a gate; discussed as a barrier; testing set case by case</td>
+<td>A single fixed fee; counts for only some classes; criticality or qualification used as a gate; a standard that requires qualification activities without class-specific counts</td>
+<td>Qualification discussed as a barrier or a future need</td>
 </tr>
 <tr>
 <td>QA inspection</td>
 <td>Per-part or per-build inspection cost is a line item, or a standard sets inspection scope by part class</td>
-<td>Folded into a reject rate or post-processing bundle; lot-level acceptance only</td>
-<td>Named or required without a cost or class-specific scope</td>
+<td>Folded into a reject rate or post-processing bundle; lot-level acceptance; inspection a required step of the procedure</td>
+<td>Inspection named, recommended or recorded but not required</td>
 </tr>
 <tr>
 <td>Storage</td>
 <td>Holding cost, stock levels or inventory investment computed</td>
-<td>Inventory cost as a fixed lifecycle element, without AM's effect on stock</td>
-<td>Stock reduction claimed; stock, demand or obsolescence used only to screen</td>
+<td>Inventory cost as a fixed lifecycle element; stock, demand or obsolescence used to screen parts</td>
+<td>Stock reduction or a digital inventory claimed</td>
 </tr>
 <tr>
 <td>Shared capital</td>
 <td>Machine capital spread with a utilization, load-factor, volume or multi-part-build assumption, or sites traded against scale economies</td>
-<td>Flat machine-hour depreciation with no utilization or volume</td>
-<td>Sharing, printer ROI or reuse of qualification described without numbers</td>
+<td>Flat machine-hour depreciation with no utilization or volume; a rule that reuses qualification across parts or machines</td>
+<td>Sharing, printer ROI or reuse described as a benefit</td>
 </tr>
 <tr>
 <td>Shared capacity</td>
 <td>Parts or users compete for shared printer capacity and that sets lead time or service level</td>
-<td>Capacity, utilization or site count modeled with no effect on lead time</td>
+<td>Capacity, utilization or site count modeled with no effect on lead time; work routed across shared printers or sites</td>
 <td>Pooling, fleets or networks described in words</td>
 </tr>
 <tr>
 <td>Speed</td>
 <td>The tool computes lead time, availability, readiness, or a backorder or downtime cost</td>
-<td>Lead time entered as a fixed parameter that isn't itself valued, or only print, build or production time reported</td>
-<td>Lead time used as a screening threshold; time savings claimed or quoted from a case</td>
+<td>Lead time entered as a fixed parameter, or only build time reported; lead time used as a screening threshold</td>
+<td>Time savings claimed or quoted from a case</td>
 </tr>
 </tbody>
 </table></div>
 <p>Two lines are judgment calls. Speed counts as Yes without a dollar value, and shared capacity counts competition for printers at a single site; the notes say when no cross-site pooling is modeled.</p>
 <h3 id="checking">Checking</h3>
-<p>Ratings were checked three times. Before the metal-scope cut, an independent reviewer re-checked 133 of the highest-stakes ratings across the original 224 tools and changed 22, mostly Yes to Partial; a second pass then moved ratings the sources could not confirm to Unknown. In November 2026, every rating for the 144 tools was re-checked against its sources under the rules above. That changed 170 of the 1,152 ratings, mostly No or Unknown to Partial as the written rules credit qualitative coverage, and settled 72 Unknowns. A separate auditor then re-checked 60 sampled ratings, including every change to or from Yes, confirmed 55 and corrected 5.</p>
-<p><strong>Tool links and versions.</strong> Each tool carries a direct link to the tool itself (product page, paper, thesis, standard or portal) where one is public; 121 of 144 do, and every link was re-checked in November 2026. Where a tool was released more than once, only the newest release is listed and earlier ones are named in its entry; McDermott et al.'s network model, for example, is folded into Doudnikoff's 2021 extension.</p>
+<p>Ratings were checked five times. An independent reviewer first re-checked 133 of the highest-stakes ratings and changed 22, mostly Yes to Partial, and a second pass moved ratings the sources could not confirm to Unknown. In early November 2026, every rating for the then 144 metal-scope tools was re-checked under the rules above (170 of 1,152 changed), and a separate auditor confirmed 55 of 60 sampled ratings.</p>
+<p>The 80 tools cut in an earlier metal-only pass were then readmitted, and all 224 went through an adversarial review. In batches of 15 to 17 tools, an advocate agent re-rated each tool from its sources with a quote or locator for every rating; a skeptic agent independently tried to overturn every rating in both directions, opening the source behind every Yes, every changed rating and every metal-scope call; and a judge agent ruled on each dispute from the sources. Skeptics contested 121 of the 1,792 ratings and 10 metal-scope calls. Judges sided with the skeptic on 97 ratings and 7 metal calls and with the advocate on 21 ratings and 2 metal calls, and chose a third rating 3 times. In all, 179 ratings changed: 106 rose from No or Unknown to Partial, 25 rose to Yes and 15 fell from Yes, and Unknowns fell by 53 net. Nine tools were dropped: eight polymer-only studies (among them Khajavi's 2018 spare-parts network and Westerweel's field-printing model) and Galorath's general-purpose SEER estimator. One drop overrides a judge: Daugherty and Heiple's Marine Corps study was kept on a program-level metal link, but its own analysis covers only polymer printers.</p>
+<p><strong>One Partial.</strong> The survey first split Partial into quantified and qualitative kinds, and the qualitative kind also credited mentions and claims. To stop those counting as coverage, the two kinds were merged under the stricter test above. Two reviewer agents independently re-ruled each of the 619 former qualitative Partials from its note, opening the source where the note was unclear; they agreed on 578, and a judge settled the other 41 and one flagged cell from the sources. In all, 185 stayed Partial, 202 became No and 232 became Unknown, so Unknown rose from 21% to 34% of ratings; no Yes rating changed.</p>
+<p><strong>Tool links and versions.</strong> Each tool carries a direct link to the tool itself (product page, paper, thesis, standard or portal) where one is public; 179 of 215 do, and every link was re-checked in November 2026. Where a tool was released more than once, only the newest release is listed and earlier ones are named in its entry; McDermott et al.'s network model, for example, is folded into Doudnikoff's 2021 extension.</p>
 <h2 id="tool-inventory-and-scores">Tool inventory and scores</h2>
-<p>These 16 tools are the most useful to a defense sustainment analyst, by coverage and defense use, sorted by coverage. The symbols match the matrix: see the legend under this paragraph. Each tool name links to the tool itself where one is public, otherwise to its main source. The <a href="index.html">full matrix</a> lists all 144 tools, with filters, a tool link, a note and a source for every rating.</p>
-<div class="legend inv-legend"><span><i class="dot Yes"></i> Yes</span><span><i class="dot Partial pq"></i> Partial, quantified</span><span><i class="dot Partial pl"></i> Partial, qualitative</span><span><i class="dot No"></i> No (confirmed)</span><span><i class="dot Unknown"></i> Unknown</span></div><div class="tablewrap"><table class="inv">
+<p>These 21 tools are the most useful to a defense sustainment analyst, by coverage and defense use, sorted by coverage. The symbols match the matrix: see the legend under this paragraph. Each tool name links to the tool itself where one is public, otherwise to its main source. The <a href="index.html">full matrix</a> lists all 215 tools, with filters, a tool link, a note and a source for every rating.</p>
+<div class="legend inv-legend"><span><i class="dot Yes"></i> Yes</span><span><i class="dot Partial"></i> Partial</span><span><i class="dot No"></i> No (confirmed)</span><span><i class="dot Unknown"></i> Unknown</span></div><div class="tablewrap"><table class="inv">
 <thead>
 <tr>
 <th>Tool</th>
@@ -249,53 +249,79 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 </thead>
 <tbody>
 <tr>
+<td><a href="https://ir.library.louisville.edu/etd/3350" target="_blank" rel="noopener">O'Brien aerospace spare parts shop simulation (Louisville)</a></td>
+<td>Tool</td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="https://ir.library.louisville.edu/etd/2290" target="_blank" rel="noopener">Jedeck spare-parts-on-demand simulation (Louisville)</a></td>
+<td>Tool</td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="https://repository.lib.ncsu.edu/server/api/core/bitstreams/6d683c20-48b9-46a7-9ef5-a8db0865b4dc/content" target="_blank" rel="noopener">Doudnikoff NCSU/USMA network model (extends McDermott et al.; metal not stated)</a></td>
+<td>Tool</td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td>High</td>
+</tr>
+<tr>
 <td><a href="https://doi.org/10.1007/s13198-017-0585-9" target="_blank" rel="noopener">Busachi/Erkoyuncu Royal Navy framework (Cranfield/Babcock)</a></td>
 <td>Tool</td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td>High</td>
-</tr>
-<tr>
-<td><a href="https://scholar.afit.edu/etd/3748/" target="_blank" rel="noopener">Braunberger MODA and L-PBF cost model (AFIT)</a></td>
-<td>Tool</td>
-<td class="rc"><i class="dot Partial pq" aria-hidden="true" title="Partial (quantified)"></i><span class="sr-only">Partial (quantified)</span></td>
-<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td>High</td>
-</tr>
-<tr>
-<td><a href="https://sarjaweb.vtt.fi/julkaisut/muut/2018/DIVA_final_report.pdf" target="_blank" rel="noopener">VTT/Aalto DIVA digital spare parts tools</a></td>
-<td>Tool</td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Partial pq" aria-hidden="true" title="Partial (quantified)"></i><span class="sr-only">Partial (quantified)</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td>High</td>
 </tr>
 <tr>
 <td><a href="https://apps.dtic.mil/sti/pdfs/AD1046824.pdf" target="_blank" rel="noopener">Coyle naval aviation screen and simulation (NPS)</a></td>
 <td>Tool</td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1007/s00291-020-00608-7" target="_blank" rel="noopener">Knofius et al. dual-sourcing spare parts model</a></td>
+<td>Tool</td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Partial pq" aria-hidden="true" title="Partial (quantified)"></i><span class="sr-only">Partial (quantified)</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
 <td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td>High</td>
@@ -303,40 +329,40 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 <tr>
 <td><a href="https://scholar.afit.edu/etd/791/" target="_blank" rel="noopener">Crean L-PBF cost and fielding model (AFIT)</a></td>
 <td>Tool</td>
-<td class="rc"><i class="dot Partial pq" aria-hidden="true" title="Partial (quantified)"></i><span class="sr-only">Partial (quantified)</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Partial pq" aria-hidden="true" title="Partial (quantified)"></i><span class="sr-only">Partial (quantified)</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="https://scholar.afit.edu/etd/3748/" target="_blank" rel="noopener">Braunberger MODA and L-PBF cost model (AFIT)</a></td>
+<td>Tool</td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td>High</td>
 </tr>
 <tr>
 <td><a href="https://utw10945.utweb.utexas.edu/Manuscripts/2013/2013-79-Lindemann.pdf" target="_blank" rel="noopener">Lindemann lifecycle and TD-ABC model (Paderborn)</a></td>
 <td>Tool</td>
-<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Partial pq" aria-hidden="true" title="Partial (quantified)"></i><span class="sr-only">Partial (quantified)</span></td>
-<td class="rc"><i class="dot Partial pq" aria-hidden="true" title="Partial (quantified)"></i><span class="sr-only">Partial (quantified)</span></td>
-<td class="rc"><i class="dot Partial pq" aria-hidden="true" title="Partial (quantified)"></i><span class="sr-only">Partial (quantified)</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
-<td class="rc"><i class="dot Partial pq" aria-hidden="true" title="Partial (quantified)"></i><span class="sr-only">Partial (quantified)</span></td>
-<td>High</td>
-</tr>
-<tr>
-<td><a href="https://repository.lib.ncsu.edu/server/api/core/bitstreams/6d683c20-48b9-46a7-9ef5-a8db0865b4dc/content" target="_blank" rel="noopener">Doudnikoff NCSU/USMA network model (extends McDermott et al.)</a></td>
-<td>Tool</td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
-<td class="rc"><i class="dot Partial pq" aria-hidden="true" title="Partial (quantified)"></i><span class="sr-only">Partial (quantified)</span></td>
-<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
-<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
-<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td>High</td>
 </tr>
 <tr>
@@ -344,52 +370,13 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 <td>Tool</td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
-<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Partial pq" aria-hidden="true" title="Partial (quantified)"></i><span class="sr-only">Partial (quantified)</span></td>
-<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
-<td>Medium</td>
-</tr>
-<tr>
-<td><a href="https://www.3yourmind.com/part-identification-software" target="_blank" rel="noopener">3YOURMIND Part Identification</a></td>
-<td>Tool</td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
-<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td>High</td>
-</tr>
-<tr>
-<td><a href="https://www.siemens.com/en-us/products/castor-enterprise/" target="_blank" rel="noopener">CASTOR (NSRP submarine spares use)</a></td>
-<td>Tool</td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
-<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
-<td class="rc"><i class="dot Partial pq" aria-hidden="true" title="Partial (quantified)"></i><span class="sr-only">Partial (quantified)</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td>Medium</td>
-</tr>
-<tr>
-<td><a href="https://www.americamakes.us/wp-content/uploads/2024/03/5554.007-IMPACT-Additive-Manufacturing-Techno-Economic-Analysis-AFRL-2024-1188.pdf" target="_blank" rel="noopener">NIAR TEA cost model and module (IMPACT 5554.007)</a></td>
-<td>Tool</td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td>Medium</td>
+<td>Low</td>
 </tr>
 <tr>
 <td><a href="https://doi.org/10.1080/09537287.2025.2494096" target="_blank" rel="noopener">Peron/Cantini qualification-cost model</a></td>
@@ -399,61 +386,139 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
-<td class="rc"><i class="dot Partial pq" aria-hidden="true" title="Partial (quantified)"></i><span class="sr-only">Partial (quantified)</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
 <td>Medium</td>
 </tr>
 <tr>
-<td><a href="https://ammo.ncms.org/wp-content/uploads/024-4870-Ser-05T-2018-024-20180817.pdf" target="_blank" rel="noopener">NAVSEA AM qualification framework</a></td>
-<td>Framework</td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
+<td><a href="https://sarjaweb.vtt.fi/julkaisut/muut/2018/DIVA_final_report.pdf" target="_blank" rel="noopener">VTT/Aalto DIVA digital spare parts tools</a></td>
+<td>Tool</td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="https://www.siemens.com/en-us/products/castor-enterprise/" target="_blank" rel="noopener">CASTOR (NSRP submarine spares use)</a></td>
+<td>Tool</td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><a href="https://www.3yourmind.com/part-identification-software" target="_blank" rel="noopener">3YOURMIND Part Identification</a></td>
+<td>Tool</td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><a href="https://webthesis.biblio.polito.it/33634/1/tesi.pdf" target="_blank" rel="noopener">Leonardo aircraft logistic support model (PoliTo thesis)</a></td>
+<td>Tool</td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
 <td>Medium</td>
 </tr>
 <tr>
 <td><a href="https://standards.nasa.gov/standard/nasa/nasa-std-6030" target="_blank" rel="noopener">NASA-STD-6030</a></td>
 <td>Tool</td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
 <td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
 <td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
 <td>High</td>
 </tr>
 <tr>
+<td><a href="https://www.navy.mil/Press-Office/News-Stories/Article/3163936/navy-price-fighters-develop-additive-manufacturing-cost-time-model/" target="_blank" rel="noopener">AMCAT cost and time model (Navy Price Fighters)</a></td>
+<td>Tool</td>
+<td class="rc"><i class="dot Yes" aria-hidden="true" title="Yes"></i><span class="sr-only">Yes</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td>Low</td>
+</tr>
+<tr>
+<td><a href="https://ammo.ncms.org/wp-content/uploads/024-4870-Ser-05T-2018-024-20180817.pdf" target="_blank" rel="noopener">NAVSEA AM qualification framework</a></td>
+<td>Framework</td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td>Medium</td>
+</tr>
+<tr>
 <td><a href="https://apps.dtic.mil/sti/pdfs/AD1013934.pdf" target="_blank" rel="noopener">DLA Legacy Parts AM Prescreening Tool (LMI)</a></td>
 <td>Tool</td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
-<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
 <td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot No" aria-hidden="true" title="No"></i><span class="sr-only">No</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td>High</td>
 </tr>
 <tr>
 <td><a href="https://www.aflcmc.af.mil/NEWS/Article/3596164/rapid-sustainment-office-advanced-manufacturing-program-office-tool-goes-live-i/" target="_blank" rel="noopener">PACT (Air Force RSO/AMPO)</a></td>
 <td>Tool</td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
 <td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
-<td class="rc"><i class="dot Partial pl" aria-hidden="true" title="Partial (qualitative)"></i><span class="sr-only">Partial (qualitative)</span></td>
+<td class="rc"><i class="dot Partial" aria-hidden="true" title="Partial"></i><span class="sr-only">Partial</span></td>
+<td>Low</td>
+</tr>
+<tr>
+<td><a href="https://www.americamakes.us/wp-content/uploads/2024/03/5554.007-IMPACT-Additive-Manufacturing-Techno-Economic-Analysis-AFRL-2024-1188.pdf" target="_blank" rel="noopener">NIAR TEA cost model and module (IMPACT 5554.007)</a></td>
+<td>Tool</td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
+<td class="rc"><i class="dot Unknown" aria-hidden="true" title="Unknown"></i><span class="sr-only">Unknown</span></td>
 <td>Low</td>
 </tr>
 </tbody>
@@ -461,21 +526,21 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 <h2 id="commonalities">Commonalities</h2>
 <p>Most tools follow the same chain (screen parts, cost them, build a business case), but most cover only one or two links. Screens use nearly the same inputs: material, build envelope, unit price, demand, lead time and sometimes criticality (<a href="https://apps.dtic.mil/sti/pdfs/AD1013934.pdf" target="_blank" rel="noopener">DLA</a>; <a href="https://www.3yourmind.com/how-to-find-3d-printable-parts-fast" target="_blank" rel="noopener">3YOURMIND</a>; <a href="https://www.nsrp.org/wp-content/uploads/2024/07/02-05_MGREEN_3D-Printing-of-Supply-Sensitive-Parts_BTSDMT-Meeting.pdf" target="_blank" rel="noopener">CASTOR</a>).</p>
 <p>Screens also pass similarly small shares of parts. DLA's prescreener cut 4.5 million parts to about 40,000, then to 40 (<a href="https://www.additivemanufacturing.media/articles/dod-utility-identifies-military-legacy-parts-that-make-the-most-sense-for-am" target="_blank" rel="noopener">Additive Manufacturing Media</a>). Coyle cut 10,162 Navy aviation items to 5, and VTT found about 2% of one firm's items feasible (<a href="https://apps.dtic.mil/sti/pdfs/AD1046824.pdf" target="_blank" rel="noopener">Coyle</a>; <a href="https://sarjaweb.vtt.fi/julkaisut/muut/2018/DIVA_final_report.pdf" target="_blank" rel="noopener">DIVA</a>).</p>
-<p>Coverage across all 144 tools is uneven, and academic models hold most Yes ratings in every column except QA qualification and speed.</p>
+<p>Coverage across all 215 tools is uneven, and academic models hold most Yes ratings in every column except qualification.</p>
 <figure class="figure">
-  <figcaption id="chart-cap"><strong>Production cost is priced by 49 tools; qualification by only 7.</strong>
-  Ratings of 144 tools on each column.</figcaption>
-  <div class="legend fig-legend"><span><i class="sw c-yes"></i>Yes: modeled or quantified</span><span><i class="sw c-part"></i>Partial, quantified</span><span><i class="sw c-partl"></i>Partial, qualitative</span><span><i class="sw c-unk"></i>Unknown: sources can't confirm</span><span><i class="sw c-no"></i>No: confirmed absent</span></div>
-  <div class="figscroll"><svg class="viz" viewBox="0 0 760 324" role="img" aria-labelledby="chart-cap"><text class="c-quiet c-grp" x="16" y="22">COSTS</text><text class="c-ink" x="16" y="47">NRE</text><rect class="c-yes" x="168.0" y="34" width="11.5" height="18"><title>NRE: 5 Yes</title></rect><rect class="c-part" x="179.5" y="34" width="57.3" height="18"><title>NRE: 25 Partial (quantified)</title></rect><rect class="c-partl" x="236.8" y="34" width="162.7" height="18"><title>NRE: 71 Partial (qualitative)</title></rect><rect class="c-unk" x="399.5" y="34" width="45.8" height="18"><title>NRE: 20 Unknown</title></rect><rect class="c-no" x="445.3" y="34" width="52.7" height="18"><title>NRE: 23 No</title></rect><text class="c-ink" x="510" y="47"><tspan font-weight="600">5 Yes</tspan><tspan class="c-quiet"> · 96 Partial (25 quant.) · 20 Unknown</tspan></text><text class="c-ink" x="16" y="77">Production</text><rect class="c-yes" x="168.0" y="64" width="112.3" height="18"><title>Production: 49 Yes</title></rect><rect class="c-part" x="280.3" y="64" width="34.4" height="18"><title>Production: 15 Partial (quantified)</title></rect><rect class="c-partl" x="314.7" y="64" width="100.8" height="18"><title>Production: 44 Partial (qualitative)</title></rect><rect class="c-unk" x="415.5" y="64" width="20.6" height="18"><title>Production: 9 Unknown</title></rect><rect class="c-no" x="436.1" y="64" width="61.9" height="18"><title>Production: 27 No</title></rect><text class="c-ink" x="510" y="77"><tspan font-weight="600">49 Yes</tspan><tspan class="c-quiet"> · 59 Partial (15 quant.) · 9 Unknown</tspan></text><text class="c-ink" x="16" y="107">QA: qualification</text><rect class="c-yes" x="168.0" y="94" width="16.0" height="18"><title>QA: qualification: 7 Yes</title></rect><rect class="c-part" x="184.0" y="94" width="25.2" height="18"><title>QA: qualification: 11 Partial (quantified)</title></rect><rect class="c-partl" x="209.2" y="94" width="153.5" height="18"><title>QA: qualification: 67 Partial (qualitative)</title></rect><rect class="c-unk" x="362.8" y="94" width="52.7" height="18"><title>QA: qualification: 23 Unknown</title></rect><rect class="c-no" x="415.5" y="94" width="82.5" height="18"><title>QA: qualification: 36 No</title></rect><text class="c-ink" x="510" y="107"><tspan font-weight="600">7 Yes</tspan><tspan class="c-quiet"> · 78 Partial (11 quant.) · 23 Unknown</tspan></text><text class="c-ink" x="16" y="137">QA: inspection</text><rect class="c-yes" x="168.0" y="124" width="29.8" height="18"><title>QA: inspection: 13 Yes</title></rect><rect class="c-part" x="197.8" y="124" width="25.2" height="18"><title>QA: inspection: 11 Partial (quantified)</title></rect><rect class="c-partl" x="223.0" y="124" width="105.4" height="18"><title>QA: inspection: 46 Partial (qualitative)</title></rect><rect class="c-unk" x="328.4" y="124" width="89.4" height="18"><title>QA: inspection: 39 Unknown</title></rect><rect class="c-no" x="417.8" y="124" width="80.2" height="18"><title>QA: inspection: 35 No</title></rect><text class="c-ink" x="510" y="137"><tspan font-weight="600">13 Yes</tspan><tspan class="c-quiet"> · 57 Partial (11 quant.) · 39 Unknown</tspan></text><text class="c-quiet c-grp" x="16" y="188">BENEFITS</text><text class="c-ink" x="16" y="213">Storage</text><rect class="c-yes" x="168.0" y="200" width="20.6" height="18"><title>Storage: 9 Yes</title></rect><rect class="c-part" x="188.6" y="200" width="11.5" height="18"><title>Storage: 5 Partial (quantified)</title></rect><rect class="c-partl" x="200.1" y="200" width="91.7" height="18"><title>Storage: 40 Partial (qualitative)</title></rect><rect class="c-unk" x="291.8" y="200" width="32.1" height="18"><title>Storage: 14 Unknown</title></rect><rect class="c-no" x="323.8" y="200" width="174.2" height="18"><title>Storage: 76 No</title></rect><text class="c-ink" x="510" y="213"><tspan font-weight="600">9 Yes</tspan><tspan class="c-quiet"> · 45 Partial (5 quant.) · 14 Unknown</tspan></text><text class="c-ink" x="16" y="243">Shared capital</text><rect class="c-yes" x="168.0" y="230" width="59.6" height="18"><title>Shared capital: 26 Yes</title></rect><rect class="c-part" x="227.6" y="230" width="55.0" height="18"><title>Shared capital: 24 Partial (quantified)</title></rect><rect class="c-partl" x="282.6" y="230" width="73.3" height="18"><title>Shared capital: 32 Partial (qualitative)</title></rect><rect class="c-unk" x="355.9" y="230" width="82.5" height="18"><title>Shared capital: 36 Unknown</title></rect><rect class="c-no" x="438.4" y="230" width="59.6" height="18"><title>Shared capital: 26 No</title></rect><text class="c-ink" x="510" y="243"><tspan font-weight="600">26 Yes</tspan><tspan class="c-quiet"> · 56 Partial (24 quant.) · 36 Unknown</tspan></text><text class="c-ink" x="16" y="273">Shared capacity</text><rect class="c-yes" x="168.0" y="260" width="2.3" height="18"><title>Shared capacity: 1 Yes</title></rect><rect class="c-part" x="170.3" y="260" width="25.2" height="18"><title>Shared capacity: 11 Partial (quantified)</title></rect><rect class="c-partl" x="195.5" y="260" width="87.1" height="18"><title>Shared capacity: 38 Partial (qualitative)</title></rect><rect class="c-unk" x="282.6" y="260" width="29.8" height="18"><title>Shared capacity: 13 Unknown</title></rect><rect class="c-no" x="312.4" y="260" width="185.6" height="18"><title>Shared capacity: 81 No</title></rect><text class="c-ink" x="510" y="273"><tspan font-weight="600">1 Yes</tspan><tspan class="c-quiet"> · 49 Partial (11 quant.) · 13 Unknown</tspan></text><text class="c-ink" x="16" y="303">Speed</text><rect class="c-yes" x="168.0" y="290" width="29.8" height="18"><title>Speed: 13 Yes</title></rect><rect class="c-part" x="197.8" y="290" width="66.5" height="18"><title>Speed: 29 Partial (quantified)</title></rect><rect class="c-partl" x="264.2" y="290" width="126.0" height="18"><title>Speed: 55 Partial (qualitative)</title></rect><rect class="c-unk" x="390.3" y="290" width="36.7" height="18"><title>Speed: 16 Unknown</title></rect><rect class="c-no" x="427.0" y="290" width="71.0" height="18"><title>Speed: 31 No</title></rect><text class="c-ink" x="510" y="303"><tspan font-weight="600">13 Yes</tspan><tspan class="c-quiet"> · 84 Partial (29 quant.) · 16 Unknown</tspan></text></svg></div>
+  <figcaption id="chart-cap"><strong>Production cost is priced by 56 tools; qualification by only 6.</strong>
+  Ratings of 215 tools on each column.</figcaption>
+  <div class="legend fig-legend"><span><i class="sw c-yes"></i>Yes: modeled or quantified</span><span><i class="sw c-part"></i>Partial: part priced, or a decision criterion</span><span><i class="sw c-unk"></i>Unknown: sources can't confirm</span><span><i class="sw c-no"></i>No: confirmed absent</span></div>
+  <div class="figscroll"><svg class="viz" viewBox="0 0 760 324" role="img" aria-labelledby="chart-cap"><text class="c-quiet c-grp" x="16" y="22">COSTS</text><text class="c-ink" x="16" y="47">NRE</text><rect class="c-yes" x="168.0" y="34" width="10.7" height="18"><title>NRE: 7 Yes</title></rect><rect class="c-part" x="178.7" y="34" width="82.9" height="18"><title>NRE: 54 Partial</title></rect><rect class="c-unk" x="261.6" y="34" width="147.3" height="18"><title>NRE: 96 Unknown</title></rect><rect class="c-no" x="409.0" y="34" width="89.0" height="18"><title>NRE: 58 No</title></rect><text class="c-ink" x="510" y="47"><tspan font-weight="600">7 Yes</tspan><tspan class="c-quiet"> · 54 Partial · 96 Unknown</tspan></text><text class="c-ink" x="16" y="77">Production</text><rect class="c-yes" x="168.0" y="64" width="86.0" height="18"><title>Production: 56 Yes</title></rect><rect class="c-part" x="254.0" y="64" width="93.6" height="18"><title>Production: 61 Partial</title></rect><rect class="c-unk" x="347.6" y="64" width="72.1" height="18"><title>Production: 47 Unknown</title></rect><rect class="c-no" x="419.7" y="64" width="78.3" height="18"><title>Production: 51 No</title></rect><text class="c-ink" x="510" y="77"><tspan font-weight="600">56 Yes</tspan><tspan class="c-quiet"> · 61 Partial · 47 Unknown</tspan></text><text class="c-ink" x="16" y="107">Qualification</text><rect class="c-yes" x="168.0" y="94" width="9.2" height="18"><title>Qualification: 6 Yes</title></rect><rect class="c-part" x="177.2" y="94" width="87.5" height="18"><title>Qualification: 57 Partial</title></rect><rect class="c-unk" x="264.7" y="94" width="122.8" height="18"><title>Qualification: 80 Unknown</title></rect><rect class="c-no" x="387.5" y="94" width="110.5" height="18"><title>Qualification: 72 No</title></rect><text class="c-ink" x="510" y="107"><tspan font-weight="600">6 Yes</tspan><tspan class="c-quiet"> · 57 Partial · 80 Unknown</tspan></text><text class="c-ink" x="16" y="137">QA: inspection</text><rect class="c-yes" x="168.0" y="124" width="16.9" height="18"><title>QA: inspection: 11 Yes</title></rect><rect class="c-part" x="184.9" y="124" width="53.7" height="18"><title>QA: inspection: 35 Partial</title></rect><rect class="c-unk" x="238.6" y="124" width="153.5" height="18"><title>QA: inspection: 100 Unknown</title></rect><rect class="c-no" x="392.1" y="124" width="105.9" height="18"><title>QA: inspection: 69 No</title></rect><text class="c-ink" x="510" y="137"><tspan font-weight="600">11 Yes</tspan><tspan class="c-quiet"> · 35 Partial · 100 Unknown</tspan></text><text class="c-quiet c-grp" x="16" y="188">BENEFITS</text><text class="c-ink" x="16" y="213">Storage</text><rect class="c-yes" x="168.0" y="200" width="30.7" height="18"><title>Storage: 20 Yes</title></rect><rect class="c-part" x="198.7" y="200" width="39.9" height="18"><title>Storage: 26 Partial</title></rect><rect class="c-unk" x="238.6" y="200" width="90.6" height="18"><title>Storage: 59 Unknown</title></rect><rect class="c-no" x="329.2" y="200" width="168.8" height="18"><title>Storage: 110 No</title></rect><text class="c-ink" x="510" y="213"><tspan font-weight="600">20 Yes</tspan><tspan class="c-quiet"> · 26 Partial · 59 Unknown</tspan></text><text class="c-ink" x="16" y="243">Shared capital</text><rect class="c-yes" x="168.0" y="230" width="52.2" height="18"><title>Shared capital: 34 Yes</title></rect><rect class="c-part" x="220.2" y="230" width="62.9" height="18"><title>Shared capital: 41 Partial</title></rect><rect class="c-unk" x="283.1" y="230" width="135.1" height="18"><title>Shared capital: 88 Unknown</title></rect><rect class="c-no" x="418.2" y="230" width="79.8" height="18"><title>Shared capital: 52 No</title></rect><text class="c-ink" x="510" y="243"><tspan font-weight="600">34 Yes</tspan><tspan class="c-quiet"> · 41 Partial · 88 Unknown</tspan></text><text class="c-ink" x="16" y="273">Shared capacity</text><rect class="c-yes" x="168.0" y="260" width="7.7" height="18"><title>Shared capacity: 5 Yes</title></rect><rect class="c-part" x="175.7" y="260" width="44.5" height="18"><title>Shared capacity: 29 Partial</title></rect><rect class="c-unk" x="220.2" y="260" width="93.6" height="18"><title>Shared capacity: 61 Unknown</title></rect><rect class="c-no" x="313.8" y="260" width="184.2" height="18"><title>Shared capacity: 120 No</title></rect><text class="c-ink" x="510" y="273"><tspan font-weight="600">5 Yes</tspan><tspan class="c-quiet"> · 29 Partial · 61 Unknown</tspan></text><text class="c-ink" x="16" y="303">Speed</text><rect class="c-yes" x="168.0" y="290" width="43.0" height="18"><title>Speed: 28 Yes</title></rect><rect class="c-part" x="211.0" y="290" width="96.7" height="18"><title>Speed: 63 Partial</title></rect><rect class="c-unk" x="307.7" y="290" width="95.2" height="18"><title>Speed: 62 Unknown</title></rect><rect class="c-no" x="402.8" y="290" width="95.2" height="18"><title>Speed: 62 No</title></rect><text class="c-ink" x="510" y="303"><tspan font-weight="600">28 Yes</tspan><tspan class="c-quiet"> · 63 Partial · 62 Unknown</tspan></text></svg></div>
 </figure>
-<p><strong>Commercial screening and cost tools</strong> are production-cost engines. Of 29 products, 10 rate Yes on production, and none on NRE, QA qualification or shared capacity. 3YOURMIND Part Identification alone itemizes stock and downtime avoidance; <a href="https://ampower.eu/tools/additive-manufacturing-cost-calculator/" target="_blank" rel="noopener">AMPOWER</a> and ExOne's calculator alone make capital use explicit.</p>
-<p><strong>Academic part-cost models</strong> add shared capital through build packing. Baumers et al. found that single-geometry builds overstate unit cost by a mean of 157% (<a href="https://arxiv.org/pdf/1706.02090v1" target="_blank" rel="noopener">Baumers et al.</a>). Lindemann's lifecycle model also prices design work, but few others price NRE, QA or any benefit (<a href="https://utw10945.utweb.utexas.edu/Manuscripts/2013/2013-79-Lindemann.pdf" target="_blank" rel="noopener">Lindemann et al.</a>).</p>
-<p><strong>Supply-chain and inventory models</strong> carry the benefit columns. Academic models, mostly of this kind, hold 7 of the 9 storage Yes ratings, 6 of the 13 speed ratings and the only shared-capacity Yes. AM cuts stock most when holding costs are high and failure rates are well known: an aircraft spares model keeps AM inventory at about a quarter of conventional levels (<a href="https://doi.org/10.1108/JMTM-07-2017-0143" target="_blank" rel="noopener">Ghadge et al.</a>), while uncertainty about AM failure rates erodes the advantage (<a href="https://doi.org/10.1016/j.ijpe.2024.109438" target="_blank" rel="noopener">Peron et al. 2024</a>). On placement, centralizing wins when machine and post-processing capital is high (<a href="https://engrxiv.org/preprint/download/2007/4037/3021" target="_blank" rel="noopener">McDermott et al.</a>; <a href="https://www.sciencedirect.com/science/article/abs/pii/S2214860418308807" target="_blank" rel="noopener">Bonnín Roca et al.</a>), and Doudnikoff finds no AM cheapest once machine fixed cost is counted (<a href="https://repository.lib.ncsu.edu/server/api/core/bitstreams/6d683c20-48b9-46a7-9ef5-a8db0865b4dc/content" target="_blank" rel="noopener">Doudnikoff</a>).</p>
-<p><strong>QA standards</strong> classify parts by criticality and attach activities to each class. NASA-STD-6030, USAF EZ-SB-19-01 and NAVSEA's framework set test data and inspection scope by class but give no prices (<a href="https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/2021-04-21_nasa-std-6030-approveddocx.pdf" target="_blank" rel="noopener">NASA</a>; <a href="https://daytonaero.com/_files/ugd/742fa6_f655412ea39b4ab89e7fa86686e6e8f6.pdf" target="_blank" rel="noopener">USAF</a>; <a href="https://ammo.ncms.org/wp-content/uploads/024-4870-Ser-05T-2018-024-20180817.pdf" target="_blank" rel="noopener">NAVSEA</a>). Most let one-time qualification cover many parts, as in NAVSEA's once-per-process/material-combination rule (<a href="https://www.nsrp.org/wp-content/uploads/2021/06/Carderock_DED-Tech-Pub-Development_Hovanec.pdf" target="_blank" rel="noopener">Hovanec</a>).</p>
-<p><strong>Government and consortium tools</strong> mostly rate Partial, and none of the 15 earns a Yes in any column. The one that did, Singapore's maritime screening programme, turned out on re-reading to quote production savings from partner cases rather than compute them. Their screening criteria echo commercial tools, which the services now buy for the same job (<a href="https://www.3yourmind.com/news/u.s.-army-awards-3yourmind-contract-for-additive-manufacturing-part-identification" target="_blank" rel="noopener">Army</a>).</p>
+<p><strong>Commercial screening and cost tools</strong> are production-cost engines. Of 35 products, 12 rate Yes on production, and none on NRE, qualification or shared capacity. 3YOURMIND Part Identification alone itemizes stock; <a href="https://ampower.eu/tools/additive-manufacturing-cost-calculator/" target="_blank" rel="noopener">AMPOWER</a>, ExOne's calculator, aPriori and 3D Spark make capital use explicit, and six products compute a lead time or delivery estimate.</p>
+<p><strong>Academic part-cost models</strong> add shared capital through build packing. Baumers et al. found that single-geometry builds overstate unit cost by a mean of 157% (<a href="https://arxiv.org/pdf/1706.02090v1" target="_blank" rel="noopener">Baumers et al.</a>). Lindemann's lifecycle model lists design work but costs only per-build job preparation, and few others price NRE, QA or any benefit (<a href="https://utw10945.utweb.utexas.edu/Manuscripts/2013/2013-79-Lindemann.pdf" target="_blank" rel="noopener">Lindemann et al.</a>).</p>
+<p><strong>Supply-chain and inventory models</strong> carry the benefit columns. Academic models, mostly of this kind, hold 17 of the 20 storage Yes ratings, 20 of the 28 speed Yes ratings and all 5 shared-capacity Yes ratings. AM cuts stock most when holding costs are high and failure rates are well known: an aircraft spares model keeps AM inventory at about a quarter of conventional levels (<a href="https://doi.org/10.1108/JMTM-07-2017-0143" target="_blank" rel="noopener">Ghadge et al.</a>), while uncertainty about AM failure rates erodes the advantage (<a href="https://doi.org/10.1016/j.ijpe.2024.109438" target="_blank" rel="noopener">Peron et al. 2024</a>). On placement, centralizing wins when machine and post-processing capital is high (<a href="https://engrxiv.org/preprint/download/2007/4037/3021" target="_blank" rel="noopener">McDermott et al.</a>; <a href="https://www.sciencedirect.com/science/article/abs/pii/S2214860418308807" target="_blank" rel="noopener">Bonnín Roca et al.</a>), and Doudnikoff finds no AM cheapest once machine fixed cost is counted (<a href="https://repository.lib.ncsu.edu/server/api/core/bitstreams/6d683c20-48b9-46a7-9ef5-a8db0865b4dc/content" target="_blank" rel="noopener">Doudnikoff</a>).</p>
+<p><strong>QA standards</strong> classify parts by criticality and attach activities to each class. NASA-STD-6030 sets test data and inspection scope for every class but gives no prices; USAF EZ-SB-19-01 and NAVSEA's framework classify parts by criticality but leave much of the testing to each part (<a href="https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/2021-04-21_nasa-std-6030-approveddocx.pdf" target="_blank" rel="noopener">NASA</a>; <a href="https://daytonaero.com/_files/ugd/742fa6_f655412ea39b4ab89e7fa86686e6e8f6.pdf" target="_blank" rel="noopener">USAF</a>; <a href="https://ammo.ncms.org/wp-content/uploads/024-4870-Ser-05T-2018-024-20180817.pdf" target="_blank" rel="noopener">NAVSEA</a>). Most let one-time qualification cover many parts, as in NAVSEA's once-per-process/material-combination rule (<a href="https://www.nsrp.org/wp-content/uploads/2021/06/Carderock_DED-Tech-Pub-Development_Hovanec.pdf" target="_blank" rel="noopener">Hovanec</a>).</p>
+<p><strong>Government and consortium tools</strong> mostly rate Unknown (65% of their ratings), and only one of the 24 earns a Yes: the Navy's AMCAT, which costs NRE. Singapore's maritime screening programme, once rated Yes on production, turned out on re-reading to quote savings from partner cases rather than compute them. Their screening criteria echo commercial tools, which the services now buy for the same job (<a href="https://www.3yourmind.com/news/u.s.-army-awards-3yourmind-contract-for-additive-manufacturing-part-identification" target="_blank" rel="noopener">Army</a>).</p>
 <h2 id="gaps">Gaps</h2>
 <p>The costs and benefits that weigh most in defense sustainment are the ones tools rarely dollarize: qualification, NRE, shared capacity and readiness value.</p>
-<p><strong>QA qualification.</strong> Only 7 of 144 tools rate Yes. Four are rule sets that fix qualification activities by part class without prices: NASA-STD-6030, NAVSEA's framework, DNV-ST-B203 and IRClass's 2025 notes. Three put a cost on it: the Peron/Cantini model prices test sets by part class, a Leonardo aircraft-support model carries qualification as a cost term with its values withheld (<a href="https://webthesis.biblio.polito.it/33634/1/tesi.pdf" target="_blank" rel="noopener">Viano</a>), and Lynch et al. minimize the cost of a requalification test campaign (<a href="https://doi.org/10.3390/jmmp10070229" target="_blank" rel="noopener">Lynch et al.</a>). <a href="https://www.mdpi.com/2226-4310/7/8/110" target="_blank" rel="noopener">Lawand et al.</a> include only a fixed certificate fee.</p>
+<p><strong>Qualification.</strong> Only 6 of 215 tools rate Yes. Three are rule sets that fix qualification activities by part class without prices: NASA-STD-6030, DNV-ST-B203 and IRClass's 2025 notes. NAVSEA's framework, rated Yes before the adversarial review, uses severity levels to decide whether qualification applies but leaves the tests to each part. Three put a cost on it: the Peron/Cantini model prices test sets by part class, a Leonardo aircraft-support model carries qualification as a cost term with its values withheld (<a href="https://webthesis.biblio.polito.it/33634/1/tesi.pdf" target="_blank" rel="noopener">Viano</a>), and Lynch et al. minimize the cost of a requalification test campaign (<a href="https://doi.org/10.3390/jmmp10070229" target="_blank" rel="noopener">Lynch et al.</a>). <a href="https://www.mdpi.com/2226-4310/7/8/110" target="_blank" rel="noopener">Lawand et al.</a> include only a fixed certificate fee.</p>
 <p>Peron/Cantini shows qualification can decide spare-part economics. Adding DNV class-based testing cut AM's break-even quantity from 42 parts to 8 for class C2 and 6 for class C3 (<a href="https://iris.unimore.it/retrieve/45137dac-17c7-46a9-a5f7-3bdd0c425dfe/Additive%20or%20Conventional%20Manufacturing%20as%20spare%20parts%20manufacturing%20technology_IFAC_YOHOHAMA_2022.pdf" target="_blank" rel="noopener">Peron et al.</a>). Its reported qualification share recomputes lower from its own inputs (about 62% versus 90%), so use its shares with care.</p>
 <p>Elsewhere, qualification costs appear only as anchors, not models:</p>
 <ul>
@@ -484,29 +549,29 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 <li>APL says NAVSEA machine certification once needed 300 test samples and millions of dollars, a burden it helped cut by over 60% (<a href="https://www.jhuapl.edu/news/news-releases/250617-navy-am-lpbf-adoption" target="_blank" rel="noopener">JHU APL</a>).</li>
 <li>An FAA briefing puts the entry cost for critical AM in the tens of millions of dollars, against about $1M for equipment (<a href="https://sites.nationalacademies.org/cs/groups/pgasite/documents/webpage/pga_172540.pdf" target="_blank" rel="noopener">Gorelik</a>). For low-criticality parts the bar is much lower: FRCE certified its first non-flight-critical metal parts in under six months (<a href="https://www.navy.mil/Press-Office/News-Stories/display-news/Article/4471557/frce-delivers-first-metal-3d-printed-parts-to-fleet/" target="_blank" rel="noopener">Navy.mil</a>).</li>
 </ul>
-<p><strong>QA per-part inspection.</strong> Inspection fares a little better, with 13 Yes ratings, but CT is rarely priced. Strutner et al. estimate about $1,480 per CT specimen in-house and $2,300 outsourced, with analysis labor the largest share (<a href="https://par.nsf.gov/servlets/purl/10079245" target="_blank" rel="noopener">Strutner et al.</a>). In a laser powder bed case, Verna et al. found quality costs of €14.40–31.69 per part against €18.56 for production (<a href="https://iris.polito.it/bitstream/11583/2954859/5/IMechE%20Part%20B%20Cost%20Modelling_Manuscript_R2%20FINAL.pdf" target="_blank" rel="noopener">Verna et al.</a>).</p>
-<p><strong>NRE.</strong> Only 5 tools put NRE in a cost model and 96 touch it only partly (25 with numbers, 71 in words); 23 confirmably leave it out and 20 don't document it either way, though legacy defense parts often lack the data needed to print them. About 75% of DLA-managed parts lack technical data packages (<a href="https://apps.dtic.mil/sti/pdfs/AD1029439.pdf" target="_blank" rel="noopener">Langlais et al.</a>), and Crean cites AFLCMC's figure of about $1M to complete the NRE for one part (<a href="https://core.ac.uk/download/277529382.pdf" target="_blank" rel="noopener">Crean</a>). Braunberger reports reverse engineering often takes 150+ hours and parameter testing can pass $150,000 (<a href="https://apps.dtic.mil/sti/pdfs/AD1102526.pdf" target="_blank" rel="noopener">Braunberger</a>).</p>
-<p><strong>Shared capacity.</strong> This is the thinnest benefit: only one tool rates Yes (Doudnikoff's network model), and 81 of 144 confirmably leave it out. None combines build batching, post-processing bottlenecks such as HIP, and qualification lead times (<a href="https://engrxiv.org/preprint/download/2007/4037/3021" target="_blank" rel="noopener">McDermott et al.</a>). FAA AC 33.15-3 and AIA guidance qualify each machine separately, so pooling capacity does not pool qualification (<a href="https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_33.15-3.pdf" target="_blank" rel="noopener">FAA</a>; <a href="https://www.aia-aerospace.org/wp-content/uploads/2025-Recommended-Guidance-for-Certification-of-AM-Components.pdf" target="_blank" rel="noopener">AIA</a>).</p>
-<p><strong>Value of speed.</strong> Speed has 13 Yes ratings, but most measure lead time, availability or a generic backorder penalty. Metal AM often loses on unit price and wins on time: six C-130 parts averaged 27.6% above DLA prices but arrived in 9–16 days versus 71 to 120+ (<a href="https://apps.dtic.mil/sti/pdfs/AD1102526.pdf" target="_blank" rel="noopener">Braunberger</a>). Coyle's Navy aviation case shows the same pattern: $3,145 in about 10 days by AM against $7,005 in 545 days from the OEM (<a href="https://apps.dtic.mil/sti/pdfs/AD1046824.pdf" target="_blank" rel="noopener">Coyle</a>). No model prices lead time per not-mission-capable aircraft-day.</p>
-<p><strong>Excluded cases and thin documentation.</strong> Several widely cited defense studies fall outside the metal scope and are not counted here: Khajavi's F/A-18 duct network and Daugherty and Heiple's Marine Corps study are polymer-only, and the Navy's AMCAT and most spare-parts inventory models (Song and Zhang, Knofius, Westerweel) never specify a process. Their value logic may carry over to metal, but their cost data do not. Ratings that public sources can't confirm are marked Unknown rather than No: 15% of all ratings, 19% for commercial products and 27% for government tools such as PACT, SEEKR and NIAR's TEA, which are known only from press releases or briefings.</p>
+<p><strong>QA per-part inspection.</strong> Inspection fares a little better, with 11 Yes ratings, but CT is rarely priced. Strutner et al. estimate about $1,480 per CT specimen in-house and $2,300 outsourced, with analysis labor the largest share (<a href="https://par.nsf.gov/servlets/purl/10079245" target="_blank" rel="noopener">Strutner et al.</a>). In a laser powder bed case, Verna et al. found quality costs of €14.40–31.69 per part against €18.56 for production (<a href="https://iris.polito.it/bitstream/11583/2954859/5/IMechE%20Part%20B%20Cost%20Modelling_Manuscript_R2%20FINAL.pdf" target="_blank" rel="noopener">Verna et al.</a>).</p>
+<p><strong>NRE.</strong> Only 7 tools put NRE in a cost model and 54 touch it only partly; 58 confirmably leave it out and 96 don't document it either way, though legacy defense parts often lack the data needed to print them. About 75% of DLA-managed parts lack technical data packages (<a href="https://apps.dtic.mil/sti/pdfs/AD1029439.pdf" target="_blank" rel="noopener">Langlais et al.</a>), and Crean cites AFLCMC's figure of about $1M to complete the NRE for one part (<a href="https://core.ac.uk/download/277529382.pdf" target="_blank" rel="noopener">Crean</a>). Braunberger reports reverse engineering often takes 150+ hours and parameter testing can pass $150,000 (<a href="https://apps.dtic.mil/sti/pdfs/AD1102526.pdf" target="_blank" rel="noopener">Braunberger</a>).</p>
+<p><strong>Shared capacity.</strong> This is the thinnest benefit: only five tools rate Yes, all academic models (Doudnikoff's network model, Jedeck's and O'Brien's simulations, Song and Zhang's shared-printer queue, and Cokyasar and Jin's capacity allocation), and 120 of 215 confirmably leave it out. None combines build batching, post-processing bottlenecks such as HIP, and qualification lead times (<a href="https://engrxiv.org/preprint/download/2007/4037/3021" target="_blank" rel="noopener">McDermott et al.</a>). FAA AC 33.15-3 and AIA guidance qualify each machine separately, so pooling capacity does not pool qualification (<a href="https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_33.15-3.pdf" target="_blank" rel="noopener">FAA</a>; <a href="https://www.aia-aerospace.org/wp-content/uploads/2025-Recommended-Guidance-for-Certification-of-AM-Components.pdf" target="_blank" rel="noopener">AIA</a>).</p>
+<p><strong>Value of speed.</strong> Speed has 28 Yes ratings, but most measure lead time, availability or a generic backorder penalty. Metal AM often loses on unit price and wins on time: six C-130 parts averaged 27.6% above DLA prices but arrived in 9–16 days versus 71 to 120+ (<a href="https://apps.dtic.mil/sti/pdfs/AD1102526.pdf" target="_blank" rel="noopener">Braunberger</a>). Coyle's Navy aviation case shows the same pattern: $3,145 in about 10 days by AM against $7,005 in 545 days from the OEM (<a href="https://apps.dtic.mil/sti/pdfs/AD1046824.pdf" target="_blank" rel="noopener">Coyle</a>). No model prices lead time per not-mission-capable aircraft-day.</p>
+<p><strong>Excluded cases and thin documentation.</strong> Polymer-only studies are left out even when widely cited: Khajavi's spare-parts network, Daugherty and Heiple's Marine Corps study, and the Einhorn, Westerweel (field printing) and Morgan and Prentiss defense models print only in plastic. Their value logic may carry over to metal, but their cost data do not. AM tools that never say whether they cover metal, including several spare-parts inventory models (Song and Zhang, Westerweel's lifecycle model, Cokyasar and Jin) and DoDI 5000.93, are kept and flagged "metal not stated" (62 of 215). The Navy's AMCAT counts as metal because NAVSEA, whose AM program is mostly metal, is wiring it into technical data package development. Ratings that public sources can't confirm are marked Unknown rather than No: 34% of all ratings, 43% for commercial products and 65% for government tools such as PACT, SEEKR and NIAR's TEA, which are known only from press releases or briefings.</p>
 <h2 id="integration-framework">Integration framework</h2>
 <p>Existing tools can be chained into a five-layer pipeline that passes each part's data, criticality class and costs forward; three missing modules would complete it. Every layer keys on the part number (NIIN), and the criticality class set at screening drives QA cost later. One-time costs (NRE, qualification, machines) stay separate from recurring costs, so the portfolio layer can spread them across parts.</p>
 <figure class="figure">
   <figcaption id="dia-cap"><strong>Existing tools fill five layers; three missing modules would complete the case.</strong>
   Highlighted rows are the missing modules; dashed arrows are feedback loops.</figcaption>
-  <div class="figscroll"><svg class="viz" viewBox="0 56 760 620" role="img" aria-labelledby="dia-cap" font-size="11.5"><defs><marker id="fw-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="d-arrowhead" d="M0 0L10 5L0 10z"/></marker></defs><rect class="d-spine" x="24" y="64" width="712" height="32" rx="8"/><text class="c-ink" x="380" y="84" text-anchor="middle" font-size="12.5">Shared data spine: part number (NIIN) · criticality class · one-time vs recurring costs</text><path class="d-line" d="M380 96V114" marker-end="url(#fw-arrow)"/><path class="d-line" d="M380 204V226" marker-end="url(#fw-arrow)"/><path class="d-line" d="M380 316V338" marker-end="url(#fw-arrow)"/><path class="d-line" d="M380 428V450" marker-end="url(#fw-arrow)"/><path class="d-line" d="M380 540V562" marker-end="url(#fw-arrow)"/><rect class="d-box" x="160" y="116" width="440" height="88" rx="8"/><text class="c-ink" x="176" y="140" font-size="13" font-weight="600">1 · Part screening</text><text class="c-ink" x="176" y="156">Out: ranked candidates, likely process, criticality class</text><text class="c-quiet" x="176" y="172">Tools: DLA prescreener, 3YOURMIND, CASTOR, Coyle Navy screen</text><text class="c-quiet" x="176" y="192">Missing: map from supply criticality codes to QA classes</text><rect class="d-box" x="160" y="228" width="440" height="88" rx="8"/><rect class="d-gap" x="170" y="291" width="420" height="18" rx="4"/><text class="c-ink" x="176" y="252" font-size="13" font-weight="600">2 · Per-part cost</text><text class="c-ink" x="176" y="268">Out: one-time NRE, unit cost and lead time by batch size</text><text class="c-quiet" x="176" y="284">Tools: NIAR TEA, Braunberger, Crean (AFIT), Lindemann, AMPOWER</text><text class="c-ink" x="176" y="304" font-weight="600">Missing: NRE cost model for legacy parts (reverse engineering)</text><rect class="d-box" x="160" y="340" width="440" height="88" rx="8"/><rect class="d-gap" x="170" y="403" width="420" height="18" rx="4"/><text class="c-ink" x="176" y="364" font-size="13" font-weight="600">3 · QA cost by criticality class</text><text class="c-ink" x="176" y="380">Out: qualification per machine–material pair, per-part inspection</text><text class="c-quiet" x="176" y="396">Tools: NASA-STD-6030, EZ-SB-19-01, NAVSEA, MMPDS, Peron/Cantini</text><text class="c-ink" x="176" y="416" font-weight="600">Missing: priced QA bundles per class; machine equivalence cost</text><rect class="d-box" x="160" y="452" width="440" height="88" rx="8"/><rect class="d-gap" x="170" y="515" width="420" height="18" rx="4"/><text class="c-ink" x="176" y="476" font-size="13" font-weight="600">4 · Network and inventory</text><text class="c-ink" x="176" y="492">Out: storage savings, sites and machines, lead time, availability</text><text class="c-quiet" x="176" y="508">Tools: Doudnikoff, Bonnín Roca, Ghadge, Sgarbossa, Peron</text><text class="c-ink" x="176" y="528" font-weight="600">Missing: dollar value per not-mission-capable day</text><rect class="d-box" x="160" y="564" width="440" height="88" rx="8"/><text class="c-ink" x="176" y="588" font-size="13" font-weight="600">5 · Portfolio business case</text><text class="c-ink" x="176" y="604">Out: which parts, processes, sites and qualifications to fund</text><text class="c-quiet" x="176" y="620">Tools: Busachi DSS, Braunberger MODA, NIAR TEA</text><text class="c-quiet" x="176" y="640">Missing: optimizer spreading qualification and capital costs</text><path class="d-line d-dash" d="M600 482H624V286H602" marker-end="url(#fw-arrow)"/><text class="c-quiet" x="636" y="374">Machine use</text><text class="c-quiet" x="636" y="390">resets unit cost</text><text class="c-quiet" x="636" y="406">in layer 2</text><path class="d-line d-dash" d="M160 594H144V398H158" marker-end="url(#fw-arrow)"/><text class="c-quiet" x="24" y="478">Portfolio size</text><text class="c-quiet" x="24" y="494">sets how many</text><text class="c-quiet" x="24" y="510">parts share each</text><text class="c-quiet" x="24" y="526">qualification</text></svg></div>
+  <div class="figscroll"><svg class="viz" viewBox="0 56 760 620" role="img" aria-labelledby="dia-cap" font-size="11.5"><defs><marker id="fw-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="d-arrowhead" d="M0 0L10 5L0 10z"/></marker></defs><rect class="d-spine" x="24" y="64" width="712" height="32" rx="8"/><text class="c-ink" x="380" y="84" text-anchor="middle" font-size="12.5">Shared data spine: part number (NIIN) · criticality class · one-time vs recurring costs</text><path class="d-line" d="M380 96V114" marker-end="url(#fw-arrow)"/><path class="d-line" d="M380 204V226" marker-end="url(#fw-arrow)"/><path class="d-line" d="M380 316V338" marker-end="url(#fw-arrow)"/><path class="d-line" d="M380 428V450" marker-end="url(#fw-arrow)"/><path class="d-line" d="M380 540V562" marker-end="url(#fw-arrow)"/><rect class="d-box" x="160" y="116" width="440" height="88" rx="8"/><text class="c-ink" x="176" y="140" font-size="13" font-weight="600">1 · Part screening</text><text class="c-ink" x="176" y="156">Out: ranked candidates, likely process, criticality class</text><text class="c-quiet" x="176" y="172">Tools: DLA prescreener, 3YOURMIND, CASTOR, Coyle Navy screen</text><text class="c-quiet" x="176" y="192">Missing: map from supply criticality codes to QA classes</text><rect class="d-box" x="160" y="228" width="440" height="88" rx="8"/><rect class="d-gap" x="170" y="291" width="420" height="18" rx="4"/><text class="c-ink" x="176" y="252" font-size="13" font-weight="600">2 · Per-part cost</text><text class="c-ink" x="176" y="268">Out: one-time NRE, unit cost and lead time by batch size</text><text class="c-quiet" x="176" y="284">Tools: NIAR TEA, Braunberger, Crean (AFIT), Lindemann, AMPOWER</text><text class="c-ink" x="176" y="304" font-weight="600">Missing: NRE cost model for legacy parts (reverse engineering)</text><rect class="d-box" x="160" y="340" width="440" height="88" rx="8"/><rect class="d-gap" x="170" y="403" width="420" height="18" rx="4"/><text class="c-ink" x="176" y="364" font-size="13" font-weight="600">3 · QA cost by criticality class</text><text class="c-ink" x="176" y="380">Out: qualification per machine–material pair, per-part inspection</text><text class="c-quiet" x="176" y="396">Tools: NASA-STD-6030, EZ-SB-19-01, NAVSEA, MMPDS, Peron/Cantini</text><text class="c-ink" x="176" y="416" font-weight="600">Missing: priced QA bundles per class; machine equivalence cost</text><rect class="d-box" x="160" y="452" width="440" height="88" rx="8"/><rect class="d-gap" x="170" y="515" width="420" height="18" rx="4"/><text class="c-ink" x="176" y="476" font-size="13" font-weight="600">4 · Network and inventory</text><text class="c-ink" x="176" y="492">Out: storage savings, sites and machines, lead time, availability</text><text class="c-quiet" x="176" y="508">Tools: Doudnikoff, Jedeck, O&#x27;Brien, Bonnín Roca, Ghadge, Peron</text><text class="c-ink" x="176" y="528" font-weight="600">Missing: dollar value per not-mission-capable day</text><rect class="d-box" x="160" y="564" width="440" height="88" rx="8"/><text class="c-ink" x="176" y="588" font-size="13" font-weight="600">5 · Portfolio business case</text><text class="c-ink" x="176" y="604">Out: which parts, processes, sites and qualifications to fund</text><text class="c-quiet" x="176" y="620">Tools: Busachi DSS, Braunberger MODA, NIAR TEA</text><text class="c-quiet" x="176" y="640">Missing: optimizer spreading qualification and capital costs</text><path class="d-line d-dash" d="M600 482H624V286H602" marker-end="url(#fw-arrow)"/><text class="c-quiet" x="636" y="374">Machine use</text><text class="c-quiet" x="636" y="390">resets unit cost</text><text class="c-quiet" x="636" y="406">in layer 2</text><path class="d-line d-dash" d="M160 594H144V398H158" marker-end="url(#fw-arrow)"/><text class="c-quiet" x="24" y="478">Portfolio size</text><text class="c-quiet" x="24" y="494">sets how many</text><text class="c-quiet" x="24" y="510">parts share each</text><text class="c-quiet" x="24" y="526">qualification</text></svg></div>
 </figure>
 <ol>
 <li><strong>Part screening → ranked candidates, likely process, criticality class.</strong> Inputs: supply records (NIIN, demand, unit price, lead times, backorders, criticality code, technical data package status), drawings or CAD, and machine–material data. Tools: the <a href="https://apps.dtic.mil/sti/pdfs/AD1013934.pdf" target="_blank" rel="noopener">DLA prescreener</a>, 3YOURMIND or CASTOR, Coyle's Navy aviation screen, and NASA's AM-risk checklist. Missing: a standard map from supply criticality codes to QA classes, and a data-package flag that routes parts to NRE costing.</li>
 <li><strong>Per-part cost → one-time NRE, plus unit cost and lead time by batch size.</strong> Inputs: candidates, machine rates, labor and post-processing steps. Tools: NIAR's planned four-process TEA model, the Braunberger and Crean models, Lindemann's activity-based model and AMPOWER, with NRE elements from Busachi. Missing: a reverse-engineering and data-package cost model; AFLCMC's $1M and Braunberger's 150 hours are only anchors.</li>
 <li><strong>QA cost by criticality class → one-time qualification per machine–material pair, plus per-part inspection.</strong> Inputs: the class from ASTM F3572, NAVSEA severity levels or USAF structural categories. Tools: activity bundles from NASA-STD-6030, EZ-SB-19-01, NAVSEA tech pubs and MMPDS, priced with the Peron/Cantini structure and JMADD, Strutner and Verna cost data. Missing: priced bundles per class, and the cost of proving machine equivalence across sites (<a href="https://www.metal-am.com/america-makes-announces-delta-qual-project-call-totalling-3-2m/" target="_blank" rel="noopener">Delta Qual</a>).</li>
-<li><strong>Network and inventory model → storage savings, machines and sites, lead time under load, availability.</strong> Inputs: demand distributions, holding cost, backorder penalty, machine capacity, and the costs from layers 2 and 3. Tools: NCSU/USMA network models (<a href="https://repository.lib.ncsu.edu/server/api/core/bitstreams/6d683c20-48b9-46a7-9ef5-a8db0865b4dc/content" target="_blank" rel="noopener">Doudnikoff</a>), Bonnín Roca's site model, Ghadge's and Sgarbossa's inventory comparisons, and Peron's failure-rate model. Missing: HIP, machining and inspection bottlenecks, per-machine qualification, and a dollar value per not-mission-capable day.</li>
+<li><strong>Network and inventory model → storage savings, machines and sites, lead time under load, availability.</strong> Inputs: demand distributions, holding cost, backorder penalty, machine capacity, and the costs from layers 2 and 3. Tools: NCSU/USMA network models (<a href="https://repository.lib.ncsu.edu/server/api/core/bitstreams/6d683c20-48b9-46a7-9ef5-a8db0865b4dc/content" target="_blank" rel="noopener">Doudnikoff</a>), Bonnín Roca's site model, Ghadge's and Sgarbossa's inventory comparisons, Peron's failure-rate model, and Jedeck's and O'Brien's shared-printer simulations. Missing: HIP, machining and inspection bottlenecks, per-machine qualification, and a dollar value per not-mission-capable day.</li>
 <li><strong>Portfolio business case → which parts, processes, sites and qualifications to fund.</strong> Inputs: per-part results from layer 4, plus budgets. Tools: Busachi's decision support system, Braunberger's multi-objective scoring for non-dollar criteria, and NIAR's planned TEA module. Missing: an optimizer that spreads qualification and capital across services, with net present value and readiness outputs.</li>
 </ol>
 <p>Feedback loops matter as much as the forward chain. Machine use from layer 4 changes unit cost in layer 2; build packing alone can shift it more than 2.5 times (<a href="https://arxiv.org/pdf/1706.02090v1" target="_blank" rel="noopener">Baumers et al.</a>). The portfolio chosen in layer 5 sets how many parts share each qualified process, and so the per-part qualification cost in layer 3.</p>
 <p>The three missing modules are an NRE cost model for legacy parts, priced QA bundles by criticality class, and a readiness value per not-mission-capable day. NIAR's TEA and CMU's Bonnín Roca model, which links process cost to site choice, are natural starting points (<a href="https://www.sciencedirect.com/science/article/abs/pii/S2214860418308807" target="_blank" rel="noopener">Bonnín Roca et al.</a>).</p>
 <h2 id="sources">Sources</h2>
-<p>The key sources behind this report are below; the <a href="index.html">full matrix</a> carries a tool link and a source for every rating of all 144 tools.</p>
+<p>The key sources behind this report are below; the <a href="index.html">full matrix</a> carries a tool link and a source for every rating of all 215 tools.</p>
 <ul>
 <li><a href="https://www.americamakes.us/wp-content/uploads/2024/03/5554.007-IMPACT-Additive-Manufacturing-Techno-Economic-Analysis-AFRL-2024-1188.pdf" target="_blank" rel="noopener">IMPACT: Additive Manufacturing Techno-Economic Analysis, Project 5554.007 (NIAR briefing, AFRL-2024-1188)</a></li>
 <li><a href="https://www.dodmantech.mil/Portals/107/JAMWGFlyer_20241114_1.pdf" target="_blank" rel="noopener">Joint Additive Manufacturing Working Group flyer, incl. WAM and JAMMEX (DoD ManTech, 2024)</a></li>
@@ -549,6 +614,10 @@ table.inv td:last-child { font-size: 13px; color: var(--muted); }
 <li><a href="https://www.navy.mil/Press-Office/News-Stories/display-news/Article/4471557/frce-delivers-first-metal-3d-printed-parts-to-fleet/" target="_blank" rel="noopener">FRCE delivers first metal 3D-printed parts to fleet (Navy.mil)</a></li>
 <li><a href="https://par.nsf.gov/servlets/purl/10079245" target="_blank" rel="noopener">Strutner et al., CT vs electromechanical impedance verification cost (NSF PAR)</a></li>
 <li><a href="https://iris.polito.it/bitstream/11583/2954859/5/IMechE%20Part%20B%20Cost%20Modelling_Manuscript_R2%20FINAL.pdf" target="_blank" rel="noopener">Verna et al., Economic impact of quality inspection in manufacturing (Proc. IMechE B, 2022)</a></li>
+<li><a href="https://www.navy.mil/Press-Office/News-Stories/Article/3163936/navy-price-fighters-develop-additive-manufacturing-cost-time-model/" target="_blank" rel="noopener">Navy Price Fighters develop additive manufacturing cost, time model (AMCAT; navy.mil, 2022)</a></li>
+<li><a href="https://doi.org/10.1007/s00291-020-00608-7" target="_blank" rel="noopener">Knofius et al., Improving effectiveness of spare parts supply by additive manufacturing as dual sourcing option (OR Spectrum, 2021)</a></li>
+<li><a href="https://ir.library.louisville.edu/etd/2290" target="_blank" rel="noopener">Jedeck, spare parts on demand using AM: a simulation model (University of Louisville thesis)</a></li>
+<li><a href="https://ir.library.louisville.edu/etd/3350" target="_blank" rel="noopener">O'Brien, aerospace spare parts AM shop vs warehouse simulation (University of Louisville thesis)</a></li>
 </ul>
     <footer class="rfoot">
       <a class="btn btn-secondary" href="index.html"><span aria-hidden="true">←</span> Back to the matrix</a>

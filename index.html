@@ -24,12 +24,11 @@
 .segwrap { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
 .linkbtn { font: inherit; font-size: 13px; background: none; border: 0; color: var(--accent); cursor: pointer; padding: 4px 2px; text-decoration: underline; }
 .linkbtn[disabled] { color: var(--muted); text-decoration: none; cursor: default; opacity: .6; }
-/* rating bar: Yes, Partial quantified, Partial qualitative, Unknown (hatched); the empty rest of the track is No */
+/* rating bar: Yes, Partial, Unknown (hatched); the empty rest of the track is No */
 .bar { display: flex; height: 8px; border-radius: 2px; overflow: hidden; background: var(--chip); }
 .bar i { display: block; height: 100%; }
 .bar .y { background: var(--accent); }
 .bar .p { background: var(--partial); }
-.bar .pl { background: var(--partial-l); }
 .bar .u { background: repeating-linear-gradient(135deg, var(--unk) 0 3px, transparent 3px 6px); }
 
 /* dashboard: filters and rating key on the left, the coverage matrix (the column filter) on the right; stacks below 1180px */
@@ -66,7 +65,7 @@
 table.hm { width: 100%; min-width: 0; table-layout: fixed; border-collapse: separate; border-spacing: 2px; font-variant-numeric: tabular-nums; }
 .hm col.g { width: 12px; }
 .hm col.dc { width: 40px; }
-@media (max-width: 700px) { .hm col.g { width: 10px; } .hm col.dc { width: auto; } .hm col.rbc { width: 138px; } }
+@media (max-width: 700px) { .hm col.g { width: 10px; } .hm col.dc { width: auto; } .hm col.rbc { width: 142px; } }
 .hm th, .hm td { padding: 0; border: 0; background: none; text-align: center; vertical-align: middle; font-weight: 400; }
 .hm .gh { font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-bottom: 3px; border-bottom: 1px solid var(--rule); }
 .hm .gv { border-left: 1px solid var(--rule); }
@@ -96,7 +95,7 @@ table.hm { width: 100%; min-width: 0; table-layout: fixed; border-collapse: sepa
 .rb .rv { display: grid; gap: 2px; min-width: 0; max-width: 400px; }
 .rb .rv .bar { margin-bottom: 2px; }
 .rb .rn { font-family: var(--font-mono); font-size: 10px; line-height: 1.2; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-variant-numeric: tabular-nums; }
-@media (max-width: 700px) { .rb { grid-template-columns: 62px minmax(0, 1fr); gap: 5px; height: 28px; padding: 0 3px; } .rb .box, .rb .rn { display: none; } .rb .rl { font-size: 11px; } }
+@media (max-width: 700px) { .rb { grid-template-columns: 70px minmax(0, 1fr); gap: 5px; height: 28px; padding: 0 3px; } .rb .box, .rb .rn { display: none; } .rb .rl { font-size: 10.5px; } }
 .hm-empty { padding: 24px 8px; text-align: center; color: var(--muted); font-size: 13px; }
 /* corner box in the empty part of the triangle: tools covering at least one cost and/or one benefit */
 .hm td.mini { vertical-align: bottom; text-align: left; padding: 0 8px 0 0; }
@@ -124,7 +123,6 @@ table.hm { width: 100%; min-width: 0; table-layout: fixed; border-collapse: sepa
 .hm-key .ks { width: 12px; height: 8px; border-radius: 2px; }
 .hm-key .ks.y { background: var(--accent); }
 .hm-key .ks.p { background: var(--partial); }
-.hm-key .ks.pl { background: var(--partial-l); }
 .hm-key .ks.u { background: repeating-linear-gradient(135deg, var(--unk) 0 3px, transparent 3px 6px); box-shadow: inset 0 0 0 1px var(--unk); }
 .hm-key .ks.n { background: var(--chip); }
 .hm-key b { font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
@@ -217,7 +215,7 @@ tr.detail td { padding: 4px 16px 18px; background: var(--row-hover); cursor: aut
         <div class="f"><label for="flevel">Decision level</label><select id="flevel"></select></div>
         <div class="f"><label for="fsector">Setting</label><select id="fsector"></select></div>
         <div class="f"><label for="fconf">Confidence</label><select id="fconf"></select></div>
-        <div class="f"><label for="flink">Tool link</label><select id="flink"><option value="">All tools</option><option value="yes">Has a public link</option><option value="no">No public link</option></select></div>
+        <div class="f"><label for="fmetal">Metal AM</label><select id="fmetal"><option value="">All tools</option><option value="Metal">Metal in scope</option><option value="Unclear">AM, metal not stated</option></select></div>
       </div>
       <div class="fbar">
         <span class="count" id="count" aria-live="polite"></span>
@@ -239,8 +237,7 @@ tr.detail td { padding: 4px 16px 18px; background: var(--row-hover); cursor: aut
       <span class="segwrap">rated
         <span class="seg" role="group" aria-label="Which ratings count as covered">
           <button type="button" data-min="yes" aria-pressed="true">Yes</button>
-          <button type="button" data-min="pquant" aria-pressed="false">or quantified Partial</button>
-          <button type="button" data-min="partial" aria-pressed="false">or any Partial</button>
+          <button type="button" data-min="partial" aria-pressed="false">or Partial</button>
         </span>
       </span>
       <button type="button" class="linkbtn" id="clearcols" disabled>Clear columns</button>
@@ -262,11 +259,10 @@ tr.detail td { padding: 4px 16px 18px; background: var(--row-hover); cursor: aut
     <h2 class="keyhead" id="key-title">Ratings in the table</h2>
     <div class="legend">
       <span><i class="dot Yes"></i> Yes: modeled or quantified</span>
-      <span><i class="dot Partial pq"></i> Partial, quantified: numbers on part of the column</span>
-      <span><i class="dot Partial pl"></i> Partial, qualitative: a criterion, flag or claim, not calculated</span>
+      <span><i class="dot Partial"></i> Partial: prices part of the column, or uses it as a decision criterion</span>
       <span><i class="dot No"></i> No: confirmed not addressed</span>
       <span><i class="dot Unknown"></i> Unknown: public sources can't confirm either way</span>
-      <span>Score counts Yes as 1 and either Partial as 0.5, out of 8 · <a href="report.html#rating-rules">How ratings are decided</a></span>
+      <span>Score counts Yes as 1 and Partial as 0.5, out of 8 · <a href="report.html#rating-rules">How ratings are decided</a></span>
     </div>
   </section>
 
