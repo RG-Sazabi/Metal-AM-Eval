@@ -1,7 +1,7 @@
 {
- "updated": "2026-11-03",
- "lead": "215 decision support tools for metal additive manufacturing, scored on whether each accounts for four costs and four benefits of adopting it. Filter by columns in the cost and benefit matrix; select a table row to read the rating notes, the tool link and sources.",
- "foot": "Scope: commercial software, academic models, government and consortium tools, and methods or standards, published 2010 onward, all metal AM processes, with a defense sustainment lens. Ratings reflect public documentation as of November 2026, checked against the written rating rules in the report. No means a full description of the tool was read, or its documented scope plainly excludes the item; Unknown means the public evidence is too thin to tell, which is common for internal government tools and products described only in press releases. Where a tool was released more than once, only the newest release is listed and earlier ones are named under What it is. A tool is included if a source shows metal AM is in scope (it models, screens for or supports metal processes or materials, was applied to metal parts, or is used in a program that prints metal parts), or if it is an AM tool whose sources don't say whether it covers metal; those are tagged Metal not stated and can be filtered out. Polymer-only studies and general-purpose tools are excluded. Every rating went through an adversarial review (advocate, skeptic and judge agents) in November 2026, and tool links were re-checked then. Partial means the tool prices part of the item or uses it as a criterion in its decision; a tool that only mentions an item or claims a benefit is rated No (or Unknown when only press, slides or an abstract are public). Every former qualitative Partial was re-reviewed against that rule by two independent reviewers, with a judge on disagreements.",
+ "updated": "2026-11-06",
+ "lead": "218 decision support tools for metal additive manufacturing, scored on whether each accounts for four costs and four benefits of adopting it. Filter by columns in the cost and benefit matrix; select a table row to read the rating notes, the tool link and sources.",
+ "foot": "Scope: commercial software, academic models, government and consortium tools, and methods or standards, published 2010 onward, all metal AM processes, with a defense sustainment lens. Ratings reflect public documentation as of November 2026, checked against the written rating rules in the report. No means a full description of the tool was read, or its documented scope plainly excludes the item; Unknown means the public evidence is too thin to tell, which is common for internal government tools and products described only in press releases. Where a tool was released more than once, only the newest release is listed and earlier ones are named under What it is. A tool is included if a source shows metal AM is in scope (it models, screens for or supports metal processes or materials, was applied to metal parts, or is used in a program that prints metal parts), or if it is an AM tool whose sources don't say whether it covers metal; those are tagged Metal not stated and can be filtered out. Polymer-only studies and general-purpose tools are excluded. Every rating went through an adversarial review (advocate, skeptic and judge agents) in November 2026, and tool links were re-checked then. Partial means the tool prices part of the item or uses it as a criterion in its decision; a tool that only mentions an item or claims a benefit is rated No (or Unknown when only press, slides or an abstract are public). Every former qualitative Partial was re-reviewed against that rule by two independent reviewers, with a judge on disagreements. AWS D20.1, QuesTek's ICMD Fatigue Toolkit and ORNL's Peregrine were added in November 2026, each rated by two independent reviewers with a judge on disagreements.",
  "tools": [
   {
    "name": "NIAR Additive Manufacturing Techno-Economic Analysis cost model and TEA module (America Makes IMPACT project 5554.007)",
@@ -292,7 +292,7 @@
    "context": "DLA-managed Class IX legacy spare parts (all services)",
    "processes": "All metal and polymer AM (matched against the Senvol machine/material database)",
    "availability": "Government internal prototype; method published in LMI report DL501T1 (DTIC)",
-   "description": "A database query tool that narrows about 4.5 million DLA-managed parts to about 43,000 that fit an AM build envelope and exactly match a common AM feedstock, assuming no redesign. Users then filter by FSC, weapon system, criticality, lead time, unit cost, dimensions, material and machine, with engineering review of each candidate's technical data package (TDP) required before any decision.",
+   "description": "A database query tool that narrows about 4.5 million DLA-managed parts to about 43,000 that fit an AM build envelope and exactly match a common AM feedstock, assuming no redesign. Users then filter by FSC, weapon system, criticality, lead time, unit cost, dimensions, material and machine, with engineering review of each candidate's technical data package (TDP) required before any decision. A 2019 Joint Force Quarterly article mentions a \"limited Additive Part Candidate Identification Tool\" from DLA Logistics Operations R&D, most likely this prototype.",
    "scores": {
     "NRE": {
      "rating": "Partial",
@@ -351,6 +351,10 @@
     {
      "title": "FY2017 Additive Manufacturing Report to Congress",
      "url": "https://defenseinnovationmarketplace.dtic.mil/wp-content/uploads/2019/05/fy-2017-additive-manufacturing-report-to-congress.pdf"
+    },
+    {
+     "title": "Price, LaBash and Land, 3D Printing for Joint Agile Operations (Joint Force Quarterly 95, 2019)",
+     "url": "https://ndupress.ndu.edu/Portals/68/Documents/jfq/jfq-95/jfq-95_92-99_Price-LaBash-Land.pdf"
     }
    ],
    "confidence": "High",
@@ -2153,7 +2157,7 @@
    "decision_levels": [
     "Process/machine choice"
    ],
-   "context": "US Navy (ONR STTR Phase I/II, NAVSEA, NAVAIR), US Air Force (AFRL; America Makes allowables project 2022), US Army (ARL/AMMP missile-part qualification with Lockheed Martin, 2020-2022); commercial aerospace, oil & gas, medical",
+   "context": "US Navy (ONR STTR Phase I/II, NAVSEA, NAVAIR), US Air Force (AFRL; America Makes allowables project 2022), US Army (ARL/AMMP missile-part qualification with Lockheed Martin, 2020-2022); commercial aerospace, oil & gas, medical; US Navy wire-DED in-situ sensor-fusion program (July 2025 to July 2027)",
    "processes": "Process-, machine- and material-agnostic (any AM process; DoD demos included multi-laser metal PBF and polymer PBF)",
    "availability": "Commercial license",
    "description": "Machine-learning software linking process parameters, process signatures (in-situ monitoring) and material properties to optimize parameters, predict properties and generate statistically substantiated allowables with fewer test builds. It targets qualification cost rather than part screening or business cases.",
@@ -2223,6 +2227,10 @@
     {
      "title": "Digital Engineering 24/7: Senvol ML utilized for U.S. Air Force multi-laser AM program (FlexSpecs, EOS M400-4)",
      "url": "https://digitalengineering247.com/article/senvol-ml-utilized-for-u.s.-air-force-multi-laser-am-program/additive-manufacturing"
+    },
+    {
+     "title": "Defense & Munitions: Senvol leads US Navy program on AM sensor fusion (wire DED, 2025-2027)",
+     "url": "https://www.defenseandmunitions.com/news/senvol-leads-us-navy-program-on-am-sensor-fusion"
     }
    ],
    "confidence": "Low",
@@ -7440,8 +7448,8 @@
    "metal_note": "Inspire Print3D is a toolset 'to design and simulate the manufacturing process for selective laser melting (SLM) parts', with SLM-specific tools in the help (3D Printing Industry launch article; Inspire 2022.2 help)."
   },
   {
-   "name": "Hexagon Simufact Additive (print cost estimation; part of HxGN Additive Manufacturing Suite)",
-   "developer": "Simufact Engineering / Hexagon Manufacturing Intelligence",
+   "name": "Cadence Simufact Additive (print cost estimation; formerly Hexagon)",
+   "developer": "Simufact Engineering, part of MSC Software; Cadence since it acquired Hexagon's design and engineering business (closed February 2026); previously Hexagon Manufacturing Intelligence",
    "year": "Cost estimation added in Simufact Additive 2020 (announced Nov 2019); bundled in HxGN AM Suite Feb 2024",
    "tool_type": "Commercial software",
    "decision_levels": [
@@ -7449,7 +7457,7 @@
    ],
    "context": "General metal AM production; no defense user found",
    "processes": "Metal L-PBF and metal binder jetting; also simulates heat treatment, cutting, HIP and machining",
-   "availability": "Commercial license (Hexagon Nexus)",
+   "availability": "Commercial license (Cadence; earlier sold through Hexagon Nexus)",
    "description": "Metal AM process simulation. It predicts and compensates distortion, residual stress and temperature. Its PBF Process and Defect Analysis module anticipates warping, porosity and incomplete fusion. It also estimates print-job costs for single components or assemblies, extending to downstream cutting, machining, drilling and grinding, to pick the best build variant.",
    "scores": {
     "NRE": {
@@ -7509,15 +7517,24 @@
     {
      "title": "Digital Engineering 24/7: Simufact Additive 2020 and DED simulation tool announced at Formnext",
      "url": "https://www.digitalengineering247.com/article/simufact-additive-2020-ded-simulation-tool-announced-at-formnext"
+    },
+    {
+     "title": "Cadence success story: Cadence Simufact Additive (aerospace CAD export and geometry morphing)",
+     "url": "https://www.cadence.com/en_US/home/resources/success-stories/transforming-aerospace-simulation-with-cadence-simufact-additive-ss.html"
+    },
+    {
+     "title": "Evertiq: Cadence completes acquisition of Hexagon's design and engineering business (Feb 2026)",
+     "url": "https://evertiq.com/news/2026-02-24-cadence-completes-acquisition-of-hexagons-de-business"
     }
    ],
    "confidence": "Low",
    "sector": "Defense",
    "tool_link": {
-    "url": "https://nexus.hexagon.com/home/product/simufact-additive",
-    "label": "Product page (Hexagon Nexus)",
+    "url": "https://www.cadence.com/en_US/home/tools/msc-software/simufact-additive.html",
+    "label": "Product page (Cadence)",
     "verified": true
    },
+   "tool_link_note": "Cadence's page is listed by search engines but blocked automated fetching; the Hexagon Nexus page was still live in November 2026.",
    "evidence_basis": "Press or marketing",
    "type": "Tool",
    "type_reason": "commercial process-simulation and cost software",
@@ -16219,6 +16236,244 @@
    "type_reason": "pilot project; no published criteria",
    "metal_scope": "Unclear",
    "metal_note": "The pilot targets pump impellers, shaft sleeves, gasket bonnet valves and rock drill bits and CSIR cites AM refurbishment of worn parts, but no source names a metal process or material (Anglo American press release, May 2021; Engineering News; Mining Magazine)."
+  },
+  {
+   "name": "AWS D20.1/D20.1M:2019 Specification for Fabrication of Metal Components using Additive Manufacturing (2019)",
+   "developer": "American Welding Society (D20 Committee on Additive Manufacturing; D20A Subcommittee for powder processes)",
+   "year": "2019 (1st edition); revision and new wire-process D20.2 targeted for summer 2026",
+   "tool_type": "Method/framework",
+   "decision_levels": [
+    "Part selection",
+    "Process/machine choice"
+   ],
+   "context": "Cross-industry fabrication specification for metal AM components; applied by EWI to Navy nickel aluminum bronze propellers (NSRP-funded) and reviewed alongside MSFC-STD-3716 in NASA and NRC workshops",
+   "processes": "Metal powder bed fusion and directed energy deposition (powder and wire) in the 2019 edition; the revision keeps PBF and blown-powder DED and moves wire DED to D20.2",
+   "availability": "Paid standard (AWS; ANSI Webstore)",
+   "description": "Specification for qualifying, fabricating and inspecting metal AM components made by PBF or DED. The Engineer assigns each component Class A (critical), B (semi-critical) or C (noncritical) by consequence of failure, and the class grades the requirements: machine qualification with a standard qualification build (at least 54 tension specimens for PBF, 9 for DED) is required for Class A and B but not C, every Additive Manufacturing Procedure Specification must be qualified with a preproduction test build, and Class A and B PBF builds carry witness specimens. Clause 8 sets the nondestructive and destructive tests and acceptance criteria for production components.",
+   "scores": {
+    "NRE": {
+     "rating": "Partial",
+     "note": "One-time preparation steps are mandatory but not costed: the Additive Manufacturing Procedure Specification must be qualified through a Procedure Qualification Record before production, and a preproduction test build must use the production build file, post-processing and parameters within qualified limits (Coughlin, NRC workshop slides, Clauses 5.1-5.2.3)."
+    },
+    "Production": {
+     "rating": "No",
+     "note": "A fabrication specification, so per-part production cost is plainly outside its scope, and neither the committee slides nor the 2026 revision article mention cost (Coughlin, NRC workshop slides; Barnhart, AWS Welding Digest, Aug 2026)."
+    },
+    "QA_Qual": {
+     "rating": "Yes",
+     "note": "Qualification is prescribed by class in countable form: machine qualification is required for Class A and B and not for C, using a standard qualification build of at least 54 tension specimens for PBF (9 for DED) across orientations plus visual, dimensional, radiographic, density and metallographic examination, followed by procedure qualification and a preproduction test build (Wells, NASA slides 11-12, Table 5.1; Coughlin, NRC workshop slides, Clause 5.2)."
+    },
+    "QA_Insp": {
+     "rating": "Partial",
+     "note": "Witness specimens are required on Class A and B PBF builds, and Clause 8 prescribes visual, dimensional, penetrant, magnetic particle, radiographic and density examination plus tension, metallography and chemical analysis with acceptance criteria, but the slides read give no witness specimen counts or per-class inspection extent (Coughlin, NRC workshop slides, 4.3 and Clause 8; Mohr, SME AM Standards Forum slides 5 and 8)."
+    },
+    "Storage": {
+     "rating": "No",
+     "note": "A fabrication and qualification specification, so spare-part inventory is plainly outside its scope and no source mentions it (Coughlin, NRC workshop slides; Wells, NASA slides)."
+    },
+    "Shared_Capital": {
+     "rating": "Partial",
+     "note": "One-time machine qualification is reused across procedures without numbers: the Machine Qualification Record is kept separate from the Procedure Qualification Record, and Tables 5.2 (PBF) and 5.3 (DED) set which variable changes require requalifying the machine, the procedure or both (Coughlin, NRC workshop slides, 5.1.1 and Tables 5.2-5.3)."
+    },
+    "Shared_Capacity": {
+     "rating": "No",
+     "note": "Print capacity shared across sites or users is plainly outside the scope; machines enter only as the unit qualified by a Machine Qualification Record (Coughlin, NRC workshop slides; Wells, NASA slides 11-12)."
+    },
+    "Speed": {
+     "rating": "No",
+     "note": "Part lead time or availability is plainly outside the scope; the only schedule content is the revision's summer 2026 release target (Barnhart, AWS Welding Digest, Aug 2026)."
+    }
+   },
+   "sources": [
+    {
+     "title": "Wells, 3rd ASTM AM CoE Snapshot Workshop: AM Machine/Process Qualification (NASA MSFC slides)",
+     "url": "https://ntrs.nasa.gov/api/citations/20200001732/downloads/20200001732.pdf"
+    },
+    {
+     "title": "Coughlin, Development of AWS D20.1/D20.1M, Specification for Fabrication of Metal Components using AM (NRC workshop slides)",
+     "url": "https://ww2.nrc.gov/docs/ML2034/ML20344A112.pdf"
+    },
+    {
+     "title": "Barnhart, Understanding What's New in AWS D20.1 & D20.2 (AWS Welding Digest, Aug 2026)",
+     "url": "https://www.aws.org/magazines-and-media/welding-digest/understanding-whats-new-in-aws-d20/"
+    },
+    {
+     "title": "Mohr (EWI), AWS D20.1 - An Application to Nickel Aluminum Bronze Propellors (SME AM Standards Forum 2025)",
+     "url": "https://prod-tux.toolingu.com/globalassets/sme.org/engage/communities/am-technical-community/am-standards-forum/mohr-2025-am-standards-forum.pdf"
+    }
+   ],
+   "confidence": "Medium",
+   "sector": "General manufacturing",
+   "tool_link": {
+    "url": "https://webstore.ansi.org/standards/aws/awsd201m2019",
+    "label": "Standard store page (ANSI Webstore, AWS D20.1/D20.1M:2019)",
+    "verified": false
+   },
+   "tool_link_note": "Store page found in web search results but not opened; the standard text itself is paywalled and was not read.",
+   "evidence_basis": "Briefing slides",
+   "type": "Framework",
+   "type_reason": "fabrication specification with class-graded qualification and inspection",
+   "metal_scope": "Metal",
+   "metal_note": "The specification covers fabrication of metal components by PBF and DED, with a PBF machine qualification build of 54 tension specimens and a DED build of 9, and has been applied to nickel aluminum bronze propellers (Coughlin, NRC workshop slides; Mohr, SME AM Standards Forum slides)."
+  },
+  {
+   "name": "QuesTek ICMD Fatigue Toolkit (microstructure-sensitive fatigue life prediction; AFRL accelerated AM qualification)",
+   "developer": "QuesTek Innovations LLC (Whelan, Gong, Olson)",
+   "year": "2023 (ICAF framework paper); March 2025 (toolkit launch)",
+   "tool_type": "Commercial software",
+   "decision_levels": [
+    "Process/machine choice"
+   ],
+   "context": "Qualification of fatigue-critical aerospace components; applied with AFRL to accelerate qualification of AM materials; module of QuesTek's ICMD materials design platform",
+   "processes": "Metal AM (printed IN625 and AM Ti64 examples; AM process not specified) plus conventional alloys (IN100, AA7075-T6, Ferrium C64)",
+   "availability": "Commercial module of the ICMD platform; licensing terms not published (demo on request)",
+   "description": "Predicts fatigue life from alloy, microstructure and loading by building a statistical 3D digital twin of grains, inclusions and porosity and running crystal plasticity FE, small-crack and long-crack models, from crack incubation to long-crack growth, at coupon or component scale. The models are calibrated to a subset of tensile, LCF and crack-growth tests so that the remaining loading scenarios of a fatigue qualification matrix can be simulated as minimum-life predictions.",
+   "scores": {
+    "NRE": {
+     "rating": "No",
+     "note": "The paper cites roughly $1 million of fatigue testing per new alloy or process parameter set as motivation, but the toolkit outputs fatigue life and does not cost or decide on design-file or parameter-development effort (Whelan, Gong and Olson, ICAF 2023)."
+    },
+    "Production": {
+     "rating": "No",
+     "note": "Per-part production cost is outside the documented scope; cost appears only as claimed savings in testing and in over-engineering from large safety factors (ICAF 2023; QuesTek ICMD page)."
+    },
+    "QA_Qual": {
+     "rating": "Partial",
+     "note": "The framework's qualification procedure calibrates its crystal plasticity and crack-growth models to a subset of tensile, LCF and crack-growth tests and simulates the remaining loading scenarios as minimum fatigue lives, but the 500+ test, $1 million baseline is background and the claimed 70% testing-cost and $2 million AFRL savings are not computed by the tool (ICAF 2023; Metal AM, Mar 2025)."
+    },
+    "QA_Insp": {
+     "rating": "No",
+     "note": "X-ray CT or SEM sections characterise porosity and inclusions as inputs to the microstructure twin, and the model finds AM Ti64 pores under about 10 um do not initiate HCF cracks, but the paper sets no per-part inspection scope or acceptance criterion and inspection does not enter the tool's output (ICAF 2023)."
+    },
+    "Storage": {
+     "rating": "No",
+     "note": "A fatigue-life prediction tool, so spare-part inventory is plainly outside its documented scope (ICAF 2023; QuesTek ICMD page)."
+    },
+    "Shared_Capital": {
+     "rating": "No",
+     "note": "Machine capital and its sharing are plainly outside the documented scope of a fatigue-life prediction tool (ICAF 2023; QuesTek ICMD page)."
+    },
+    "Shared_Capacity": {
+     "rating": "No",
+     "note": "Print capacity is plainly outside the documented scope of a fatigue-life prediction and qualification tool (ICAF 2023; QuesTek ICMD page)."
+    },
+    "Speed": {
+     "rating": "No",
+     "note": "QuesTek claims AM qualification timelines fall 'from years to months', a claimed benefit, while the toolkit predicts fatigue life and does not compute part lead time or availability (QuesTek ICMD page; Metal AM, Mar 2025)."
+    }
+   },
+   "sources": [
+    {
+     "title": "Whelan, Gong, Olson, Using Digital Twins to Accelerate Qualification of Fatigue Critical Components (ICAF 2023)",
+     "url": "https://icaf.aero/icaf2023/proceedings/documents/33.pdf"
+    },
+    {
+     "title": "Metal AM: QuesTek's ICMD platform launches advanced fatigue toolkit (Mar 2025)",
+     "url": "https://www.metal-am.com/questeks-icmd-platform-launches-advanced-fatigue-toolkit/"
+    },
+    {
+     "title": "QuesTek: ICMD Expands Capabilities with new Fatigue Toolkit (ICMD page)",
+     "url": "https://questek.com/icmd/"
+    },
+    {
+     "title": "ICMD expands capabilities with new Fatigue Toolkit (Digital Engineering 24/7, Mar 2025)",
+     "url": "https://www.digitalengineering247.com/article/icmd-expands-capabilities-with-new-fatigue-toolkit"
+    }
+   ],
+   "confidence": "Medium",
+   "sector": "Defense",
+   "tool_link": {
+    "url": "https://questek.com/icmd/",
+    "label": "Product page (ICMD platform, Fatigue Toolkit)",
+    "verified": true
+   },
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "commercial fatigue-life prediction software module",
+   "metal_scope": "Metal",
+   "metal_note": "The toolkit is validated for IN625 and Ti64 among other alloys and applied with AFRL to qualify AM materials, and the ICAF paper calibrates its model to printed Inconel 625 and analyses AM Ti64 porosity (QuesTek ICMD page; ICAF 2023)."
+  },
+  {
+   "name": "ORNL Peregrine AI layer-image in-situ monitoring software for powder bed AM",
+   "developer": "Oak Ridge National Laboratory, Manufacturing Demonstration Facility (Scime, Paquit et al.)",
+   "year": "2022 (FLC technology-transfer award, 10 licensees); 2025 (40+ licensees; AMMT nuclear qualification report)",
+   "tool_type": "Government/consortium tool",
+   "decision_levels": [
+    "Process/machine choice"
+   ],
+   "context": "In-process quality monitoring at the ORNL MDF; used to help qualify printed components for DOE's Transformational Challenge Reactor and in DOE-NE AMMT nuclear qualification work; licensed to 40+ academic, government and industry partners",
+   "processes": "Powder bed AM on 20+ printer types: laser powder bed fusion (Concept Laser M2, Renishaw AM400/AM250, EOS M290), electron beam melting (Arcam Q10) and binder jet (ExOne)",
+   "availability": "Commercial copyright licence from ORNL through the MDF",
+   "description": "Segments each layer image of a powder bed build (visible and near-infrared cameras, with machine and melt-pool sensor data) with a deep convolutional network that classifies anomalies such as recoater hopping and streaking, spatter, swelling, superelevation and overheating, registered to CAD and scan paths at voxel resolution. It alerts operators mid-build, stores the data in each part's digital thread, and feeds a voxelized property prediction model that predicts local tensile properties and porosity hot spots for comparison with XCT and testing.",
+   "scores": {
+    "NRE": {
+     "rating": "No",
+     "note": "The report documents image registration, segmentation and per-machine network training on calibration builds, but no design-file, redesign or parameter-development cost enters Peregrine's output (ORNL/TM-2025/4056)."
+    },
+    "Production": {
+     "rating": "No",
+     "note": "Per-part production cost is outside the documented scope of a monitoring tool; ORNL claims lower cost and waste without figures (ORNL news, Apr 2025; ORNL/TM-2025/4056)."
+    },
+    "QA_Qual": {
+     "rating": "No",
+     "note": "Peregrine helped qualify TCR components and the report calls it the driver toward 'born-qualified' parts, but the tool outputs anomaly maps and voxel property predictions and sets no qualification gate, test set or accept/reject decision, and using it to cut fatigue and creep tests is listed as future work (ORNL/TM-2025/4056; Paquit and Scime, GAIN slides, May 2022)."
+    },
+    "QA_Insp": {
+     "rating": "Partial",
+     "note": "The tool's output is a layer-by-layer in-situ inspection that classifies anomalies pixel-wise, alerts operators and predicts porosity hot spots checked against XCT to triage flaws and show when targeted post-build inspection is needed, but no inspection cost or scope is computed (ORNL/TM-2025/4056; ORNL news, Apr 2025)."
+    },
+    "Storage": {
+     "rating": "No",
+     "note": "An in-process monitoring tool, so spare-part inventory is plainly outside its documented scope (ORNL/TM-2025/4056)."
+    },
+    "Shared_Capital": {
+     "rating": "No",
+     "note": "Peregrine runs on 20+ printer types with a desktop computer and an off-the-shelf camera, but machine capital and its sharing are outside its documented scope (ORNL news, Apr 2025; ORNL/TM-2025/4056)."
+    },
+    "Shared_Capacity": {
+     "rating": "No",
+     "note": "Cameras are deployed across several ORNL LPBF machines and ORNL and Argonne share an AM400 for comparison builds, but the software neither models nor allocates print capacity (ORNL/TM-2025/4056)."
+    },
+    "Speed": {
+     "rating": "No",
+     "note": "ORNL claims faster certification and less post-production analysis time without figures, while the tool does not compute part lead time or availability (ORNL news, Apr 2025)."
+    }
+   },
+   "sources": [
+    {
+     "title": "ORNL news: AI tool takes the guesswork out of 3D printing (Apr 2025)",
+     "url": "https://www.ornl.gov/news/ai-tool-takes-the-guesswork-out-of-3d-printing/"
+    },
+    {
+     "title": "Hyer, Scime, Snow et al., Demonstrating Advanced Sensors for In Situ Monitoring Toward Qualification of Nuclear-Relevant Components (ORNL/TM-2025/4056)",
+     "url": "https://www.osti.gov/servlets/purl/3002257"
+    },
+    {
+     "title": "Paquit and Scime, Digital Thread for Additive Manufacturing (GAIN/AMMT slides, May 2022)",
+     "url": "https://gain.inl.gov/day-1_6_ornl_digital-thread-for-am"
+    },
+    {
+     "title": "ORNL news: AI tool takes the guesswork out of 3D printing (Apr 2025)",
+     "url": "https://www.ornl.gov/news/ai-tool-takes-the-guesswork-out-of-3d-printing"
+    },
+    {
+     "title": "Paquit, TCR digital platform and component qualification (ORNL slides, NRC AM workshop, ML20345A164)",
+     "url": "https://ww2.nrc.gov/docs/ML2034/ML20345A164.pdf"
+    }
+   ],
+   "confidence": "Medium",
+   "sector": "General manufacturing",
+   "tool_link": {
+    "url": "https://www.ornl.gov/news/ai-tool-takes-the-guesswork-out-of-3d-printing/",
+    "label": "ORNL news feature (Peregrine; licensing via MDF)",
+    "verified": true
+   },
+   "tool_link_note": "No standalone Peregrine product page was opened; the ORNL feature points to MDF licensing.",
+   "evidence_basis": "Full text",
+   "type": "Tool",
+   "type_reason": "AI in-situ layer-image monitoring software",
+   "metal_scope": "Metal",
+   "metal_note": "The report runs Peregrine on SS316L/SS316H builds on Concept Laser M2, Renishaw AM400 and AM250 laser powder bed machines, and ORNL lists laser powder bed and electron beam melting among supported systems (ORNL/TM-2025/4056; ORNL news, Apr 2025)."
   }
  ]
 }
